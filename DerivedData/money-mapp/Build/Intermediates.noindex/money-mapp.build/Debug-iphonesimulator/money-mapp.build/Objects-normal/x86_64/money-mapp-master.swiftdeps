@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2 (swiftlang-1000.0.16.9 clang-1000.10.25.3)"
+options: "eb7c633550d11236fac52fc66e0e83ed"
+build_time: [1531269991, 940137000]
+inputs:
+  "/Users/aliceywu/money-mapp/money-mapp/ViewController.swift": [1531269987, 0]
+  "/Users/aliceywu/money-mapp/money-mapp/AppDelegate.swift": [1531269987, 0]
