@@ -163,6 +163,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
+@import CoreGraphics;
+@import Foundation;
 @import UIKit;
 #endif
 
@@ -196,15 +198,73 @@ SWIFT_CLASS("_TtC10money_mapp11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UICollectionView;
+@class UIView;
+@class UITabBar;
+@class UIStoryboardSegue;
+@class UICollectionViewCell;
+@class UITabBarItem;
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC10money_mapp14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC10money_mapp12CategoriesVC")
+@interface CategoriesVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITabBarDelegate>
+@property (nonatomic, weak) IBOutlet UICollectionView * _Null_unspecified collection_view;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified title_view;
+@property (nonatomic, weak) IBOutlet UITabBar * _Null_unspecified tab_bar;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+@property (nonatomic, readonly) UIStatusBarStyle preferredStatusBarStyle;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tabBar:(UITabBar * _Nonnull)tabBar didSelectItem:(UITabBarItem * _Nonnull)item;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+@class UIImageView;
+@class UILabel;
+@class UIButton;
+@class UICollectionViewLayoutAttributes;
+
+SWIFT_CLASS("_TtC10money_mapp26CategoryCollectionViewCell")
+@interface CategoryCollectionViewCell : UICollectionViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified category_image_view;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified category_label;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified delete_button;
+- (UICollectionViewLayoutAttributes * _Nonnull)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes * _Nonnull)layoutAttributes SWIFT_WARN_UNUSED_RESULT;
+- (void)longPressed;
+- (IBAction)deletePressed:(id _Nonnull)sender;
+- (void)sendParent;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10money_mapp21ConfirmDeleteCategory")
+@interface ConfirmDeleteCategory : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified confirmation_window;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified buttons_view;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified yes_btn;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified no_btn;
+- (void)viewDidLoad;
+- (IBAction)deleteConfirmed:(id _Nonnull)sender;
+- (IBAction)dismissDelete:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITouch;
+@class UIEvent;
+
+@interface UICollectionView (SWIFT_EXTENSION(money_mapp))
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

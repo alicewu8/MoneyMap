@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		15110EB820F58AE30095CCD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110EB720F58AE30095CCD8 /* AppDelegate.swift */; };
-		15110EBA20F58AE30095CCD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110EB920F58AE30095CCD8 /* ViewController.swift */; };
+		15110EBA20F58AE30095CCD8 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110EB920F58AE30095CCD8 /* CategoriesVC.swift */; };
 		15110EBD20F58AE30095CCD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15110EBB20F58AE30095CCD8 /* Main.storyboard */; };
 		15110EBF20F58AE40095CCD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15110EBE20F58AE40095CCD8 /* Assets.xcassets */; };
 		15110EC220F58AE40095CCD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */; };
 		15110ECD20F58AE40095CCD8 /* money_mappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110ECC20F58AE40095CCD8 /* money_mappTests.swift */; };
 		15110ED820F58AE40095CCD8 /* money_mappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110ED720F58AE40095CCD8 /* money_mappUITests.swift */; };
+		15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C14E21138F24007CEBAE /* Extensions.swift */; };
+		15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */; };
+		15C9C1592113E816007CEBAE /* ConfirmDeleteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C1582113E816007CEBAE /* ConfirmDeleteCategory.swift */; };
+		15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C15A2113F675007CEBAE /* ExpensesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		15110EB420F58AE30095CCD8 /* money-mapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "money-mapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15110EB720F58AE30095CCD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15110EB920F58AE30095CCD8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15110EB920F58AE30095CCD8 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		15110EBC20F58AE30095CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15110EBE20F58AE40095CCD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15110EC120F58AE40095CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		15110ED320F58AE40095CCD8 /* money-mappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "money-mappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15110ED720F58AE40095CCD8 /* money_mappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_mappUITests.swift; sourceTree = "<group>"; };
 		15110ED920F58AE40095CCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C9C14E21138F24007CEBAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		15C9C1582113E816007CEBAE /* ConfirmDeleteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteCategory.swift; sourceTree = "<group>"; };
+		15C9C15A2113F675007CEBAE /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
-				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
-				15110EB920F58AE30095CCD8 /* ViewController.swift */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
+				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
+				15110EB920F58AE30095CCD8 /* CategoriesVC.swift */,
+				15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
+				15C9C14E21138F24007CEBAE /* Extensions.swift */,
+				15C9C1582113E816007CEBAE /* ConfirmDeleteCategory.swift */,
+				15C9C15A2113F675007CEBAE /* ExpensesVC.swift */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15110EBA20F58AE30095CCD8 /* ViewController.swift in Sources */,
+				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
+				15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */,
+				15110EBA20F58AE30095CCD8 /* CategoriesVC.swift in Sources */,
 				15110EB820F58AE30095CCD8 /* AppDelegate.swift in Sources */,
+				15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */,
+				15C9C1592113E816007CEBAE /* ConfirmDeleteCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9GZK3CLYY;
 				INFOPLIST_FILE = "money-mapp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9GZK3CLYY;
 				INFOPLIST_FILE = "money-mapp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

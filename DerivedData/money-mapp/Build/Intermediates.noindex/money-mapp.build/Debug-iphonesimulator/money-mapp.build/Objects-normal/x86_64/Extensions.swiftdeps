@@ -1,0 +1,470 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Category"
+- "Purchase"
+- "Canvas"
+provides-nominal:
+- "10money_mapp8CategoryV"
+- "10money_mapp8PurchaseV"
+- "10money_mapp6CanvasV"
+provides-member:
+- ["10money_mapp8CategoryV", ""]
+- ["10money_mapp8PurchaseV", ""]
+- ["10money_mapp6CanvasV", ""]
+- ["So6UIViewC", ""]
+- ["So16UICollectionViewC", ""]
+- ["So6UIViewC", "roundCorners"]
+- ["So6UIViewC", "fadeTransition"]
+- ["So16UICollectionViewC", "touchesBegan"]
+provides-dynamic-lookup:
+- "touchesBegan"
+depends-top-level:
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- !private "CAMediaTimingFunction"
+- !private "CAMediaTimingFunctionName"
+- !private "CATransition"
+- !private "CATransitionType"
+- "CFTimeInterval"
+- "CGFloat"
+- "Canvas"
+- "Category"
+- "Double"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- "Purchase"
+- "Set"
+- "String"
+- "UICollectionView"
+- "UIColor"
+- "UIEvent"
+- "UIImage"
+- "UITouch"
+- "UIView"
+depends-member:
+- !private ["So8CAActionP", "duration"]
+- !private ["So8CAActionP", "init"]
+- !private ["So8CAActionP", "timingFunction"]
+- !private ["So8CAActionP", "type"]
+- !private ["So11CAAnimationC", "duration"]
+- !private ["So11CAAnimationC", "init"]
+- !private ["So11CAAnimationC", "timingFunction"]
+- !private ["So11CAAnimationC", "type"]
+- !private ["So7CALayerC", "add"]
+- !private ["So7CALayerC", "cornerRadius"]
+- !private ["So7CALayerC", "masksToBounds"]
+- !private ["So15CALayerDelegateP", "CAMediaTimingFunction"]
+- !private ["So15CALayerDelegateP", "CAMediaTimingFunctionName"]
+- !private ["So15CALayerDelegateP", "CATransition"]
+- !private ["So15CALayerDelegateP", "CATransitionType"]
+- !private ["So15CALayerDelegateP", "layer"]
+- !private ["So15CALayerDelegateP", "next"]
+- !private ["So15CALayerDelegateP", "touchesBegan"]
+- !private ["So13CAMediaTimingP", "add"]
+- !private ["So13CAMediaTimingP", "cornerRadius"]
+- !private ["So13CAMediaTimingP", "duration"]
+- !private ["So13CAMediaTimingP", "init"]
+- !private ["So13CAMediaTimingP", "masksToBounds"]
+- !private ["So13CAMediaTimingP", "timingFunction"]
+- !private ["So13CAMediaTimingP", "type"]
+- !private ["So21CAMediaTimingFunctionC", "init"]
+- !private ["So25CAMediaTimingFunctionNamea", "easeInEaseOut"]
+- !private ["So12CATransitionC", "duration"]
+- !private ["So12CATransitionC", "init"]
+- !private ["So12CATransitionC", "timingFunction"]
+- !private ["So12CATransitionC", "type"]
+- !private ["So16CATransitionTypea", "fade"]
+- !private ["So16CATransitionTypea", "rawValue"]
+- !private ["s7CVarArgP", "CAMediaTimingFunction"]
+- !private ["s7CVarArgP", "CAMediaTimingFunctionName"]
+- !private ["s7CVarArgP", "CATransition"]
+- !private ["s7CVarArgP", "CATransitionType"]
+- !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "cornerRadius"]
+- !private ["s7CVarArgP", "duration"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "layer"]
+- !private ["s7CVarArgP", "masksToBounds"]
+- !private ["s7CVarArgP", "next"]
+- !private ["s7CVarArgP", "timingFunction"]
+- !private ["s7CVarArgP", "touchesBegan"]
+- !private ["s7CVarArgP", "type"]
+- ["10money_mapp6CanvasV", "UIColor"]
+- ["10money_mapp6CanvasV", "init"]
+- ["10money_mapp6CanvasV", "sky_blue"]
+- ["10money_mapp6CanvasV", "watermelon_red"]
+- ["10money_mapp8CategoryV", "Int"]
+- ["10money_mapp8CategoryV", "String"]
+- ["10money_mapp8CategoryV", "UIImage"]
+- ["10money_mapp8CategoryV", "id"]
+- ["10money_mapp8CategoryV", "image"]
+- ["10money_mapp8CategoryV", "init"]
+- ["10money_mapp8CategoryV", "name"]
+- ["10money_mapp8CategoryV", "selected"]
+- !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunctionName"]
+- !private ["s28CustomDebugStringConvertibleP", "CATransition"]
+- !private ["s28CustomDebugStringConvertibleP", "CATransitionType"]
+- !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
+- !private ["s28CustomDebugStringConvertibleP", "duration"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "layer"]
+- !private ["s28CustomDebugStringConvertibleP", "masksToBounds"]
+- !private ["s28CustomDebugStringConvertibleP", "next"]
+- !private ["s28CustomDebugStringConvertibleP", "timingFunction"]
+- !private ["s28CustomDebugStringConvertibleP", "touchesBegan"]
+- !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s23CustomStringConvertibleP", "CAMediaTimingFunction"]
+- !private ["s23CustomStringConvertibleP", "CAMediaTimingFunctionName"]
+- !private ["s23CustomStringConvertibleP", "CATransition"]
+- !private ["s23CustomStringConvertibleP", "CATransitionType"]
+- !private ["s23CustomStringConvertibleP", "add"]
+- !private ["s23CustomStringConvertibleP", "cornerRadius"]
+- !private ["s23CustomStringConvertibleP", "duration"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "layer"]
+- !private ["s23CustomStringConvertibleP", "masksToBounds"]
+- !private ["s23CustomStringConvertibleP", "next"]
+- !private ["s23CustomStringConvertibleP", "timingFunction"]
+- !private ["s23CustomStringConvertibleP", "touchesBegan"]
+- !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s9EquatableP", "CAMediaTimingFunction"]
+- !private ["s9EquatableP", "CAMediaTimingFunctionName"]
+- !private ["s9EquatableP", "CATransition"]
+- !private ["s9EquatableP", "CATransitionType"]
+- !private ["s9EquatableP", "add"]
+- !private ["s9EquatableP", "cornerRadius"]
+- !private ["s9EquatableP", "duration"]
+- !private ["s9EquatableP", "easeInEaseOut"]
+- !private ["s9EquatableP", "fade"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "layer"]
+- !private ["s9EquatableP", "masksToBounds"]
+- !private ["s9EquatableP", "next"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "timingFunction"]
+- !private ["s9EquatableP", "touchesBegan"]
+- !private ["s9EquatableP", "type"]
+- !private ["s8HashableP", "CAMediaTimingFunction"]
+- !private ["s8HashableP", "CAMediaTimingFunctionName"]
+- !private ["s8HashableP", "CATransition"]
+- !private ["s8HashableP", "CATransitionType"]
+- !private ["s8HashableP", "add"]
+- !private ["s8HashableP", "cornerRadius"]
+- !private ["s8HashableP", "duration"]
+- !private ["s8HashableP", "easeInEaseOut"]
+- !private ["s8HashableP", "fade"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "layer"]
+- !private ["s8HashableP", "masksToBounds"]
+- !private ["s8HashableP", "next"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "timingFunction"]
+- !private ["s8HashableP", "touchesBegan"]
+- !private ["s8HashableP", "type"]
+- !private ["So8NSCodingP", "CAMediaTimingFunction"]
+- !private ["So8NSCodingP", "CAMediaTimingFunctionName"]
+- !private ["So8NSCodingP", "CATransition"]
+- !private ["So8NSCodingP", "CATransitionType"]
+- !private ["So8NSCodingP", "add"]
+- !private ["So8NSCodingP", "cornerRadius"]
+- !private ["So8NSCodingP", "duration"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "layer"]
+- !private ["So8NSCodingP", "masksToBounds"]
+- !private ["So8NSCodingP", "next"]
+- !private ["So8NSCodingP", "timingFunction"]
+- !private ["So8NSCodingP", "touchesBegan"]
+- !private ["So8NSCodingP", "type"]
+- !private ["So9NSCopyingP", "duration"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "timingFunction"]
+- !private ["So9NSCopyingP", "type"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- !private ["So8NSObjectC", "CAMediaTimingFunction"]
+- !private ["So8NSObjectC", "CAMediaTimingFunctionName"]
+- !private ["So8NSObjectC", "CATransition"]
+- !private ["So8NSObjectC", "CATransitionType"]
+- ["So8NSObjectC", "CFTimeInterval"]
+- ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Set"]
+- ["So8NSObjectC", "UIEvent"]
+- ["So8NSObjectC", "UITouch"]
+- !private ["So8NSObjectC", "add"]
+- !private ["So8NSObjectC", "cornerRadius"]
+- !private ["So8NSObjectC", "duration"]
+- ["So8NSObjectC", "fadeTransition"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "layer"]
+- !private ["So8NSObjectC", "masksToBounds"]
+- !private ["So8NSObjectC", "next"]
+- ["So8NSObjectC", "roundCorners"]
+- !private ["So8NSObjectC", "timingFunction"]
+- ["So8NSObjectC", "touchesBegan"]
+- !private ["So8NSObjectC", "type"]
+- !private ["So8NSObjectP", "CAMediaTimingFunction"]
+- !private ["So8NSObjectP", "CAMediaTimingFunctionName"]
+- !private ["So8NSObjectP", "CATransition"]
+- !private ["So8NSObjectP", "CATransitionType"]
+- !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "cornerRadius"]
+- !private ["So8NSObjectP", "duration"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layer"]
+- !private ["So8NSObjectP", "masksToBounds"]
+- !private ["So8NSObjectP", "next"]
+- !private ["So8NSObjectP", "timingFunction"]
+- !private ["So8NSObjectP", "touchesBegan"]
+- !private ["So8NSObjectP", "type"]
+- !private ["So14NSSecureCodingP", "add"]
+- !private ["So14NSSecureCodingP", "cornerRadius"]
+- !private ["So14NSSecureCodingP", "duration"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "masksToBounds"]
+- !private ["So14NSSecureCodingP", "timingFunction"]
+- !private ["So14NSSecureCodingP", "type"]
+- ["10money_mapp8PurchaseV", "Double"]
+- ["10money_mapp8PurchaseV", "String"]
+- ["10money_mapp8PurchaseV", "date_of_purchase"]
+- ["10money_mapp8PurchaseV", "init"]
+- ["10money_mapp8PurchaseV", "name"]
+- ["10money_mapp8PurchaseV", "price"]
+- !private ["s16RawRepresentableP", "easeInEaseOut"]
+- !private ["s16RawRepresentableP", "fade"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["So29UIAccessibilityIdentificationP", "CAMediaTimingFunction"]
+- !private ["So29UIAccessibilityIdentificationP", "CAMediaTimingFunctionName"]
+- !private ["So29UIAccessibilityIdentificationP", "CATransition"]
+- !private ["So29UIAccessibilityIdentificationP", "CATransitionType"]
+- !private ["So29UIAccessibilityIdentificationP", "layer"]
+- !private ["So29UIAccessibilityIdentificationP", "next"]
+- !private ["So29UIAccessibilityIdentificationP", "touchesBegan"]
+- !private ["So12UIAppearanceP", "CAMediaTimingFunction"]
+- !private ["So12UIAppearanceP", "CAMediaTimingFunctionName"]
+- !private ["So12UIAppearanceP", "CATransition"]
+- !private ["So12UIAppearanceP", "CATransitionType"]
+- !private ["So12UIAppearanceP", "layer"]
+- !private ["So12UIAppearanceP", "next"]
+- !private ["So12UIAppearanceP", "touchesBegan"]
+- !private ["So21UIAppearanceContainerP", "CAMediaTimingFunction"]
+- !private ["So21UIAppearanceContainerP", "CAMediaTimingFunctionName"]
+- !private ["So21UIAppearanceContainerP", "CATransition"]
+- !private ["So21UIAppearanceContainerP", "CATransitionType"]
+- !private ["So21UIAppearanceContainerP", "layer"]
+- !private ["So21UIAppearanceContainerP", "next"]
+- !private ["So21UIAppearanceContainerP", "touchesBegan"]
+- ["So16UICollectionViewC", "Set"]
+- ["So16UICollectionViewC", "UIEvent"]
+- ["So16UICollectionViewC", "UITouch"]
+- !private ["So16UICollectionViewC", "next"]
+- ["So16UICollectionViewC", "touchesBegan"]
+- ["So7UIColorC", "init"]
+- !private ["So17UICoordinateSpaceP", "CAMediaTimingFunction"]
+- !private ["So17UICoordinateSpaceP", "CAMediaTimingFunctionName"]
+- !private ["So17UICoordinateSpaceP", "CATransition"]
+- !private ["So17UICoordinateSpaceP", "CATransitionType"]
+- !private ["So17UICoordinateSpaceP", "layer"]
+- !private ["So17UICoordinateSpaceP", "next"]
+- !private ["So17UICoordinateSpaceP", "touchesBegan"]
+- !private ["So23UIDataSourceTranslatingP", "next"]
+- !private ["So13UIDynamicItemP", "CAMediaTimingFunction"]
+- !private ["So13UIDynamicItemP", "CAMediaTimingFunctionName"]
+- !private ["So13UIDynamicItemP", "CATransition"]
+- !private ["So13UIDynamicItemP", "CATransitionType"]
+- !private ["So13UIDynamicItemP", "layer"]
+- !private ["So13UIDynamicItemP", "next"]
+- !private ["So13UIDynamicItemP", "touchesBegan"]
+- !private ["So18UIFocusEnvironmentP", "CAMediaTimingFunction"]
+- !private ["So18UIFocusEnvironmentP", "CAMediaTimingFunctionName"]
+- !private ["So18UIFocusEnvironmentP", "CATransition"]
+- !private ["So18UIFocusEnvironmentP", "CATransitionType"]
+- !private ["So18UIFocusEnvironmentP", "layer"]
+- !private ["So18UIFocusEnvironmentP", "next"]
+- !private ["So18UIFocusEnvironmentP", "touchesBegan"]
+- !private ["So11UIFocusItemP", "CAMediaTimingFunction"]
+- !private ["So11UIFocusItemP", "CAMediaTimingFunctionName"]
+- !private ["So11UIFocusItemP", "CATransition"]
+- !private ["So11UIFocusItemP", "CATransitionType"]
+- !private ["So11UIFocusItemP", "layer"]
+- !private ["So11UIFocusItemP", "next"]
+- !private ["So11UIFocusItemP", "touchesBegan"]
+- !private ["So20UIFocusItemContainerP", "CAMediaTimingFunction"]
+- !private ["So20UIFocusItemContainerP", "CAMediaTimingFunctionName"]
+- !private ["So20UIFocusItemContainerP", "CATransition"]
+- !private ["So20UIFocusItemContainerP", "CATransitionType"]
+- !private ["So20UIFocusItemContainerP", "layer"]
+- !private ["So20UIFocusItemContainerP", "next"]
+- !private ["So20UIFocusItemContainerP", "touchesBegan"]
+- !private ["So30UIFocusItemScrollableContainerP", "next"]
+- !private ["So30UIFocusItemScrollableContainerP", "touchesBegan"]
+- !private ["So30UIPasteConfigurationSupportingP", "CAMediaTimingFunction"]
+- !private ["So30UIPasteConfigurationSupportingP", "CAMediaTimingFunctionName"]
+- !private ["So30UIPasteConfigurationSupportingP", "CATransition"]
+- !private ["So30UIPasteConfigurationSupportingP", "CATransitionType"]
+- !private ["So30UIPasteConfigurationSupportingP", "layer"]
+- !private ["So30UIPasteConfigurationSupportingP", "next"]
+- !private ["So30UIPasteConfigurationSupportingP", "touchesBegan"]
+- !private ["So11UIResponderC", "CAMediaTimingFunction"]
+- !private ["So11UIResponderC", "CAMediaTimingFunctionName"]
+- !private ["So11UIResponderC", "CATransition"]
+- !private ["So11UIResponderC", "CATransitionType"]
+- ["So11UIResponderC", "CFTimeInterval"]
+- ["So11UIResponderC", "CGFloat"]
+- ["So11UIResponderC", "Set"]
+- ["So11UIResponderC", "UIEvent"]
+- ["So11UIResponderC", "UITouch"]
+- ["So11UIResponderC", "fadeTransition"]
+- !private ["So11UIResponderC", "layer"]
+- !private ["So11UIResponderC", "next"]
+- ["So11UIResponderC", "roundCorners"]
+- ["So11UIResponderC", "touchesBegan"]
+- !private ["So30UIResponderStandardEditActionsP", "CAMediaTimingFunction"]
+- !private ["So30UIResponderStandardEditActionsP", "CAMediaTimingFunctionName"]
+- !private ["So30UIResponderStandardEditActionsP", "CATransition"]
+- !private ["So30UIResponderStandardEditActionsP", "CATransitionType"]
+- !private ["So30UIResponderStandardEditActionsP", "layer"]
+- !private ["So30UIResponderStandardEditActionsP", "next"]
+- !private ["So30UIResponderStandardEditActionsP", "touchesBegan"]
+- ["So12UIScrollViewC", "Set"]
+- ["So12UIScrollViewC", "UIEvent"]
+- ["So12UIScrollViewC", "UITouch"]
+- !private ["So12UIScrollViewC", "next"]
+- ["So12UIScrollViewC", "touchesBegan"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "next"]
+- !private ["So18UITraitEnvironmentP", "CAMediaTimingFunction"]
+- !private ["So18UITraitEnvironmentP", "CAMediaTimingFunctionName"]
+- !private ["So18UITraitEnvironmentP", "CATransition"]
+- !private ["So18UITraitEnvironmentP", "CATransitionType"]
+- !private ["So18UITraitEnvironmentP", "layer"]
+- !private ["So18UITraitEnvironmentP", "next"]
+- !private ["So18UITraitEnvironmentP", "touchesBegan"]
+- !private ["So23UIUserActivityRestoringP", "CAMediaTimingFunction"]
+- !private ["So23UIUserActivityRestoringP", "CAMediaTimingFunctionName"]
+- !private ["So23UIUserActivityRestoringP", "CATransition"]
+- !private ["So23UIUserActivityRestoringP", "CATransitionType"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
+- !private ["So23UIUserActivityRestoringP", "next"]
+- !private ["So23UIUserActivityRestoringP", "touchesBegan"]
+- !private ["So6UIViewC", "CAMediaTimingFunction"]
+- !private ["So6UIViewC", "CAMediaTimingFunctionName"]
+- !private ["So6UIViewC", "CATransition"]
+- !private ["So6UIViewC", "CATransitionType"]
+- ["So6UIViewC", "CFTimeInterval"]
+- ["So6UIViewC", "CGFloat"]
+- ["So6UIViewC", "Set"]
+- ["So6UIViewC", "UIEvent"]
+- ["So6UIViewC", "UITouch"]
+- ["So6UIViewC", "fadeTransition"]
+- !private ["So6UIViewC", "layer"]
+- !private ["So6UIViewC", "next"]
+- ["So6UIViewC", "roundCorners"]
+- ["So6UIViewC", "touchesBegan"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CAMediaTimingFunction"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CAMediaTimingFunctionName"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CATransition"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CATransitionType"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "next"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesBegan"]
+- ["s26_ExpressibleByColorLiteralP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAMediaTimingFunction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CAMediaTimingFunctionName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CATransition"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CATransitionType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "duration"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "masksToBounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "next"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timingFunction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "touchesBegan"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
+- !private ["s21_ObjectiveCBridgeableP", "easeInEaseOut"]
+- !private ["s21_ObjectiveCBridgeableP", "fade"]
+- !private ["s21_ObjectiveCBridgeableP", "rawValue"]
+- !private ["s20_SwiftNewtypeWrapperP", "easeInEaseOut"]
+- !private ["s20_SwiftNewtypeWrapperP", "fade"]
+- !private ["s20_SwiftNewtypeWrapperP", "rawValue"]
+depends-nominal:
+- !private "So8CAActionP"
+- !private "So11CAAnimationC"
+- !private "So7CALayerC"
+- !private "So15CALayerDelegateP"
+- !private "So13CAMediaTimingP"
+- !private "So21CAMediaTimingFunctionC"
+- !private "So25CAMediaTimingFunctionNamea"
+- !private "So12CATransitionC"
+- !private "So16CATransitionTypea"
+- "s7CVarArgP"
+- "10money_mapp6CanvasV"
+- "10money_mapp8CategoryV"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- "s8HashableP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "So14NSSecureCodingP"
+- "10money_mapp8PurchaseV"
+- !private "s16RawRepresentableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- "So16UICollectionViewC"
+- "So7UIColorC"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So30UIFocusItemScrollableContainerP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- "So12UIScrollViewC"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s26_ExpressibleByColorLiteralP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/usr/include/Darwin.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "a197e209c3e633fc46ab74d6eb355843"

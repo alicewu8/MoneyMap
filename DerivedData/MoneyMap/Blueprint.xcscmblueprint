@@ -1,0 +1,23 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8C66085CDB21E69EEA607E1FBF9E7B8E61386C9C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8C66085CDB21E69EEA607E1FBF9E7B8E61386C9C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6D684118-1E5E-4A15-9063-E7AD09BD5CFB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8C66085CDB21E69EEA607E1FBF9E7B8E61386C9C" : "money-mapp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MoneyMap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MoneyMap.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git@gitlab.eecs.umich.edu:aliceywu\/money-mapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C66085CDB21E69EEA607E1FBF9E7B8E61386C9C"
+    }
+  ]
+}
