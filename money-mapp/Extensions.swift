@@ -15,6 +15,8 @@ struct Category {
     var image : UIImage
     let id : Int
     var selected = false
+    var budget : Double?
+    var running_total : Double
 }
 
 // Represents a purchased item

@@ -203,6 +203,7 @@ SWIFT_CLASS("_TtC10money_mapp11AppDelegate")
 @class UITabBar;
 @class UIStoryboardSegue;
 @class UICollectionViewCell;
+@class UITabBarItem;
 @class NSBundle;
 @class NSCoder;
 
@@ -219,6 +220,7 @@ SWIFT_CLASS("_TtC10money_mapp12CategoriesVC")
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tabBar:(UITabBar * _Nonnull)tabBar didSelectItem:(UITabBarItem * _Nonnull)item;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -245,13 +247,22 @@ SWIFT_CLASS("_TtC10money_mapp26CategoryCollectionViewCell")
 SWIFT_CLASS("_TtC10money_mapp21ConfirmDeleteCategory")
 @interface ConfirmDeleteCategory : UIViewController
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified confirmation_window;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified message;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified buttons_view;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified yes_btn;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified no_btn;
 - (void)viewDidLoad;
 - (IBAction)deleteConfirmed:(id _Nonnull)sender;
 - (IBAction)dismissDelete:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10money_mapp10ExpensesVC")
+@interface ExpensesVC : UIViewController <UITableViewDelegate, UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified done_btn;
+- (void)viewDidLoad;
+- (IBAction)doneEditing:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

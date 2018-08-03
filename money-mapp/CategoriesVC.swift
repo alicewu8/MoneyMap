@@ -48,12 +48,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // Default purchase categories (for testing)
     func initializeCategories() {
-        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false))
-        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false))
-        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false))
-        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false))
-        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false))
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false))
+        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0))
     }
     
     func formatViews() {
@@ -73,7 +73,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     func formatTabBar() {
         tab_bar.delegate = self
-        tab_bar.barTintColor = Canvas.watermelon_red
         
         let appearance = UITabBarItem.appearance()
         
@@ -88,8 +87,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             let delete_cat = segue.destination as! ConfirmDeleteCategory
             delete_cat.categories_vc = self
         } else if segue.identifier == "to_expense_recording" {
-            let expense = segue.destination as! ExpensesVC
+            //let expense = segue.destination as! ExpensesVC
+            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
+            // track the category selected and pass information to next view controller
+            let expense_category = categories[selected_row_index]
+            let expense_vc = segue.destination as! ExpensesVC
+            expense_vc.category = expense_category
         }
     }
     

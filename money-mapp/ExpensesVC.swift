@@ -16,4 +16,17 @@ class ExpensesVC : UIViewController, UITextFieldDelegate, UITableViewDelegate {
     // Think of a better way to allocate this
     var category : Category!
     
+    @IBOutlet weak var done_btn: UIButton!
+    
+    override func viewDidLoad() {
+        done_btn.roundCorners(7.5)
+        done_btn.layer.borderWidth = 1.5
+        done_btn.layer.borderColor = Canvas.watermelon_red.cgColor
+    }
+    
+    
+    // return to the category selection screen
+    @IBAction func doneEditing(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

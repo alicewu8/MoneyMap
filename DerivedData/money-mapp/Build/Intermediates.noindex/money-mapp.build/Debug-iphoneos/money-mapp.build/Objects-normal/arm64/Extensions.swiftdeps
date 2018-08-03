@@ -94,13 +94,16 @@ depends-member:
 - ["10money_mapp6CanvasV", "init"]
 - ["10money_mapp6CanvasV", "sky_blue"]
 - ["10money_mapp6CanvasV", "watermelon_red"]
+- ["10money_mapp8CategoryV", "Double"]
 - ["10money_mapp8CategoryV", "Int"]
 - ["10money_mapp8CategoryV", "String"]
 - ["10money_mapp8CategoryV", "UIImage"]
+- ["10money_mapp8CategoryV", "budget"]
 - ["10money_mapp8CategoryV", "id"]
 - ["10money_mapp8CategoryV", "image"]
 - ["10money_mapp8CategoryV", "init"]
 - ["10money_mapp8CategoryV", "name"]
+- ["10money_mapp8CategoryV", "running_total"]
 - ["10money_mapp8CategoryV", "selected"]
 - !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunction"]
 - !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunctionName"]
@@ -467,4 +470,4 @@ depends-external:
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "a197e209c3e633fc46ab74d6eb355843"
+interface-hash: "b8a24c5ae6ab77ea102fd66b4b6e5e68"
