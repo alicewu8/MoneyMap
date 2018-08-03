@@ -282,7 +282,7 @@
                                         <color key="backgroundColor" red="0.94756561517715454" green="0.84766489267349243" blue="0.78832656145095825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="Done">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="doneEditing:" destination="6AC-K8-Xxs" eventType="primaryActionTriggered" id="oPW-fH-dXi"/>

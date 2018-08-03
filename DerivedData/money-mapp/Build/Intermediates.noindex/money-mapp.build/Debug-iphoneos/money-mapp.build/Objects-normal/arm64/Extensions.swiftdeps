@@ -11,14 +11,23 @@ provides-member:
 - ["10money_mapp8CategoryV", ""]
 - ["10money_mapp8PurchaseV", ""]
 - ["10money_mapp6CanvasV", ""]
+- ["So7UIColorC", ""]
 - ["So6UIViewC", ""]
 - ["So16UICollectionViewC", ""]
+- ["So7UIColorC", "init"]
+- ["So7UIColorC", "init"]
 - ["So6UIViewC", "roundCorners"]
 - ["So6UIViewC", "fadeTransition"]
 - ["So16UICollectionViewC", "touchesBegan"]
 provides-dynamic-lookup:
 - "touchesBegan"
 depends-top-level:
+- !private "&"
+- !private "&&"
+- !private "/"
+- !private "<="
+- !private ">="
+- !private ">>"
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
 - !private "CAMediaTimingFunction"
@@ -36,13 +45,17 @@ depends-top-level:
 - "Purchase"
 - "Set"
 - "String"
+- !private "StringLiteralType"
 - "UICollectionView"
 - "UIColor"
 - "UIEvent"
 - "UIImage"
 - "UITouch"
 - "UIView"
+- !private "assert"
 depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s19BinaryFloatingPointP", "init"]
 - !private ["So8CAActionP", "duration"]
 - !private ["So8CAActionP", "init"]
 - !private ["So8CAActionP", "timingFunction"]
@@ -76,11 +89,14 @@ depends-member:
 - !private ["So12CATransitionC", "type"]
 - !private ["So16CATransitionTypea", "fade"]
 - !private ["So16CATransitionTypea", "rawValue"]
+- !private ["12CoreGraphics7CGFloatV", "init"]
 - !private ["s7CVarArgP", "CAMediaTimingFunction"]
 - !private ["s7CVarArgP", "CAMediaTimingFunctionName"]
 - !private ["s7CVarArgP", "CATransition"]
 - !private ["s7CVarArgP", "CATransitionType"]
+- !private ["s7CVarArgP", "CGFloat"]
 - !private ["s7CVarArgP", "add"]
+- !private ["s7CVarArgP", "assert"]
 - !private ["s7CVarArgP", "cornerRadius"]
 - !private ["s7CVarArgP", "duration"]
 - ["s7CVarArgP", "init"]
@@ -91,7 +107,16 @@ depends-member:
 - !private ["s7CVarArgP", "touchesBegan"]
 - !private ["s7CVarArgP", "type"]
 - ["10money_mapp6CanvasV", "UIColor"]
+- ["10money_mapp6CanvasV", "artificial_watermelon"]
+- ["10money_mapp6CanvasV", "blush"]
+- ["10money_mapp6CanvasV", "french_sky_blue"]
+- ["10money_mapp6CanvasV", "golden_sand"]
+- ["10money_mapp6CanvasV", "grapefruit"]
 - ["10money_mapp6CanvasV", "init"]
+- ["10money_mapp6CanvasV", "jellybean_green"]
+- ["10money_mapp6CanvasV", "marshmallow"]
+- ["10money_mapp6CanvasV", "not_tiffany_blue"]
+- ["10money_mapp6CanvasV", "prestige_blue"]
 - ["10money_mapp6CanvasV", "sky_blue"]
 - ["10money_mapp6CanvasV", "watermelon_red"]
 - ["10money_mapp8CategoryV", "Double"]
@@ -105,11 +130,15 @@ depends-member:
 - ["10money_mapp8CategoryV", "name"]
 - ["10money_mapp8CategoryV", "running_total"]
 - ["10money_mapp8CategoryV", "selected"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunction"]
 - !private ["s28CustomDebugStringConvertibleP", "CAMediaTimingFunctionName"]
 - !private ["s28CustomDebugStringConvertibleP", "CATransition"]
 - !private ["s28CustomDebugStringConvertibleP", "CATransitionType"]
+- !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
 - !private ["s28CustomDebugStringConvertibleP", "add"]
+- !private ["s28CustomDebugStringConvertibleP", "assert"]
 - !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
 - !private ["s28CustomDebugStringConvertibleP", "duration"]
 - ["s28CustomDebugStringConvertibleP", "init"]
@@ -119,11 +148,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "timingFunction"]
 - !private ["s28CustomDebugStringConvertibleP", "touchesBegan"]
 - !private ["s28CustomDebugStringConvertibleP", "type"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "CAMediaTimingFunction"]
 - !private ["s23CustomStringConvertibleP", "CAMediaTimingFunctionName"]
 - !private ["s23CustomStringConvertibleP", "CATransition"]
 - !private ["s23CustomStringConvertibleP", "CATransitionType"]
+- !private ["s23CustomStringConvertibleP", "CGFloat"]
 - !private ["s23CustomStringConvertibleP", "add"]
+- !private ["s23CustomStringConvertibleP", "assert"]
 - !private ["s23CustomStringConvertibleP", "cornerRadius"]
 - !private ["s23CustomStringConvertibleP", "duration"]
 - ["s23CustomStringConvertibleP", "init"]
@@ -133,11 +166,15 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "timingFunction"]
 - !private ["s23CustomStringConvertibleP", "touchesBegan"]
 - !private ["s23CustomStringConvertibleP", "type"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "CAMediaTimingFunction"]
 - !private ["s9EquatableP", "CAMediaTimingFunctionName"]
 - !private ["s9EquatableP", "CATransition"]
 - !private ["s9EquatableP", "CATransitionType"]
+- !private ["s9EquatableP", "CGFloat"]
 - !private ["s9EquatableP", "add"]
+- !private ["s9EquatableP", "assert"]
 - !private ["s9EquatableP", "cornerRadius"]
 - !private ["s9EquatableP", "duration"]
 - !private ["s9EquatableP", "easeInEaseOut"]
@@ -150,11 +187,19 @@ depends-member:
 - !private ["s9EquatableP", "timingFunction"]
 - !private ["s9EquatableP", "touchesBegan"]
 - !private ["s9EquatableP", "type"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s13FloatingPointP", "init"]
 - !private ["s8HashableP", "CAMediaTimingFunction"]
 - !private ["s8HashableP", "CAMediaTimingFunctionName"]
 - !private ["s8HashableP", "CATransition"]
 - !private ["s8HashableP", "CATransitionType"]
+- !private ["s8HashableP", "CGFloat"]
 - !private ["s8HashableP", "add"]
+- !private ["s8HashableP", "assert"]
 - !private ["s8HashableP", "cornerRadius"]
 - !private ["s8HashableP", "duration"]
 - !private ["s8HashableP", "easeInEaseOut"]
@@ -167,11 +212,15 @@ depends-member:
 - !private ["s8HashableP", "timingFunction"]
 - !private ["s8HashableP", "touchesBegan"]
 - !private ["s8HashableP", "type"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "CAMediaTimingFunction"]
 - !private ["So8NSCodingP", "CAMediaTimingFunctionName"]
 - !private ["So8NSCodingP", "CATransition"]
 - !private ["So8NSCodingP", "CATransitionType"]
+- !private ["So8NSCodingP", "CGFloat"]
 - !private ["So8NSCodingP", "add"]
+- !private ["So8NSCodingP", "assert"]
 - !private ["So8NSCodingP", "cornerRadius"]
 - !private ["So8NSCodingP", "duration"]
 - ["So8NSCodingP", "init"]
@@ -181,11 +230,17 @@ depends-member:
 - !private ["So8NSCodingP", "timingFunction"]
 - !private ["So8NSCodingP", "touchesBegan"]
 - !private ["So8NSCodingP", "type"]
+- !private ["So9NSCopyingP", "CGFloat"]
+- !private ["So9NSCopyingP", "assert"]
 - !private ["So9NSCopyingP", "duration"]
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "timingFunction"]
 - !private ["So9NSCopyingP", "type"]
+- !private ["So21NSItemProviderReadingP", "CGFloat"]
+- !private ["So21NSItemProviderReadingP", "assert"]
 - ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "CGFloat"]
+- !private ["So21NSItemProviderWritingP", "assert"]
 - ["So21NSItemProviderWritingP", "init"]
 - !private ["So8NSObjectC", "CAMediaTimingFunction"]
 - !private ["So8NSObjectC", "CAMediaTimingFunctionName"]
@@ -193,10 +248,12 @@ depends-member:
 - !private ["So8NSObjectC", "CATransitionType"]
 - ["So8NSObjectC", "CFTimeInterval"]
 - ["So8NSObjectC", "CGFloat"]
+- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "Set"]
 - ["So8NSObjectC", "UIEvent"]
 - ["So8NSObjectC", "UITouch"]
 - !private ["So8NSObjectC", "add"]
+- !private ["So8NSObjectC", "assert"]
 - !private ["So8NSObjectC", "cornerRadius"]
 - !private ["So8NSObjectC", "duration"]
 - ["So8NSObjectC", "fadeTransition"]
@@ -212,7 +269,9 @@ depends-member:
 - !private ["So8NSObjectP", "CAMediaTimingFunctionName"]
 - !private ["So8NSObjectP", "CATransition"]
 - !private ["So8NSObjectP", "CATransitionType"]
+- !private ["So8NSObjectP", "CGFloat"]
 - !private ["So8NSObjectP", "add"]
+- !private ["So8NSObjectP", "assert"]
 - !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "duration"]
 - ["So8NSObjectP", "init"]
@@ -222,22 +281,34 @@ depends-member:
 - !private ["So8NSObjectP", "timingFunction"]
 - !private ["So8NSObjectP", "touchesBegan"]
 - !private ["So8NSObjectP", "type"]
+- !private ["So14NSSecureCodingP", "CGFloat"]
 - !private ["So14NSSecureCodingP", "add"]
+- !private ["So14NSSecureCodingP", "assert"]
 - !private ["So14NSSecureCodingP", "cornerRadius"]
 - !private ["So14NSSecureCodingP", "duration"]
 - ["So14NSSecureCodingP", "init"]
 - !private ["So14NSSecureCodingP", "masksToBounds"]
 - !private ["So14NSSecureCodingP", "timingFunction"]
 - !private ["So14NSSecureCodingP", "type"]
+- !private ["s7NumericP", "init"]
 - ["10money_mapp8PurchaseV", "Double"]
 - ["10money_mapp8PurchaseV", "String"]
 - ["10money_mapp8PurchaseV", "date_of_purchase"]
 - ["10money_mapp8PurchaseV", "init"]
 - ["10money_mapp8PurchaseV", "name"]
 - ["10money_mapp8PurchaseV", "price"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s16RawRepresentableP", "easeInEaseOut"]
 - !private ["s16RawRepresentableP", "fade"]
 - !private ["s16RawRepresentableP", "rawValue"]
+- !private ["s8SequenceP", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s10StrideableP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "CAMediaTimingFunction"]
 - !private ["So29UIAccessibilityIdentificationP", "CAMediaTimingFunctionName"]
 - !private ["So29UIAccessibilityIdentificationP", "CATransition"]
@@ -264,6 +335,9 @@ depends-member:
 - ["So16UICollectionViewC", "UITouch"]
 - !private ["So16UICollectionViewC", "next"]
 - ["So16UICollectionViewC", "touchesBegan"]
+- !private ["So7UIColorC", "CGFloat"]
+- ["So7UIColorC", "Int"]
+- !private ["So7UIColorC", "assert"]
 - ["So7UIColorC", "init"]
 - !private ["So17UICoordinateSpaceP", "CAMediaTimingFunction"]
 - !private ["So17UICoordinateSpaceP", "CAMediaTimingFunctionName"]
@@ -365,6 +439,8 @@ depends-member:
 - !private ["So6UIViewC", "next"]
 - ["So6UIViewC", "roundCorners"]
 - ["So6UIViewC", "touchesBegan"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CAMediaTimingFunction"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CAMediaTimingFunctionName"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CATransition"]
@@ -372,12 +448,21 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "next"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesBegan"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "CGFloat"]
+- !private ["s26_ExpressibleByColorLiteralP", "assert"]
 - ["s26_ExpressibleByColorLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CAMediaTimingFunction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CAMediaTimingFunctionName"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CATransition"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CATransitionType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "add"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "assert"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "duration"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -389,11 +474,15 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "type"]
 - !private ["s21_ObjectiveCBridgeableP", "easeInEaseOut"]
 - !private ["s21_ObjectiveCBridgeableP", "fade"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "rawValue"]
 - !private ["s20_SwiftNewtypeWrapperP", "easeInEaseOut"]
 - !private ["s20_SwiftNewtypeWrapperP", "fade"]
 - !private ["s20_SwiftNewtypeWrapperP", "rawValue"]
+- !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "s19BinaryFloatingPointP"
 - !private "So8CAActionP"
 - !private "So11CAAnimationC"
 - !private "So7CALayerC"
@@ -403,13 +492,28 @@ depends-nominal:
 - !private "So25CAMediaTimingFunctionNamea"
 - !private "So12CATransitionC"
 - !private "So16CATransitionTypea"
+- !private "12CoreGraphics7CGFloatV"
 - "s7CVarArgP"
 - "10money_mapp6CanvasV"
 - "10money_mapp8CategoryV"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s13FloatingPointP"
 - "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
@@ -417,8 +521,18 @@ depends-nominal:
 - "So8NSObjectC"
 - "So8NSObjectP"
 - "So14NSSecureCodingP"
+- !private "s7NumericP"
 - "10money_mapp8PurchaseV"
+- !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "s13SignedNumericP"
+- !private "s12StaticStringV"
+- !private "s10StrideableP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
@@ -439,11 +553,19 @@ depends-nominal:
 - !private "So18UITraitEnvironmentP"
 - !private "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - "s26_ExpressibleByColorLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
@@ -470,4 +592,4 @@ depends-external:
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b8a24c5ae6ab77ea102fd66b4b6e5e68"
+interface-hash: "e45e92bc15e1b29fc930e0fb9d9c480c"

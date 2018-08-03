@@ -16,9 +16,11 @@ provides-dynamic-lookup:
 - "viewDidLoad"
 - "viewWillAppear"
 depends-top-level:
+- !private "*"
 - !private "-"
 - !private "..<"
 - !private "/"
+- !private "<"
 - !private "=="
 - "AssignmentPrecedence"
 - "Bool"
@@ -54,6 +56,7 @@ depends-top-level:
 - "UIView"
 - "UIViewController"
 - !private "print"
+- !private "~="
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
@@ -122,6 +125,7 @@ depends-member:
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "borderColor"]
 - !private ["s7CVarArgP", "borderWidth"]
+- !private ["s7CVarArgP", "budgetStatusColor"]
 - !private ["s7CVarArgP", "categories"]
 - !private ["s7CVarArgP", "categories_vc"]
 - !private ["s7CVarArgP", "category"]
@@ -188,6 +192,10 @@ depends-member:
 - ["s7CVarArgP", "viewForZooming"]
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
 - !private ["s7CVarArgP", "viewWillAppear"]
+- !private ["10money_mapp6CanvasV", "blush"]
+- !private ["10money_mapp6CanvasV", "golden_sand"]
+- !private ["10money_mapp6CanvasV", "jellybean_green"]
+- !private ["10money_mapp6CanvasV", "marshmallow"]
 - !private ["10money_mapp6CanvasV", "sky_blue"]
 - !private ["10money_mapp6CanvasV", "watermelon_red"]
 - ["10money_mapp12CategoriesVCC", "Bool"]
@@ -211,6 +219,7 @@ depends-member:
 - ["10money_mapp12CategoriesVCC", "UITabBar"]
 - ["10money_mapp12CategoriesVCC", "UITabBarItem"]
 - ["10money_mapp12CategoriesVCC", "UIView"]
+- ["10money_mapp12CategoriesVCC", "budgetStatusColor"]
 - ["10money_mapp12CategoriesVCC", "categories"]
 - ["10money_mapp12CategoriesVCC", "category_to_delete"]
 - ["10money_mapp12CategoriesVCC", "collectionView"]
@@ -253,10 +262,12 @@ depends-member:
 - ["10money_mapp12CategoriesVCC", "viewForZooming"]
 - ["10money_mapp12CategoriesVCC", "viewForZoomingInScrollView"]
 - ["10money_mapp12CategoriesVCC", "viewWillAppear"]
+- !private ["10money_mapp8CategoryV", "budget"]
 - !private ["10money_mapp8CategoryV", "id"]
 - !private ["10money_mapp8CategoryV", "image"]
 - !private ["10money_mapp8CategoryV", "init"]
 - !private ["10money_mapp8CategoryV", "name"]
+- !private ["10money_mapp8CategoryV", "running_total"]
 - !private ["10money_mapp26CategoryCollectionViewCellC", "addLongPress"]
 - !private ["10money_mapp26CategoryCollectionViewCellC", "addTap"]
 - !private ["10money_mapp26CategoryCollectionViewCellC", "category"]
@@ -294,6 +305,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "borderColor"]
 - !private ["s28CustomDebugStringConvertibleP", "borderWidth"]
+- !private ["s28CustomDebugStringConvertibleP", "budgetStatusColor"]
 - !private ["s28CustomDebugStringConvertibleP", "categories"]
 - !private ["s28CustomDebugStringConvertibleP", "categories_vc"]
 - !private ["s28CustomDebugStringConvertibleP", "category"]
@@ -410,6 +422,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "borderColor"]
 - !private ["s23CustomStringConvertibleP", "borderWidth"]
+- !private ["s23CustomStringConvertibleP", "budgetStatusColor"]
 - !private ["s23CustomStringConvertibleP", "categories"]
 - !private ["s23CustomStringConvertibleP", "categories_vc"]
 - !private ["s23CustomStringConvertibleP", "category"]
@@ -538,6 +551,7 @@ depends-member:
 - !private ["s9EquatableP", "backgroundColor"]
 - !private ["s9EquatableP", "borderColor"]
 - !private ["s9EquatableP", "borderWidth"]
+- !private ["s9EquatableP", "budgetStatusColor"]
 - !private ["s9EquatableP", "categories"]
 - !private ["s9EquatableP", "categories_vc"]
 - !private ["s9EquatableP", "category"]
@@ -653,6 +667,7 @@ depends-member:
 - !private ["s8HashableP", "backgroundColor"]
 - !private ["s8HashableP", "borderColor"]
 - !private ["s8HashableP", "borderWidth"]
+- !private ["s8HashableP", "budgetStatusColor"]
 - !private ["s8HashableP", "categories"]
 - !private ["s8HashableP", "categories_vc"]
 - !private ["s8HashableP", "category"]
@@ -751,6 +766,7 @@ depends-member:
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "borderColor"]
 - !private ["So8NSCodingP", "borderWidth"]
+- !private ["So8NSCodingP", "budgetStatusColor"]
 - !private ["So8NSCodingP", "categories"]
 - !private ["So8NSCodingP", "categories_vc"]
 - !private ["So8NSCodingP", "category"]
@@ -824,6 +840,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIImage"]
 - !private ["So26NSExtensionRequestHandlingP", "UITabBarItem"]
 - ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "budgetStatusColor"]
 - !private ["So26NSExtensionRequestHandlingP", "categories"]
 - !private ["So26NSExtensionRequestHandlingP", "categories_vc"]
 - !private ["So26NSExtensionRequestHandlingP", "category"]
@@ -897,6 +914,7 @@ depends-member:
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "borderColor"]
 - !private ["So8NSObjectC", "borderWidth"]
+- ["So8NSObjectC", "budgetStatusColor"]
 - ["So8NSObjectC", "categories"]
 - !private ["So8NSObjectC", "categories_vc"]
 - !private ["So8NSObjectC", "category"]
@@ -981,6 +999,7 @@ depends-member:
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "borderColor"]
 - !private ["So8NSObjectP", "borderWidth"]
+- !private ["So8NSObjectP", "budgetStatusColor"]
 - !private ["So8NSObjectP", "categories"]
 - !private ["So8NSObjectP", "categories_vc"]
 - !private ["So8NSObjectP", "category"]
@@ -1151,6 +1170,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addLongPress"]
 - !private ["So21UIAppearanceContainerP", "addTap"]
+- !private ["So21UIAppearanceContainerP", "budgetStatusColor"]
 - !private ["So21UIAppearanceContainerP", "categories"]
 - !private ["So21UIAppearanceContainerP", "categories_vc"]
 - !private ["So21UIAppearanceContainerP", "category"]
@@ -1248,6 +1268,7 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "UIImage"]
 - !private ["So26UICollectionViewDataSourceP", "UITabBarItem"]
 - ["So26UICollectionViewDataSourceP", ""]
+- !private ["So26UICollectionViewDataSourceP", "budgetStatusColor"]
 - !private ["So26UICollectionViewDataSourceP", "categories"]
 - !private ["So26UICollectionViewDataSourceP", "category_to_delete"]
 - ["So26UICollectionViewDataSourceP", "collectionView"]
@@ -1290,6 +1311,7 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "UIImage"]
 - !private ["So24UICollectionViewDelegateP", "UITabBarItem"]
 - ["So24UICollectionViewDelegateP", ""]
+- !private ["So24UICollectionViewDelegateP", "budgetStatusColor"]
 - !private ["So24UICollectionViewDelegateP", "categories"]
 - !private ["So24UICollectionViewDelegateP", "category_to_delete"]
 - ["So24UICollectionViewDelegateP", "collectionView"]
@@ -1332,6 +1354,7 @@ depends-member:
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "UIImage"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "UITabBarItem"]
 - ["So34UICollectionViewDelegateFlowLayoutP", ""]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "budgetStatusColor"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "categories"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "category_to_delete"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "collectionView"]
@@ -1381,6 +1404,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIImage"]
 - !private ["So18UIContentContainerP", "UITabBarItem"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "budgetStatusColor"]
 - !private ["So18UIContentContainerP", "categories"]
 - !private ["So18UIContentContainerP", "categories_vc"]
 - !private ["So18UIContentContainerP", "category"]
@@ -1484,6 +1508,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addLongPress"]
 - !private ["So18UIFocusEnvironmentP", "addTap"]
+- !private ["So18UIFocusEnvironmentP", "budgetStatusColor"]
 - !private ["So18UIFocusEnvironmentP", "categories"]
 - !private ["So18UIFocusEnvironmentP", "categories_vc"]
 - !private ["So18UIFocusEnvironmentP", "category"]
@@ -1607,6 +1632,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addLongPress"]
 - !private ["So30UIPasteConfigurationSupportingP", "addTap"]
+- !private ["So30UIPasteConfigurationSupportingP", "budgetStatusColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "categories"]
 - !private ["So30UIPasteConfigurationSupportingP", "categories_vc"]
 - !private ["So30UIPasteConfigurationSupportingP", "category"]
@@ -1686,6 +1712,7 @@ depends-member:
 - ["So11UIResponderC", "UIView"]
 - !private ["So11UIResponderC", "addLongPress"]
 - !private ["So11UIResponderC", "addTap"]
+- ["So11UIResponderC", "budgetStatusColor"]
 - ["So11UIResponderC", "categories"]
 - !private ["So11UIResponderC", "categories_vc"]
 - !private ["So11UIResponderC", "category"]
@@ -1758,6 +1785,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addLongPress"]
 - !private ["So30UIResponderStandardEditActionsP", "addTap"]
+- !private ["So30UIResponderStandardEditActionsP", "budgetStatusColor"]
 - !private ["So30UIResponderStandardEditActionsP", "categories"]
 - !private ["So30UIResponderStandardEditActionsP", "categories_vc"]
 - !private ["So30UIResponderStandardEditActionsP", "category"]
@@ -1832,6 +1860,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "UIImage"]
 - !private ["So20UIScrollViewDelegateP", "UITabBarItem"]
 - ["So20UIScrollViewDelegateP", ""]
+- !private ["So20UIScrollViewDelegateP", "budgetStatusColor"]
 - !private ["So20UIScrollViewDelegateP", "categories"]
 - !private ["So20UIScrollViewDelegateP", "category"]
 - !private ["So20UIScrollViewDelegateP", "category_to_delete"]
@@ -1887,6 +1916,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIImage"]
 - !private ["So16UIStateRestoringP", "UITabBarItem"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "budgetStatusColor"]
 - !private ["So16UIStateRestoringP", "categories"]
 - !private ["So16UIStateRestoringP", "categories_vc"]
 - !private ["So16UIStateRestoringP", "category"]
@@ -1938,6 +1968,7 @@ depends-member:
 - !private ["So16UITabBarDelegateP", "UIImage"]
 - !private ["So16UITabBarDelegateP", "UITabBarItem"]
 - ["So16UITabBarDelegateP", ""]
+- !private ["So16UITabBarDelegateP", "budgetStatusColor"]
 - !private ["So16UITabBarDelegateP", "categories"]
 - !private ["So16UITabBarDelegateP", "category_to_delete"]
 - ["So16UITabBarDelegateP", "collectionView"]
@@ -1986,6 +2017,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addLongPress"]
 - !private ["So18UITraitEnvironmentP", "addTap"]
+- !private ["So18UITraitEnvironmentP", "budgetStatusColor"]
 - !private ["So18UITraitEnvironmentP", "categories"]
 - !private ["So18UITraitEnvironmentP", "categories_vc"]
 - !private ["So18UITraitEnvironmentP", "category"]
@@ -2053,6 +2085,7 @@ depends-member:
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addLongPress"]
 - !private ["So23UIUserActivityRestoringP", "addTap"]
+- !private ["So23UIUserActivityRestoringP", "budgetStatusColor"]
 - !private ["So23UIUserActivityRestoringP", "categories"]
 - !private ["So23UIUserActivityRestoringP", "categories_vc"]
 - !private ["So23UIUserActivityRestoringP", "category"]
@@ -2152,6 +2185,7 @@ depends-member:
 - ["So16UIViewControllerC", "UITabBarItem"]
 - ["So16UIViewControllerC", "UIView"]
 - ["So16UIViewControllerC", ""]
+- ["So16UIViewControllerC", "budgetStatusColor"]
 - ["So16UIViewControllerC", "categories"]
 - !private ["So16UIViewControllerC", "categories_vc"]
 - !private ["So16UIViewControllerC", "category"]
@@ -2245,6 +2279,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "borderColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "borderWidth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "budgetStatusColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "categories"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "categories_vc"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "category"]
@@ -2483,4 +2518,4 @@ depends-external:
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8d1021f4961ecaa2e3143e9e17f170c9"
+interface-hash: "672371527e5701c9f559cffb56b6278b"

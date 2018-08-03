@@ -1,6 +1,0 @@
-framework module Pods_M_Cam_Beta {
-  umbrella header "Pods-M-Cam Beta-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -28,8 +28,36 @@ struct Purchase {
 
 // UI Colors
 struct Canvas {
-    static let watermelon_red = UIColor(red: 228, green: 88, blue: 88, alpha: 1)
-    static let sky_blue = UIColor(red: 150, green: 225, blue: 255, alpha: 1)
+    static let watermelon_red = UIColor(red: 228, green: 88, blue: 88)
+    static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
+    static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)
+    static let marshmallow = UIColor(red: 255, green: 255, blue: 255)
+    static let grapefruit = UIColor(red: 255, green: 127, blue: 80)
+    static let blush = UIColor(red: 255, green: 99, blue: 72)
+    static let prestige_blue = UIColor(red: 255, green: 99, blue: 72)
+    static let golden_sand = UIColor(red: 236, green: 204, blue: 104)
+    static let french_sky_blue = UIColor(red: 112, green: 161, blue: 255)
+    static let artificial_watermelon = UIColor(red: 255, green: 107, blue: 129)
+    static let not_tiffany_blue = UIColor(red: 30, green: 144, blue: 255)
+}
+
+// MARK: UIColor extension
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
 }
 
 // MARK : UIView Layout Modification

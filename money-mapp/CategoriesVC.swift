@@ -48,16 +48,16 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // Default purchase categories (for testing)
     func initializeCategories() {
-        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: nil, running_total: 0))
-        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: nil, running_total: 0))
-        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0))
+        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25))
+        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70))
         categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0))
         categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0))
         categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0))
     }
     
     func formatViews() {
-        collection_view.layer.backgroundColor = Canvas.watermelon_red.cgColor
+        collection_view.layer.backgroundColor = Canvas.marshmallow.cgColor
     }
     
     func formatCells() {
@@ -102,6 +102,25 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
+    
+    // Helper function: determines cell color based on remaining budget
+    /* 0 = default, 1 = green, 2 = orange, 3 = red */
+    func budgetStatusColor(_ category: Category) -> Int {
+        // first, check that a budget has been instantiated
+        // TODO: prompt user for budget
+        guard let budget = category.budget else { return 0 }
+        
+        if category.running_total < budget / 2 {
+            return 1
+        } else if category.running_total < budget * 0.8 {
+            return 2
+        } else {
+            return 3
+        }
+    }
+    
+    // TODO: make a function that checks for spending past your limit
+    // If you have only $20 left in your budget, a separate view controller pops up with a warning message
 
     // Initializes a category collection view cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -117,6 +136,18 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = Canvas.watermelon_red.cgColor
         cell.roundCorners()
+        
+        // set the cell's color based on the current spending amount
+        switch budgetStatusColor(cell.category) {
+            case 1:
+                cell.layer.backgroundColor = Canvas.jellybean_green.cgColor
+            case 2:
+                cell.layer.backgroundColor = Canvas.golden_sand.cgColor
+            case 3:
+                cell.layer.backgroundColor = Canvas.blush.cgColor
+            default:
+                print("Default Storyboard color--no budget instantiated")
+        }
         
         // modify cell member variables
         cell.parent = self
