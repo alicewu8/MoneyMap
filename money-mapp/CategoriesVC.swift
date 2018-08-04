@@ -10,22 +10,23 @@ import UIKit
 
 class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
+    // MARK: collection view
     @IBOutlet weak var collection_view: UICollectionView!
+    
+    // MARK: views
     @IBOutlet weak var title_view: UIView!
+    
+    // MARK: tab bar
     @IBOutlet weak var tab_bar: UITabBar!
     
+    // array of purchase categories
     var categories : [Category] = []
     
     // tracks the id of the category to delete
     var category_to_delete : Int?
-    //let categories = ["Clothes", "Eating Out", "Groceries", "Coffee", "Gas", "Gifts"]
-    
-    // Array of images from Assets folder
-    //var category_images: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // This view controller is the delegate and datasource for the collection view
         collection_view.delegate = self
@@ -41,19 +42,18 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         super.viewWillAppear(animated)
     }
     
-    // TODO: do I need this? Status bar time/date wouldn't show
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     // Default purchase categories (for testing)
     func initializeCategories() {
-        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0))
-        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25))
-        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70))
-        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0))
-        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0))
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0))
+        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0, purchases: []))
+        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
+        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: []))
+        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
     func formatViews() {
@@ -87,13 +87,15 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             let delete_cat = segue.destination as! ConfirmDeleteCategory
             delete_cat.categories_vc = self
         } else if segue.identifier == "to_expense_recording" {
-            //let expense = segue.destination as! ExpensesVC
             guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
             // track the category selected and pass information to next view controller
             let expense_category = categories[selected_row_index]
             let expense_vc = segue.destination as! ExpensesVC
             expense_vc.category = expense_category
+        } else if segue.identifier == "to_add_budget" {
+            let add_budget = segue.destination as! AddBudgetVC
+            add_budget.categories_vc = self
         }
     }
     
@@ -220,4 +222,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
                 print("tab bar")
         }
     }
+    
+    // Add budget to a category
+    
 }

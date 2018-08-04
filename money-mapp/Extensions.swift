@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 // Represents a purchase category
+// TODO: might have too much data
 struct Category {
     var name : String
     var image : UIImage
@@ -17,12 +18,13 @@ struct Category {
     var selected = false
     var budget : Double?
     var running_total : Double
+    var purchases : [Purchase]
 }
 
 // Represents a purchased item
 struct Purchase {
     let name : String
-    let price : Double
+    let cost : Double
     let date_of_purchase : String
 }
 

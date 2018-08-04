@@ -9,10 +9,13 @@
 import UIKit
 
 // Controls the collection view cells that represent purchase categories
-class CategoryCollectionViewCell: UICollectionViewCell {
+class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var category_image_view: UIImageView!
     @IBOutlet weak var category_label: UILabel!
+    
+    // TODO: set the budget_button tag to the category ID
+    @IBOutlet weak var budget_button: UIButton!
     @IBOutlet weak var delete_button: UIButton!
     
     var parent : CategoriesVC!

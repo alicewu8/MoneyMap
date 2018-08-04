@@ -35,6 +35,64 @@
 			<key>uniqueIdentifier</key>
 			<string>06353B9A-4E1A-4C30-B984-27CC259363D3</string>
 		</dict>
+		<key>57F95E49-EB9D-458C-855B-DAE0C410C47F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>57F95E49-EB9D-458C-855B-DAE0C410C47F.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Clean money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555094168.62795496</real>
+			<key>timeStoppedRecording</key>
+			<real>555094168.75972295</real>
+			<key>title</key>
+			<string>Clean money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>57F95E49-EB9D-458C-855B-DAE0C410C47F</string>
+		</dict>
+		<key>D040D414-367C-421E-A4F9-E9DB4327A851</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D040D414-367C-421E-A4F9-E9DB4327A851.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Clean money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555094405.63358998</real>
+			<key>timeStoppedRecording</key>
+			<real>555094405.78462303</real>
+			<key>title</key>
+			<string>Clean money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>D040D414-367C-421E-A4F9-E9DB4327A851</string>
+		</dict>
 	</dict>
 </dict>
 </plist>
