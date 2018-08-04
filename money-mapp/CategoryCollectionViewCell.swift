@@ -32,6 +32,29 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         return layoutAttributes
     }
     
+    func initialize() {
+        delete_button.isHidden = true
+        
+        roundCorners()
+        updateBudgetText()
+        
+        budget_button.layer.borderWidth = 2
+        budget_button.layer.borderColor = Canvas.marshmallow.cgColor
+        budget_button.roundCorners(7.5)
+        
+        // add gesture recognizers
+        addTap()
+        addLongPress()
+    }
+    
+    func updateBudgetText() {
+        if category.budget != nil {
+            print(category)
+            // format string to two decimal places
+            budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
+        }
+    }
+    
     // adds a tap gesture recognizer to this instance to forwards touch to CategoriesVC
     func addTap() {
         self.isUserInteractionEnabled = true
@@ -59,6 +82,10 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
     
     @objc func sendParent() {
         parent.collectionView(parent.collection_view, didSelectItemAt: index_path)
+    }
+    
+    @IBAction func addBudgetPressed(_ sender: Any) {
+        parent.performSegue(withIdentifier: "to_add_budget", sender: self)
     }
     
     

@@ -22,6 +22,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // array of purchase categories
     var categories : [Category] = []
     
+    // represents the collection view cell currently generated
+    var current_cell : CategoryCollectionViewCell!
+    
     // tracks the id of the category to delete
     var category_to_delete : Int?
     
@@ -96,6 +99,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         } else if segue.identifier == "to_add_budget" {
             let add_budget = segue.destination as! AddBudgetVC
             add_budget.categories_vc = self
+            add_budget.category_cell = current_cell
         }
     }
     
@@ -121,10 +125,22 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         }
     }
     
+    // update the budget for the selected category
+    // bug fix: search by name instead of ID to prevent falsely assigning budgets
+    func updateBudget(_ category: String, _ budget: Double) {
+        for i in 0..<categories.count {
+            if categories[i].name == category {
+                categories[i].budget = budget
+            }
+        }
+        collection_view.reloadData()
+    }
+    
     // TODO: make a function that checks for spending past your limit
     // If you have only $20 left in your budget, a separate view controller pops up with a warning message
 
     // Initializes a category collection view cell
+    // TODO! Move the UI edits to a function in CategoryCollectionViewCell.swift
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category_cell", for: indexPath) as! CategoryCollectionViewCell
         
@@ -133,9 +149,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         cell.category_label.text = cell_data.name
         cell.category_image_view.image = cell_data.image
         cell.category = cell_data
-        cell.delete_button.isHidden = true
         
-        cell.roundCorners()
+        cell.initialize()
         
         // set the cell's color based on the current spending amount
         switch budgetStatusColor(cell.category) {
@@ -153,9 +168,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         cell.parent = self
         cell.index_path = indexPath
         
-        // add gesture recognizers
-        cell.addTap()
-        cell.addLongPress()
+        // copy the cell to the member variable
+        current_cell = cell
         
         return cell
     }
@@ -222,7 +236,5 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
                 print("tab bar")
         }
     }
-    
-    // Add budget to a category
     
 }
