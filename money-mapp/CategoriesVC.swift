@@ -57,7 +57,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     }
     
     func formatViews() {
-        collection_view.layer.backgroundColor = Canvas.marshmallow.cgColor
+        collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
     }
     
     func formatCells() {
@@ -133,18 +133,16 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         cell.category = cell_data
         cell.delete_button.isHidden = true
         
-        cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = Canvas.watermelon_red.cgColor
         cell.roundCorners()
         
         // set the cell's color based on the current spending amount
         switch budgetStatusColor(cell.category) {
             case 1:
-                cell.layer.backgroundColor = Canvas.jellybean_green.cgColor
+                cell.layer.backgroundColor = Canvas.aurora_green.cgColor
             case 2:
-                cell.layer.backgroundColor = Canvas.golden_sand.cgColor
+                cell.layer.backgroundColor = Canvas.peach.cgColor
             case 3:
-                cell.layer.backgroundColor = Canvas.blush.cgColor
+                cell.layer.backgroundColor = Canvas.lipstick.cgColor
             default:
                 print("Default Storyboard color--no budget instantiated")
         }
@@ -164,7 +162,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
         
-        cell.layer.borderColor = Canvas.sky_blue.cgColor
+        cell.layer.borderColor = Canvas.golden_sand.cgColor
         cell.layer.borderWidth = 2
         
         // segue into the VC responsible for expense tracking
@@ -208,6 +206,18 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // MARK: tab bar
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("tab bar! Work on this!")
+        // represents the tab bar item the user selected
+        let selected_ind = tab_bar.items?.index(of: item)
+        
+        switch selected_ind {
+            case 0:
+                print("Expense recording")
+            case 1:
+                print("Analyze spending")
+            case 2:
+                print("Settings: change UI, adjust variables, etc.")
+            default:
+                print("tab bar")
+        }
     }
 }

@@ -108,16 +108,23 @@ depends-member:
 - !private ["s7CVarArgP", "type"]
 - ["10money_mapp6CanvasV", "UIColor"]
 - ["10money_mapp6CanvasV", "artificial_watermelon"]
+- ["10money_mapp6CanvasV", "aurora_green"]
 - ["10money_mapp6CanvasV", "blush"]
+- ["10money_mapp6CanvasV", "cheerful_green"]
+- ["10money_mapp6CanvasV", "emerald"]
 - ["10money_mapp6CanvasV", "french_sky_blue"]
 - ["10money_mapp6CanvasV", "golden_sand"]
 - ["10money_mapp6CanvasV", "grapefruit"]
 - ["10money_mapp6CanvasV", "init"]
 - ["10money_mapp6CanvasV", "jellybean_green"]
+- ["10money_mapp6CanvasV", "lipstick"]
 - ["10money_mapp6CanvasV", "marshmallow"]
+- ["10money_mapp6CanvasV", "melon_melody"]
 - ["10money_mapp6CanvasV", "not_tiffany_blue"]
+- ["10money_mapp6CanvasV", "peach"]
 - ["10money_mapp6CanvasV", "prestige_blue"]
 - ["10money_mapp6CanvasV", "sky_blue"]
+- ["10money_mapp6CanvasV", "super_light_gray"]
 - ["10money_mapp6CanvasV", "watermelon_red"]
 - ["10money_mapp8CategoryV", "Double"]
 - ["10money_mapp8CategoryV", "Int"]
@@ -592,4 +599,4 @@ depends-external:
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Users/aliceywu/Downloads/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e45e92bc15e1b29fc930e0fb9d9c480c"
+interface-hash: "14ecb1174ddc816a1e9a28300bbfb3b5"

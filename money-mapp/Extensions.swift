@@ -26,19 +26,37 @@ struct Purchase {
     let date_of_purchase : String
 }
 
-// UI Colors
+// UI Colors 
 struct Canvas {
+    // Reds
     static let watermelon_red = UIColor(red: 228, green: 88, blue: 88)
-    static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
-    static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)
-    static let marshmallow = UIColor(red: 255, green: 255, blue: 255)
     static let grapefruit = UIColor(red: 255, green: 127, blue: 80)
     static let blush = UIColor(red: 255, green: 99, blue: 72)
     static let prestige_blue = UIColor(red: 255, green: 99, blue: 72)
-    static let golden_sand = UIColor(red: 236, green: 204, blue: 104)
-    static let french_sky_blue = UIColor(red: 112, green: 161, blue: 255)
+    static let lipstick = UIColor(red: 229, green: 80, blue: 57)
     static let artificial_watermelon = UIColor(red: 255, green: 107, blue: 129)
+    
+    // Yellows
+    static let golden_sand = UIColor(red: 236, green: 204, blue: 104)
+    
+    // Oranges
+    static let peach = UIColor(red: 250, green: 152, blue: 58)
+    static let melon_melody = UIColor(red: 250, green: 152, blue: 58)
+
+    // Greens
+    static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)
+    static let cheerful_green = UIColor(red: 123, green: 237, blue: 159)
+    static let aurora_green = UIColor(red: 120, green: 224, blue: 143)
+    static let emerald = UIColor(red: 46, green: 204, blue: 113)
+
+    // Blues
+    static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
+    static let french_sky_blue = UIColor(red: 112, green: 161, blue: 255)
     static let not_tiffany_blue = UIColor(red: 30, green: 144, blue: 255)
+
+    // Neutrals
+    static let marshmallow = UIColor(red: 255, green: 255, blue: 255)
+    static let super_light_gray = UIColor(red: 223, green: 228, blue: 234)
 }
 
 // MARK: UIColor extension

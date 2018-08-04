@@ -1,10 +1,10 @@
 version: "Apple Swift version 4.2 (swiftlang-1000.0.16.9 clang-1000.10.25.3)"
 options: "6fa9b0499a7afd7114168b9b15b48dab"
-build_time: [1533317210, 499873000]
+build_time: [1533351813, 192543000]
 inputs:
   "/Users/aliceywu/money-mapp/money-mapp/CategoryCollectionViewCell.swift": [1533261139, 0]
   "/Users/aliceywu/money-mapp/money-mapp/ExpensesVC.swift": [1533315124, 0]
-  "/Users/aliceywu/money-mapp/money-mapp/CategoriesVC.swift": [1533317210, 0]
+  "/Users/aliceywu/money-mapp/money-mapp/CategoriesVC.swift": [1533317729, 0]
   "/Users/aliceywu/money-mapp/money-mapp/AppDelegate.swift": [1531269987, 0]
-  "/Users/aliceywu/money-mapp/money-mapp/Extensions.swift": [1533317148, 0]
+  "/Users/aliceywu/money-mapp/money-mapp/Extensions.swift": [1533317986, 0]
   "/Users/aliceywu/money-mapp/money-mapp/ConfirmDeleteCategory.swift": [1533263004, 0]
