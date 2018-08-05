@@ -11,4 +11,8 @@ import UIKit
 
 class StatsVC : UIViewController {
     
+    // changes status bar contents to white instead of default black
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

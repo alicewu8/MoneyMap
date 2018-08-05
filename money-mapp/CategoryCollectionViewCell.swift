@@ -62,7 +62,6 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         budget_button.layer.borderColor = Canvas.marshmallow.cgColor
         budget_button.roundCorners(7.5)
         
-        // TODO! FIXME! This line is going wrong! The value is nil but still going into the conditional!
         // FIXED: added check for category.budget == nil
         if self.category.budget == nil {
             print(category)
@@ -73,6 +72,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
             budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
         }
         
+        // set the background color of the cell based on the budget remaining
         if self.category.running_total == nil {
             self.layer.backgroundColor = Canvas.golden_sand.cgColor
         } else {
@@ -117,6 +117,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
     }
     
     @objc func sendParent() {
+        parent.current_cell = self
         parent.collectionView(parent.collection_view, didSelectItemAt: index_path)
     }
     

@@ -43,8 +43,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        collection_view.reloadData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -92,12 +90,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             let delete_cat = segue.destination as! ConfirmDeleteCategory
             delete_cat.categories_vc = self
         } else if segue.identifier == "to_expense_recording" {
-            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
+//            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
             // track the category selected and pass information to next view controller
-            let expense_category = categories[selected_row_index]
+            let expense_category = current_cell.category
             let expense_vc = segue.destination as! ExpensesVC
             expense_vc.category = expense_category
+            expense_vc.categories_vc = self
         } else if segue.identifier == "to_add_budget" {
             let add_budget = segue.destination as! AddBudgetVC
             add_budget.categories_vc = self

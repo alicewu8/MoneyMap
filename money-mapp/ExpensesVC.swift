@@ -39,6 +39,8 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         purchases_collection_view.delegate = self
         purchases_collection_view.dataSource = self
         
+        purchases_collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
+        
         // add the custom collection view cells to this collection view
         purchases_collection_view.register(UINib(nibName: "PurchasesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PurchaseCollectionViewCell.reuse_id)
         purchases_collection_view.register(UINib(nibName: "AddPurchaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id)
@@ -99,5 +101,8 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     // return to the category selection screen
     @IBAction func doneEditing(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        
+        // reverts the border color
+        categories_vc.collection_view.reloadData()
     }
 }
