@@ -13,6 +13,9 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     var categories_vc : CategoriesVC!
     var category : Category!
     
+    var cell_width = 140
+    var cell_height = 170
+    
     @IBOutlet weak var message_view: UIView!
     @IBOutlet weak var purchases_collection_view: UICollectionView!
     @IBOutlet weak var done_btn: UIButton!
@@ -55,34 +58,42 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     // MARK: collection view
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: cell_width, height: cell_height)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // add an additional cell to be the add purchase cell
-        return category.purchases.count + 1
+        //return category?.purchases.count + 1
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // base case: no purchases
-        if category.purchases.count == 0 {
+        // FIXME: category is nil
+        //if category.purchases.count == 0 {
             let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
+        
+            add_cell.initialize(parent: self)
             //add_cell.initialize(parent: self)
             return add_cell
-        } else {
+        //} else {
             // store the index of this cell in the array
-            let index = indexPath.row
-            
-            // use a purchase collection view cell
-            if index <= category.purchases.count {
-                let purchase_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: PurchaseCollectionViewCell.reuse_id, for: indexPath) as! PurchaseCollectionViewCell
-                
-                //purchase_cell.initialize(category: category, parent: self)
-                
-                return purchase_cell
-            } else {
-                let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
-                
-                return add_cell
-            }
-        }
+//            let index = indexPath.row
+//
+//            // use a purchase collection view cell
+//            if index <= category.purchases.count {
+//                let purchase_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: PurchaseCollectionViewCell.reuse_id, for: indexPath) as! PurchaseCollectionViewCell
+//
+//                //purchase_cell.initialize(category: category, parent: self)
+//
+//                return purchase_cell
+//            } else {
+//                let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
+//
+//                return add_cell
+//            }
+//        }
     }
     
     // return to the category selection screen

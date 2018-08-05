@@ -47,6 +47,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         addLongPress()
     }
     
+    // FIXME: categories without budgets are displaying budgets
     func updateBudgetText() {
         if category.budget != nil {
             print(category)

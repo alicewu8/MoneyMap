@@ -10,12 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPurchaseCollectionViewCell" customModule="money_mapp" customModuleProvider="target">
-            <connections>
-                <outlet property="background_view" destination="RyU-SC-Pab" id="9gs-7A-p3H"/>
-                <outlet property="message_view" destination="RyU-SC-Pab" id="Ryj-yy-RR0"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPurchaseCollectionViewCell" customModule="money_mapp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddPurchaseCollectionViewCell" id="gTV-IL-0wX" customClass="AddPurchaseCollectionViewCell" customModule="money_mapp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="248" height="288"/>
@@ -31,41 +26,41 @@
                                 <rect key="frame" x="4" y="19" width="240" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hQX-Yy-sFl" secondAttribute="height" multiplier="1:1" constant="44" id="eDH-pf-vO1"/>
+                                    <constraint firstAttribute="height" constant="196" id="tyj-T6-Tzt"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyU-SC-Pab">
-                                <rect key="frame" x="5" y="230" width="238" height="44"/>
+                                <rect key="frame" x="5" y="218" width="238" height="62"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add purchase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hv-mn-m9p">
-                                        <rect key="frame" x="0.0" y="0.0" width="238" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchase" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="7hv-mn-m9p">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="62"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7hv-mn-m9p" secondAttribute="bottom" id="7Oc-LS-5Wc"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="height" secondItem="RyU-SC-Pab" secondAttribute="height" id="BZr-3U-p3T"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="centerY" secondItem="RyU-SC-Pab" secondAttribute="centerY" id="IIp-7c-j4d"/>
-                                    <constraint firstAttribute="trailing" secondItem="7hv-mn-m9p" secondAttribute="trailing" id="O5Q-nU-Ciz"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="leading" secondItem="RyU-SC-Pab" secondAttribute="leading" id="ktA-L0-uih"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="centerX" secondItem="RyU-SC-Pab" secondAttribute="centerX" id="lfX-Zx-2Mp"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="width" secondItem="RyU-SC-Pab" secondAttribute="width" id="r0f-9s-nHO"/>
-                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="top" secondItem="RyU-SC-Pab" secondAttribute="top" id="t2n-gT-i11"/>
+                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="leading" secondItem="RyU-SC-Pab" secondAttribute="leading" id="0x0-6a-Mqk"/>
+                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="top" secondItem="RyU-SC-Pab" secondAttribute="top" id="CxJ-5c-H39"/>
+                                    <constraint firstAttribute="trailing" secondItem="7hv-mn-m9p" secondAttribute="trailing" id="DoT-gP-iw5"/>
+                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="centerX" secondItem="RyU-SC-Pab" secondAttribute="centerX" id="Qfx-DB-gWn"/>
+                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="width" secondItem="RyU-SC-Pab" secondAttribute="width" id="WQK-Wo-aDu"/>
+                                    <constraint firstItem="7hv-mn-m9p" firstAttribute="height" secondItem="RyU-SC-Pab" secondAttribute="height" id="YZK-rM-NVo"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.66566262089999995" blue="0.63191391799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hQX-Yy-sFl" firstAttribute="top" secondItem="Sht-ho-xfn" secondAttribute="top" constant="19" id="ADq-jR-LYa"/>
                             <constraint firstAttribute="trailing" secondItem="RyU-SC-Pab" secondAttribute="trailing" constant="5" id="ItA-8N-Hr2"/>
-                            <constraint firstAttribute="bottom" secondItem="RyU-SC-Pab" secondAttribute="bottom" constant="14" id="QAc-hZ-Xjx"/>
+                            <constraint firstAttribute="bottom" secondItem="RyU-SC-Pab" secondAttribute="bottom" constant="8" id="QAc-hZ-Xjx"/>
                             <constraint firstItem="hQX-Yy-sFl" firstAttribute="leading" secondItem="Sht-ho-xfn" secondAttribute="leading" constant="4" id="WbJ-mw-xfO"/>
                             <constraint firstItem="RyU-SC-Pab" firstAttribute="leading" secondItem="Sht-ho-xfn" secondAttribute="leading" constant="5" id="hf5-s5-nv1"/>
                             <constraint firstAttribute="trailing" secondItem="hQX-Yy-sFl" secondAttribute="trailing" constant="4" id="l5d-mt-bxZ"/>
                             <constraint firstItem="RyU-SC-Pab" firstAttribute="centerX" secondItem="Sht-ho-xfn" secondAttribute="centerX" id="nuL-df-jLd"/>
+                            <constraint firstItem="RyU-SC-Pab" firstAttribute="top" secondItem="hQX-Yy-sFl" secondAttribute="bottom" constant="3" id="yuY-Ez-AJW"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -75,6 +70,7 @@
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="Sht-ho-xfn" secondAttribute="bottom" id="JjI-do-LKP"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Sht-ho-xfn" secondAttribute="trailing" id="TnU-Zf-DAz"/>
                 <constraint firstItem="Sht-ho-xfn" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="Ug1-io-nsx"/>
+                <constraint firstItem="RyU-SC-Pab" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="pwr-Dh-8hK"/>
                 <constraint firstItem="Sht-ho-xfn" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="wr3-CN-kmC"/>
                 <constraint firstItem="Sht-ho-xfn" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="zl1-iN-j9a"/>
             </constraints>

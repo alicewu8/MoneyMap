@@ -19,9 +19,22 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var purchase_name: UILabel!
     @IBOutlet weak var purchase_date: UILabel!
     
+    var parent : ExpensesVC!
+    var category : Category!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func initialize(category: Category, parent: ExpensesVC) {
+        self.parent = parent
+        self.category = category
+        
+        price_view.roundCorners(7.5)
+        
+        // TODO: the
+        
     }
 
 }
