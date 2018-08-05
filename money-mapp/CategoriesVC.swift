@@ -43,6 +43,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        collection_view.reloadData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -142,15 +144,11 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // Initializes a category collection view cell
     // TODO! Move the UI edits to a function in CategoryCollectionViewCell.swift
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let index_in_array = indexPath.row
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category_cell", for: indexPath) as! CategoryCollectionViewCell
         
-        // set the cell data and modify appearance
-        let cell_data = categories[indexPath.row]
-        cell.category_label.text = cell_data.name
-        cell.category_image_view.image = cell_data.image
-        cell.category = cell_data
-        
-        cell.initialize()
+        cell.initialize(categories[index_in_array], self)
         
         // set the cell's color based on the current spending amount
         switch budgetStatusColor(cell.category) {
@@ -165,7 +163,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         }
         
         // modify cell member variables
-        cell.parent = self
         cell.index_path = indexPath
         
         // copy the cell to the member variable
@@ -237,5 +234,4 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
                 print("tab bar")
         }
     }
-    
 }

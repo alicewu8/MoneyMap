@@ -32,29 +32,36 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         return layoutAttributes
     }
     
-    func initialize() {
-        delete_button.isHidden = true
+    func initialize(_ category: Category, _ parent: CategoriesVC) {
+        self.parent = parent
+        self.category = category
+        
+        self.category_label.text = category.name
+        self.category_image_view.image = category.image
+        
+        self.delete_button.isHidden = true
         
         roundCorners()
-        updateBudgetText()
         
         budget_button.layer.borderWidth = 2
         budget_button.layer.borderColor = Canvas.marshmallow.cgColor
         budget_button.roundCorners(7.5)
+        
+        // TODO! FIXME! This line is going wrong! The value is nil but still going into the conditional!
+        if self.category.budget == nil {
+            print(category)
+            budget_button.setTitle("+ Add Budget", for: .normal)
+        } else {
+            print(category)
+            // format string to two decimal places
+            budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
+        }
         
         // add gesture recognizers
         addTap()
         addLongPress()
     }
     
-    // FIXME: categories without budgets are displaying budgets
-    func updateBudgetText() {
-        if category.budget != nil {
-            print(category)
-            // format string to two decimal places
-            budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
-        }
-    }
     
     // adds a tap gesture recognizer to this instance to forwards touch to CategoriesVC
     func addTap() {
