@@ -56,9 +56,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0, purchases: []))
         categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: []))
-        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
-        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: nil, purchases: nil))
+        categories.append(Category(name: "Gas", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: nil))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: nil))
     }
     
     func formatViews() {
@@ -111,21 +111,21 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         return categories.count
     }
     
-    // Helper function: determines cell color based on remaining budget
-    /* 0 = default, 1 = green, 2 = orange, 3 = red */
-    func budgetStatusColor(_ category: Category) -> Int {
-        // first, check that a budget has been instantiated
-        // TODO: prompt user for budget
-        guard let budget = category.budget else { return 0 }
-        
-        if category.running_total < budget / 2 {
-            return 1
-        } else if category.running_total < budget * 0.8 {
-            return 2
-        } else {
-            return 3
-        }
-    }
+//    // Helper function: determines cell color based on remaining budget
+//    /* 0 = default, 1 = green, 2 = orange, 3 = red */
+//    func budgetStatusColor(_ category: Category) -> Int {
+//        // first, check that a budget has been instantiated
+//        // TODO: prompt user for budget
+//        guard let budget = category.budget else { return 0 }
+//        
+//        if category.running_total < budget / 2 {
+//            return 1
+//        } else if category.running_total < budget * 0.8 {
+//            return 2
+//        } else {
+//            return 3
+//        }
+//    }
     
     // update the budget for the selected category
     // bug fix: search by name instead of ID to prevent falsely assigning budgets
@@ -150,17 +150,17 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         cell.initialize(categories[index_in_array], self)
         
-        // set the cell's color based on the current spending amount
-        switch budgetStatusColor(cell.category) {
-            case 1:
-                cell.layer.backgroundColor = Canvas.aurora_green.cgColor
-            case 2:
-                cell.layer.backgroundColor = Canvas.peach.cgColor
-            case 3:
-                cell.layer.backgroundColor = Canvas.lipstick.cgColor
-            default:
-                print("Default Storyboard color--no budget instantiated")
-        }
+//        // set the cell's color based on the current spending amount
+//        switch budgetStatusColor(cell.category) {
+//            case 1:
+//                cell.layer.backgroundColor = Canvas.aurora_green.cgColor
+//            case 2:
+//                cell.layer.backgroundColor = Canvas.peach.cgColor
+//            case 3:
+//                cell.layer.backgroundColor = Canvas.lipstick.cgColor
+//            default:
+//                print("Default Storyboard color--no budget instantiated")
+//        }
         
         // modify cell member variables
         cell.index_path = indexPath

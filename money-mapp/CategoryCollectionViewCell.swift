@@ -32,6 +32,21 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         return layoutAttributes
     }
     
+    // Helper function: determines cell color based on remaining budget
+    /* 0 = default, 1 = green, 2 = orange, 3 = red */
+//    func budgetStatusColor(_ category: Category) -> Int {
+//        // first, check that a budget has been instantiated
+//        guard let budget = category.budget else { return 0 }
+//
+//        if category.running_total < budget / 2 {
+//            return 1
+//        } else if category.running_total < budget * 0.8 {
+//            return 2
+//        } else {
+//            return 3
+//        }
+//    }
+    
     func initialize(_ category: Category, _ parent: CategoriesVC) {
         self.parent = parent
         self.category = category
@@ -48,6 +63,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         budget_button.roundCorners(7.5)
         
         // TODO! FIXME! This line is going wrong! The value is nil but still going into the conditional!
+        // FIXED: added check for category.budget == nil
         if self.category.budget == nil {
             print(category)
             budget_button.setTitle("+ Add Budget", for: .normal)
@@ -55,6 +71,18 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
             print(category)
             // format string to two decimal places
             budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
+        }
+        
+        if self.category.running_total == nil {
+            self.layer.backgroundColor = Canvas.golden_sand.cgColor
+        } else {
+            if self.category.running_total! < self.category.budget! / 2 {
+                self.layer.backgroundColor = Canvas.aurora_green.cgColor
+            } else if self.category.running_total! < self.category.budget! * 0.8 {
+                self.layer.backgroundColor = Canvas.peach.cgColor
+            } else {
+                self.layer.backgroundColor = Canvas.lipstick.cgColor
+            }
         }
         
         // add gesture recognizers

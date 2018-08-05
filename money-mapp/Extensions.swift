@@ -17,8 +17,8 @@ struct Category {
     let id : Int
     var selected = false
     var budget : Double?
-    var running_total : Double
-    var purchases : [Purchase]
+    var running_total : Double?
+    var purchases : [Purchase]?
 }
 
 // Represents a purchased item
