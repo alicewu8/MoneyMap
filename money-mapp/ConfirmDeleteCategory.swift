@@ -43,6 +43,8 @@ class ConfirmDeleteCategory : UIViewController {
     
     @IBAction func dismissDelete(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        categories_vc.collection_view.reloadData()
+        categories_vc.current_cell.removeWiggleAnimation(categories_vc.current_cell)
+        //categories_vc.collection_view.layer.removeAllAnimations()
+        //categories_vc.collection_view.reloadData()
     }
 }

@@ -206,15 +206,16 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // searches categories array for the object to delete
     func deleteCategory() {
-        for i in 0..<categories.count {
+        for i in 0...categories.count {
             if categories[i].id == category_to_delete {
                 categories.remove(at: i)
                 // exit loop once element is removed
                 break
             }
         }
+        
         collection_view.reloadData()
-        // animate the collection view refreshing
+        // animate the collection view refreshing FIXME: 'attempt to create view animation for nil view'
 //        collection_view.performBatchUpdates({
 //            self.collection_view.reloadSections(IndexSet(integer: 0))
 //        }, completion: nil)

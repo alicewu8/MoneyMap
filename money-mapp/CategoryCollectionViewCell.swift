@@ -99,6 +99,14 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         CATransaction.commit()
     }
     
+    func removeWiggleAnimation(_ cell: UICollectionViewCell) {
+        for i in 0...parent.categories.count {
+            guard let cell = parent.collection_view.cellForItem(at: IndexPath(row: i, section: 0)) as? CategoryCollectionViewCell else { return }
+            cell.layer.removeAllAnimations()
+            cell.delete_button.isHidden = true
+        }
+    }
+    
     private func rotationAnimation() -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
         let angle = CGFloat(0.01)
