@@ -479,30 +479,48 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="21l-V1-7KL"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="866-jv-b6R">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ruW-bw-cwd">
                                 <rect key="frame" x="0.0" y="84" width="414" height="652"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YrO-M9-wqc">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dgR-9E-5rw">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.94756561517715454" green="0.84766489267349243" blue="0.78832656145095825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lI5-8p-e3u" firstAttribute="top" secondItem="Aai-kx-iy5" secondAttribute="top" id="1bg-c2-EmK"/>
-                            <constraint firstItem="866-jv-b6R" firstAttribute="top" secondItem="lI5-8p-e3u" secondAttribute="bottom" id="DLE-em-cts"/>
-                            <constraint firstItem="Aai-kx-iy5" firstAttribute="bottom" secondItem="866-jv-b6R" secondAttribute="bottom" id="jBW-Yj-Tdk"/>
-                            <constraint firstItem="866-jv-b6R" firstAttribute="leading" secondItem="Aai-kx-iy5" secondAttribute="leading" id="nb8-Vn-qtb"/>
-                            <constraint firstItem="Aai-kx-iy5" firstAttribute="trailing" secondItem="866-jv-b6R" secondAttribute="trailing" id="oK1-A0-sBc"/>
+                            <constraint firstItem="Aai-kx-iy5" firstAttribute="bottom" secondItem="ruW-bw-cwd" secondAttribute="bottom" id="DaW-jK-p2z"/>
+                            <constraint firstItem="Aai-kx-iy5" firstAttribute="trailing" secondItem="ruW-bw-cwd" secondAttribute="trailing" id="Znx-ZM-eCV"/>
+                            <constraint firstItem="ruW-bw-cwd" firstAttribute="leading" secondItem="Aai-kx-iy5" secondAttribute="leading" id="icB-J9-M4f"/>
                             <constraint firstItem="lI5-8p-e3u" firstAttribute="leading" secondItem="Aai-kx-iy5" secondAttribute="leading" id="rmX-50-AaG"/>
+                            <constraint firstItem="ruW-bw-cwd" firstAttribute="top" secondItem="lI5-8p-e3u" secondAttribute="bottom" id="tVt-TH-rLQ"/>
                             <constraint firstItem="Aai-kx-iy5" firstAttribute="trailing" secondItem="lI5-8p-e3u" secondAttribute="trailing" id="uI4-HE-eYK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Aai-kx-iy5"/>
                     </view>
                     <connections>
                         <outlet property="done_btn" destination="0lP-qG-bqx" id="nRO-JA-bVI"/>
+                        <outlet property="message_view" destination="lI5-8p-e3u" id="45h-g0-lo7"/>
+                        <outlet property="purchases_collection_view" destination="ruW-bw-cwd" id="3ws-Ef-kyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXV-Kj-kLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="-465"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="-465.48913043478262"/>
         </scene>
     </scenes>
     <resources>
