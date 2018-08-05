@@ -14,6 +14,7 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var background_view: UIView!
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var add_purchase_btn: UIButton!
     
     var parent : ExpensesVC!
     
@@ -26,12 +27,10 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
         self.parent = parent
         
         self.roundCorners(7.5)
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(addPurchaseTapped(_:)))
-        self.addGestureRecognizer(tap)
     }
     
-    @objc func addPurchaseTapped(_ sender: UITapGestureRecognizer) {
-        //parent.performSegue(withIdentifier: "to_add_purchase", sender: self)
+    @IBAction func addPurchaseTapped(_ sender: Any) {
+        parent.performSegue(withIdentifier: "to_add_purchase", sender: self)
     }
+    
 }

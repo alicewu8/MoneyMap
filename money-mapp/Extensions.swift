@@ -22,10 +22,13 @@ struct Category {
 }
 
 // Represents a purchased item
+// TODO: check that at least price has been entered. If not, have a reminder screen pop up
 struct Purchase {
-    let name : String
-    let cost : Double
-    let date_of_purchase : String
+    var name : String?
+    var cost : Double
+    var date_of_purchase : String?
+    // multi-line string """ """
+    var additional_info : String?
 }
 
 // UI Colors 

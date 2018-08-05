@@ -29,6 +29,12 @@
                                     <constraint firstAttribute="height" constant="196" id="tyj-T6-Tzt"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jD-1V-5BZ">
+                                <rect key="frame" x="4" y="19" width="240" height="196"/>
+                                <connections>
+                                    <action selector="addPurchaseTapped:" destination="gTV-IL-0wX" eventType="primaryActionTriggered" id="KW5-SB-Hk8"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RyU-SC-Pab">
                                 <rect key="frame" x="5" y="218" width="238" height="62"/>
                                 <subviews>
@@ -55,11 +61,15 @@
                         <constraints>
                             <constraint firstItem="hQX-Yy-sFl" firstAttribute="top" secondItem="Sht-ho-xfn" secondAttribute="top" constant="19" id="ADq-jR-LYa"/>
                             <constraint firstAttribute="trailing" secondItem="RyU-SC-Pab" secondAttribute="trailing" constant="5" id="ItA-8N-Hr2"/>
+                            <constraint firstItem="8jD-1V-5BZ" firstAttribute="centerY" secondItem="hQX-Yy-sFl" secondAttribute="centerY" id="MR4-va-KGj"/>
                             <constraint firstAttribute="bottom" secondItem="RyU-SC-Pab" secondAttribute="bottom" constant="8" id="QAc-hZ-Xjx"/>
                             <constraint firstItem="hQX-Yy-sFl" firstAttribute="leading" secondItem="Sht-ho-xfn" secondAttribute="leading" constant="4" id="WbJ-mw-xfO"/>
+                            <constraint firstItem="8jD-1V-5BZ" firstAttribute="height" secondItem="hQX-Yy-sFl" secondAttribute="height" id="aeX-WJ-UX1"/>
+                            <constraint firstItem="8jD-1V-5BZ" firstAttribute="width" secondItem="hQX-Yy-sFl" secondAttribute="width" id="eIu-gF-eao"/>
                             <constraint firstItem="RyU-SC-Pab" firstAttribute="leading" secondItem="Sht-ho-xfn" secondAttribute="leading" constant="5" id="hf5-s5-nv1"/>
                             <constraint firstAttribute="trailing" secondItem="hQX-Yy-sFl" secondAttribute="trailing" constant="4" id="l5d-mt-bxZ"/>
                             <constraint firstItem="RyU-SC-Pab" firstAttribute="centerX" secondItem="Sht-ho-xfn" secondAttribute="centerX" id="nuL-df-jLd"/>
+                            <constraint firstItem="8jD-1V-5BZ" firstAttribute="centerX" secondItem="hQX-Yy-sFl" secondAttribute="centerX" id="xYf-nS-xB7"/>
                             <constraint firstItem="RyU-SC-Pab" firstAttribute="top" secondItem="hQX-Yy-sFl" secondAttribute="bottom" constant="3" id="yuY-Ez-AJW"/>
                         </constraints>
                     </view>
@@ -77,6 +87,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="248" height="288"/>
             <connections>
+                <outlet property="add_purchase_btn" destination="8jD-1V-5BZ" id="huN-tv-WKn"/>
                 <outlet property="background_view" destination="Sht-ho-xfn" id="rzj-Nj-zBr"/>
                 <outlet property="message" destination="7hv-mn-m9p" id="qNS-9s-iFJ"/>
             </connections>

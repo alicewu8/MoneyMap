@@ -20,6 +20,14 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var purchases_collection_view: UICollectionView!
     @IBOutlet weak var done_btn: UIButton!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "to_add_purchase" {
+            let add_purchase = segue.destination as! AddPurchaseVC
+            add_purchase.expenses_vc = self
+            add_purchase.category = category
+        }
+    }
+    
     override func viewDidLoad() {
         done_btn.roundCorners(7.5)
         done_btn.layer.borderWidth = 1.5
