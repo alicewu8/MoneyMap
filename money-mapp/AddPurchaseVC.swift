@@ -18,6 +18,7 @@ class AddPurchaseVC : UIViewController {
     
     private var date_picker : UIDatePicker?
     
+    @IBOutlet weak var return_button: UIButton!
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var review_button: UIButton!
     
@@ -45,6 +46,8 @@ class AddPurchaseVC : UIViewController {
         date_picker = UIDatePicker()
         date_picker?.datePickerMode = .date
         date_picker?.addTarget(self, action: #selector(AddPurchaseVC.dateChanged(date_picker:)), for: .valueChanged)
+        
+        //date_picker?.maximumDate = Date(timeIntervalSince1970: <#T##TimeInterval#>)
         
         // the date picker will be displayed inside purchase_date
         purchase_date.inputView = date_picker
@@ -86,6 +89,10 @@ class AddPurchaseVC : UIViewController {
 //        review_button.titleLabel?.textColor = Canvas.french_sky_blue
     }
     
+    @IBAction func returnToPrevious(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func reviewDetails(_ sender: Any) {
         // display info in the text view
         // FIXME: check for nil values
@@ -122,6 +129,7 @@ class AddPurchaseVC : UIViewController {
         expenses_vc.addNewPurchase(purchase, category_index)
     }
 }
+
 
 // This view controller is a delegate for UITextField
 extension AddPurchaseVC: UITextFieldDelegate {
