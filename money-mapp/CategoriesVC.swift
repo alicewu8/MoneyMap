@@ -58,9 +58,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0, purchases: []))
         categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: []))
-        categories.append(Category(name: "Beverages", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: nil, purchases: nil))
-        categories.append(Category(name: "Fuel", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: nil))
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: nil))
+        categories.append(Category(name: "Beverages", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: nil, purchases: []))
+        categories.append(Category(name: "Fuel", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: []))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: []))
     }
     
     func formatViews() {

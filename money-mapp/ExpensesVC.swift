@@ -113,7 +113,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {
-        categories_vc.categories[category_index].purchases!.append(purchase)
+        categories_vc.categories[category_index].purchases.append(purchase)
         purchases_collection_view.reloadData()
     }
     

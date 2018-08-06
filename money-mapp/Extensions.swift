@@ -18,7 +18,7 @@ struct Category {
     var selected = false
     var budget : Double?
     var running_total : Double?
-    var purchases : [Purchase]?
+    var purchases : [Purchase] = []
 }
 
 // Represents a purchased item
@@ -35,6 +35,7 @@ struct Purchase {
 // UI Colors 
 struct Canvas {
     // Reds
+    static let strawberry = UIColor(red: 223, green: 48, blue: 0)
     static let watermelon_red = UIColor(red: 228, green: 88, blue: 88)
     static let grapefruit = UIColor(red: 255, green: 127, blue: 80)
     static let blush = UIColor(red: 255, green: 99, blue: 72)
