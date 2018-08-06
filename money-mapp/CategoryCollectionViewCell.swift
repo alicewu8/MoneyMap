@@ -62,6 +62,10 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         budget_button.layer.borderColor = Canvas.marshmallow.cgColor
         budget_button.roundCorners(7.5)
         
+        // assign the button tags to be equivalent to the category ID
+        budget_button.tag = self.category.id
+        print(budget_button.tag)
+        
         // FIXED: added check for category.budget == nil
         if self.category.budget == nil {
             print(category)
@@ -118,10 +122,13 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
     
     @objc func sendParent() {
         parent.current_cell = self
+        parent.selected_category_index = index_path.row
         parent.collectionView(parent.collection_view, didSelectItemAt: index_path)
     }
     
-    @IBAction func addBudgetPressed(_ sender: Any) {
+    @IBAction func addBudgetPressed(_ sender: UIButton) {
+        parent.selected_category_index = sender.tag
+        print(sender.tag)
         parent.performSegue(withIdentifier: "to_add_budget", sender: self)
     }
     

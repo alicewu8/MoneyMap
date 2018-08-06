@@ -29,6 +29,7 @@ struct Purchase {
     var date_of_purchase : String?
     // multi-line string """ """
     var additional_info : String?
+    var id : Int!
 }
 
 // UI Colors 

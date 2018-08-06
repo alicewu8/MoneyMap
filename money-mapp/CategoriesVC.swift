@@ -22,11 +22,14 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // array of purchase categories
     var categories : [Category] = []
     
+    // TODO: using this as a means to track the category whose "add budget" button was isn't working. Modify the button tags instead to match the category IDs (0-indexed)
     // represents the collection view cell currently generated
     var current_cell : CategoryCollectionViewCell!
     
     // tracks the id of the category to delete
     var category_to_delete : Int?
+    
+    var selected_category_index : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,10 +100,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             let expense_vc = segue.destination as! ExpensesVC
             expense_vc.category = expense_category
             expense_vc.categories_vc = self
+            expense_vc.category_index = selected_category_index
         } else if segue.identifier == "to_add_budget" {
             let add_budget = segue.destination as! AddBudgetVC
             add_budget.categories_vc = self
             add_budget.category_cell = current_cell
+            add_budget.category_index = selected_category_index
         }
     }
     
@@ -128,9 +133,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // update the budget for the selected category
     // bug fix: search by name instead of ID to prevent falsely assigning budgets
-    func updateBudget(_ category: String, _ budget: Double) {
+    func updateBudget(_ category_id: Int, _ budget: Double) {
         for i in 0..<categories.count {
-            if categories[i].name == category {
+            // search for this category and modify its budget
+            if categories[i].id == category_id {
                 categories[i].budget = budget
             }
         }
@@ -215,22 +221,5 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
 //        collection_view.performBatchUpdates({
 //            self.collection_view.reloadSections(IndexSet(integer: 0))
 //        }, completion: nil)
-    }
-    
-    // MARK: tab bar
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        // represents the tab bar item the user selected
-        let selected_ind = tab_bar.items?.index(of: item)
-        
-        switch selected_ind {
-            case 0:
-                print("Expense recording")
-            case 1:
-                print("Analyze spending")
-            case 2:
-                print("Settings: change UI, adjust variables, etc.")
-            default:
-                print("tab bar")
-        }
     }
 }

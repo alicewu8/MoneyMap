@@ -13,6 +13,7 @@ class AddBudgetVC : UIViewController {
     
     var categories_vc : CategoriesVC!
     var category_cell : CategoryCollectionViewCell!
+    var category_index : Int!
     
     @IBOutlet weak var add_budget_btn: UIButton!
     @IBOutlet weak var budget_text_field: UITextField!
@@ -53,7 +54,8 @@ class AddBudgetVC : UIViewController {
         // convert from string to int and add the budget to the given category
         // pass the category id
         guard let user_budget = Double(budget_text_field.text!) else { return }
-        categories_vc.updateBudget(category_cell.category.name, user_budget) 
+        print(category_cell.category)
+        categories_vc.updateBudget(category_index, user_budget)
     }
     
     // returns to categoriesVC as main view

@@ -12,7 +12,9 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     var categories_vc : CategoriesVC!
     var category : Category!
+    var category_index : Int!
     
+    // MARK: cell size variables
     var cell_width = 140
     var cell_height = 170
     
@@ -25,6 +27,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
             let add_purchase = segue.destination as! AddPurchaseVC
             add_purchase.expenses_vc = self
             add_purchase.category = category
+            add_purchase.category_index = category_index
         }
     }
     
@@ -104,6 +107,11 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
 //                return add_cell
 //            }
 //        }
+    }
+    
+    func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {
+        categories_vc.categories[category_index].purchases!.append(purchase)
+        purchases_collection_view.reloadData()
     }
     
     // return to the category selection screen
