@@ -27,6 +27,18 @@ class AddPurchaseVC : UIViewController {
     
     override func viewDidLoad() {
         setUpUI()
+        
+        // TODO: placeholder for testing. Instantiate a purchase (do this in the segue! Need to pass correct id info)
+        purchase = Purchase(name: "", cost: 0, date_of_purchase: "", additional_info: "", id: 0)
+    }
+    
+    private func configureTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AddBudgetVC.tapHandler))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapHandler() {
+        view.endEditing(true)
     }
     
     private func configureTextFields() {
@@ -59,6 +71,10 @@ class AddPurchaseVC : UIViewController {
             purchase.additional_info = additional_info
         }
         
+        view.endEditing(true)
+        self.dismiss(animated: true, completion: nil)
+        
+        print(purchase)
         expenses_vc.addNewPurchase(purchase, category_index)
     }
     
@@ -75,10 +91,7 @@ extension AddPurchaseVC: UITextFieldDelegate {
     
     // dismisses keyboard after return key is pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        purchase_name.resignFirstResponder()
-        purchase_cost.resignFirstResponder()
-        purchase_date.resignFirstResponder()
-        additional_info.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
 }

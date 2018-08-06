@@ -21,6 +21,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var message_view: UIView!
     @IBOutlet weak var purchases_collection_view: UICollectionView!
     @IBOutlet weak var done_btn: UIButton!
+    @IBOutlet weak var category_name: UILabel!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_add_purchase" {
@@ -35,6 +36,8 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         done_btn.roundCorners(7.5)
         done_btn.layer.borderWidth = 1.5
         done_btn.layer.borderColor = Canvas.watermelon_red.cgColor
+        
+        category_name.text = category.name
         
         initializeCollectionView()
      
