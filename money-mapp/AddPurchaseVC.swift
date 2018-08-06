@@ -63,7 +63,7 @@ class AddPurchaseVC : UIViewController {
             // TODO: prompt user to enter a cost and don't let the screen dismiss
             return
         }
-        purchase.cost = Double(cost)!  
+        //purchase.cost = Double(cost)!  
         // check for whether the optional values exist and assign them
         if let name = purchase_name.text, let date = purchase_date.text, let additional_info = additional_info.text {
             purchase.name = name

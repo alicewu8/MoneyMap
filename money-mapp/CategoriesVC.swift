@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Expand budget label and give three sig figures
 class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
     // MARK: collection view
