@@ -16,18 +16,18 @@ class AddPurchaseVC : UIViewController {
     var purchase : Purchase!
     var category_index : Int!
     
-    @IBOutlet weak var remove_button: UIButton!
     @IBOutlet weak var done_button: UIButton!
     
-    @IBOutlet weak var recording_stack_view: UIStackView!
     @IBOutlet weak var purchase_name: UITextField!
     @IBOutlet weak var purchase_cost: UITextField!
     @IBOutlet weak var purchase_date: UITextField!
     @IBOutlet weak var additional_info: UITextField!
+    @IBOutlet weak var edit_view: UIView!
     
     override func viewDidLoad() {
         setUpUI()
-        
+        configureTextFields()
+        configureTapGesture()
         // TODO: placeholder for testing. Instantiate a purchase (do this in the segue! Need to pass correct id info)
         purchase = Purchase(name: "", cost: 0, date_of_purchase: "", additional_info: "", id: 0)
     }
@@ -49,10 +49,8 @@ class AddPurchaseVC : UIViewController {
     }
     
     func setUpUI() {
-        remove_button.roundCorners(7.5)
+        edit_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         done_button.roundCorners(7.5)
-        remove_button.layer.borderWidth = 2
-        remove_button.layer.borderColor = Canvas.artificial_watermelon.cgColor
         done_button.layer.borderWidth = 2
         done_button.layer.borderColor = UIColor.black.cgColor
     }
@@ -76,13 +74,6 @@ class AddPurchaseVC : UIViewController {
         
         print(purchase)
         expenses_vc.addNewPurchase(purchase, category_index)
-    }
-    
-    /* TODO: check if this purchase already exists in the array
-     if it does, remove it by its id
-    */
-    @IBAction func removePurchase(_ sender: Any) {
-        print("Implement!")
     }
 }
 

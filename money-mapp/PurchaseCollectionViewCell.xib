@@ -32,14 +32,25 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr7-Ig-1pY">
                                         <rect key="frame" x="0.0" y="0.0" width="247" height="115"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="46"/>
-                                        <color key="textColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" red="0.87522091489999998" green="0.1889421735" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJz-1P-IwL">
+                                        <rect key="frame" x="156" y="-12" width="99" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="99" id="hIA-QH-rWT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="iJz-1P-IwL" firstAttribute="top" secondItem="l15-uA-i26" secondAttribute="top" constant="-12" id="BFD-wp-DU7"/>
                                     <constraint firstItem="Wr7-Ig-1pY" firstAttribute="centerY" secondItem="l15-uA-i26" secondAttribute="centerY" id="DcN-sc-tfC"/>
+                                    <constraint firstAttribute="trailing" secondItem="iJz-1P-IwL" secondAttribute="trailing" constant="-8" id="VsO-6M-4cA"/>
                                     <constraint firstItem="Wr7-Ig-1pY" firstAttribute="height" secondItem="l15-uA-i26" secondAttribute="height" id="hCf-ST-yzF"/>
                                     <constraint firstItem="Wr7-Ig-1pY" firstAttribute="centerX" secondItem="l15-uA-i26" secondAttribute="centerX" id="vUd-qh-qtm"/>
                                     <constraint firstItem="Wr7-Ig-1pY" firstAttribute="width" secondItem="l15-uA-i26" secondAttribute="width" id="y29-LN-cnd"/>
