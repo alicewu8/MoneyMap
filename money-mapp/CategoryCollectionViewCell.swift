@@ -77,7 +77,9 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         }
         
         // set the background color of the cell based on the budget remaining
-        if self.category.running_total == nil {
+        if self.category.budget != nil && self.category.running_total == nil { 
+            self.layer.backgroundColor = Canvas.aurora_green.cgColor
+        } else if self.category.budget == nil && self.category.running_total == nil {
             self.layer.backgroundColor = Canvas.golden_sand.cgColor
         } else {
             if self.category.running_total! < self.category.budget! / 2 {

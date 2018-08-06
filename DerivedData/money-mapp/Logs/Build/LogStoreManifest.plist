@@ -180,6 +180,35 @@
 			<key>uniqueIdentifier</key>
 			<string>1A162548-4C2C-4EAD-85FD-27B804903186</string>
 		</dict>
+		<key>241703C9-9D5D-43BA-8273-17DB5A935C11</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>241703C9-9D5D-43BA-8273-17DB5A935C11.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555210632.80875194</real>
+			<key>timeStoppedRecording</key>
+			<real>555210635.44693303</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>241703C9-9D5D-43BA-8273-17DB5A935C11</string>
+		</dict>
 		<key>2514D148-3C51-4F21-9FEA-E7E3836A7F1A</key>
 		<dict>
 			<key>className</key>
@@ -1977,6 +2006,35 @@
 			<string>Build money-mapp</string>
 			<key>uniqueIdentifier</key>
 			<string>E7E60725-FF8D-4E18-9E0A-1B21E18DBB36</string>
+		</dict>
+		<key>F11B275C-6E80-4F1C-9FF0-EF34DA6356FF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F11B275C-6E80-4F1C-9FF0-EF34DA6356FF.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555210536.60954797</real>
+			<key>timeStoppedRecording</key>
+			<real>555210539.50147605</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>F11B275C-6E80-4F1C-9FF0-EF34DA6356FF</string>
 		</dict>
 		<key>F53A9AFD-815B-47D6-9618-F9B8911F609E</key>
 		<dict>
