@@ -16,6 +16,8 @@ class AddPurchaseVC : UIViewController {
     var purchase : Purchase!
     var category_index : Int!
     
+    private var date_picker : UIDatePicker?
+    
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var review_button: UIButton!
     
@@ -34,7 +36,25 @@ class AddPurchaseVC : UIViewController {
         setUpUI()
         configureTextFields()
         configureTapGesture()
+        configureDatePicker()
+    }
+    
+    // TODO: add min/max dates
+    // TODO: only dismiss if month, day, and year are all confirmed
+    private func configureDatePicker() {
+        date_picker = UIDatePicker()
+        date_picker?.datePickerMode = .date
+        date_picker?.addTarget(self, action: #selector(AddPurchaseVC.dateChanged(date_picker:)), for: .valueChanged)
         
+        // the date picker will be displayed inside purchase_date
+        purchase_date.inputView = date_picker
+    }
+    
+    @objc func dateChanged(date_picker: UIDatePicker) {
+        let date_formatter = DateFormatter()
+        date_formatter.dateFormat = "MM/dd/yyyy"
+        purchase_date.text = date_formatter.string(from: date_picker.date)
+        view.endEditing(true)
     }
     
     private func configureTapGesture() {
@@ -62,7 +82,6 @@ class AddPurchaseVC : UIViewController {
         
         display_purchase_info.roundCorners(9)
         review_button.roundCorners()
-        review_button.layer.borderWidth = 1.5
 //        review_button.layer.borderColor = Canvas.french_sky_blue.cgColor
 //        review_button.titleLabel?.textColor = Canvas.french_sky_blue
     }
