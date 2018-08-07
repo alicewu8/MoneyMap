@@ -87,29 +87,29 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // base case: no purchases
         // FIXME: category is nil
-        //if category.purchases.count == 0 {
+        if category.purchases.count == 0 {
             let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
         
             add_cell.initialize(parent: self)
             //add_cell.initialize(parent: self)
             return add_cell
-        //} else {
+        } else {
             // store the index of this cell in the array
-//            let index = indexPath.row
-//
-//            // use a purchase collection view cell
-//            if index <= category.purchases.count {
-//                let purchase_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: PurchaseCollectionViewCell.reuse_id, for: indexPath) as! PurchaseCollectionViewCell
-//
-//                //purchase_cell.initialize(category: category, parent: self)
-//
-//                return purchase_cell
-//            } else {
-//                let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
-//
-//                return add_cell
-//            }
-//        }
+            let index = indexPath.row
+
+            // use a purchase collection view cell
+            if index <= category.purchases.count {
+                let purchase_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: PurchaseCollectionViewCell.reuse_id, for: indexPath) as! PurchaseCollectionViewCell
+
+                purchase_cell.initialize(category: category, parent: self, purchase_id: index)
+
+                return purchase_cell
+            } else {
+                let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
+
+                return add_cell
+            }
+        }
     }
     
     func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {

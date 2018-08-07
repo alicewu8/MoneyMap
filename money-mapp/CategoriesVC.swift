@@ -97,11 +97,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
 //            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
             // track the category selected and pass information to next view controller
-            let expense_category = current_cell.category
+            // FIXME: current_cell always refers to the last loaded category
+            //let expense_category = current_cell.category
             let expense_vc = segue.destination as! ExpensesVC
-            expense_vc.category = expense_category
+            //expense_vc.category = expense_category
             expense_vc.categories_vc = self
             expense_vc.category_index = selected_category_index
+            expense_vc.category = categories[selected_category_index!]
         } else if segue.identifier == "to_add_budget" {
             let add_budget = segue.destination as! AddBudgetVC
             add_budget.categories_vc = self

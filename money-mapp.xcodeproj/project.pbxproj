@@ -21,6 +21,7 @@
 		1528EFC821163426001E8297 /* AddPurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */; };
 		1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */; };
 		1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */; };
+		153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */; };
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
 		156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940932117B73400D8F654 /* PurchaseInfo.swift */; };
@@ -68,6 +69,7 @@
 		1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPurchaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupViewController.swift; sourceTree = "<group>"; };
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		156940932117B73400D8F654 /* PurchaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseInfo.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */,
 				156940912117ADA000D8F654 /* FavoritesVC.swift */,
 				156940932117B73400D8F654 /* PurchaseInfo.swift */,
+				153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				15C9C1592113E816007CEBAE /* ConfirmDeleteCategory.swift in Sources */,
 				1528EFC221163365001E8297 /* StatsVC.swift in Sources */,
 				1528EFC721163426001E8297 /* AddPurchaseCollectionViewCell.swift in Sources */,
+				153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

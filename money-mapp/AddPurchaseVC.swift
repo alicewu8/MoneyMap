@@ -93,6 +93,7 @@ class AddPurchaseVC : UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // displays the purchase info in the text field
     @IBAction func reviewDetails(_ sender: Any) {
         // display info in the text view
         // FIXME: check for nil values
@@ -103,6 +104,7 @@ class AddPurchaseVC : UIViewController {
         \(additional_info.text!)
         """
         print(display_purchase_info.text)
+        
     }
     
     @IBAction func doneEditing(_ sender: Any) {

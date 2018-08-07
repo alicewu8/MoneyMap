@@ -21,20 +21,30 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     
     var parent : ExpensesVC!
     var category : Category!
+    var purchase : Purchase!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func initialize(category: Category, parent: ExpensesVC) {
+    func initialize(category: Category, parent: ExpensesVC, purchase_id: Int) {
         self.parent = parent
         self.category = category
+        print(category)
+        self.purchase = category.purchases[purchase_id]
+        print(purchase)
         
         price_view.roundCorners(7.5)
         
-        // TODO: the
-        
+        // set the cell information
+        if let name = purchase.name, let date = purchase.date_of_purchase {
+            purchase_name.text = name
+            print(name)
+            purchase_date.text = date
+            print(date)
+        }
+        price_label.text = String(purchase.cost)
     }
 
 }
