@@ -6,6 +6,35 @@
 	<integer>8</integer>
 	<key>logs</key>
 	<dict>
+		<key>0A6D3C41-A642-49A6-98F6-60FE72B43ECB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0A6D3C41-A642-49A6-98F6-60FE72B43ECB.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555378820.50890601</real>
+			<key>timeStoppedRecording</key>
+			<real>555378821.35529494</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>0A6D3C41-A642-49A6-98F6-60FE72B43ECB</string>
+		</dict>
 		<key>1A57087C-D898-4BB1-8267-6AA3F600FFE2</key>
 		<dict>
 			<key>className</key>
@@ -63,6 +92,35 @@
 			<string>Build money-mapp</string>
 			<key>uniqueIdentifier</key>
 			<string>1F47A9EC-19C3-4FC7-9A93-2B7EFD851018</string>
+		</dict>
+		<key>2D14E81F-A9CE-41C5-9B59-A2F3CC9FC7F3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2D14E81F-A9CE-41C5-9B59-A2F3CC9FC7F3.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555378769.79531705</real>
+			<key>timeStoppedRecording</key>
+			<real>555378773.646415</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>2D14E81F-A9CE-41C5-9B59-A2F3CC9FC7F3</string>
 		</dict>
 		<key>34B303F8-CE73-4801-9811-BA8F1E8DF5E8</key>
 		<dict>
