@@ -87,7 +87,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // base case: no purchases
         // FIXME: category is nil
-        if category.purchases.count == 0 {
+        if self.categories_vc[category_index].purchases.count == 0 {
             let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
         
             add_cell.initialize(parent: self)

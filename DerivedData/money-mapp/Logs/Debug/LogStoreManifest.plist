@@ -93,6 +93,93 @@
 			<key>uniqueIdentifier</key>
 			<string>84813EE3-77AC-4C13-8862-167E5C3E68BA</string>
 		</dict>
+		<key>97B10C7C-806A-4D5C-8452-D7DCD93040C9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>97B10C7C-806A-4D5C-8452-D7DCD93040C9.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555302620.03840399</real>
+			<key>timeStoppedRecording</key>
+			<real>555302691.01133597</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>97B10C7C-806A-4D5C-8452-D7DCD93040C9</string>
+		</dict>
+		<key>B4EC1BFF-0FFB-491E-8134-2ACBD88873A7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B4EC1BFF-0FFB-491E-8134-2ACBD88873A7.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555302547.02671099</real>
+			<key>timeStoppedRecording</key>
+			<real>555302620.21474504</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>B4EC1BFF-0FFB-491E-8134-2ACBD88873A7</string>
+		</dict>
+		<key>B7A73C1D-41F7-48C0-A352-E52F8364CDA2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B7A73C1D-41F7-48C0-A352-E52F8364CDA2.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555302366.35041797</real>
+			<key>timeStoppedRecording</key>
+			<real>555302547.19439101</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>B7A73C1D-41F7-48C0-A352-E52F8364CDA2</string>
+		</dict>
 		<key>C70AFD50-5F36-4977-97CF-0AEE9A517FCC</key>
 		<dict>
 			<key>className</key>
@@ -121,6 +208,35 @@
 			<string>Debug money-mapp</string>
 			<key>uniqueIdentifier</key>
 			<string>C70AFD50-5F36-4977-97CF-0AEE9A517FCC</string>
+		</dict>
+		<key>F29FC9E7-8502-4588-AA05-C72F3F2E5EC0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F29FC9E7-8502-4588-AA05-C72F3F2E5EC0.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555302690.81632197</real>
+			<key>timeStoppedRecording</key>
+			<real>555302898.28084397</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>F29FC9E7-8502-4588-AA05-C72F3F2E5EC0</string>
 		</dict>
 	</dict>
 </dict>
