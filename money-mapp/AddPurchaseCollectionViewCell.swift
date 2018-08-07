@@ -26,11 +26,10 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
     func initialize(parent: ExpensesVC) {
         self.parent = parent
         
-        self.roundCorners(7.5)
+        self.roundCorners(10)
     }
     
     @IBAction func addPurchaseTapped(_ sender: Any) {
         parent.performSegue(withIdentifier: "to_add_purchase", sender: self)
     }
-    
 }

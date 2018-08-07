@@ -19,6 +19,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var purchases_collection_view: UICollectionView!
     @IBOutlet weak var done_btn: UIButton!
     @IBOutlet weak var category_name: UILabel!
+    @IBOutlet weak var switch_layout_button: UIButton!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_add_purchase" {
@@ -39,7 +40,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         formatCells()
         initializeCollectionView()
-        initializePurchases()
+        //initializePurchases()
     }
     
     // TODO: testing
@@ -149,4 +150,8 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         // reverts the border color
         categories_vc.collection_view.reloadData()
     }
+    
+    @IBAction func switchPurchaseLayout(_ sender: Any) {
+    }
+    
 }
