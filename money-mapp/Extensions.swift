@@ -26,9 +26,9 @@ struct Category {
 struct Purchase {
     var name : String?
     var cost : Double
-    var date_of_purchase : String?
+    var date : String?
     // multi-line string """ """
-    var additional_info : String?
+    var info : String?
     var id : Int!
 }
 

@@ -35,16 +35,18 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
         self.purchase = category.purchases[purchase_id]
         print(purchase)
         
-        price_view.roundCorners(7.5)
+        roundCorners(7.5)
+        
+        price_view.roundCorners(10)
         
         // set the cell information
-        if let name = purchase.name, let date = purchase.date_of_purchase {
+        if let name = purchase.name, let date = purchase.date {
             purchase_name.text = name
             print(name)
             purchase_date.text = date
             print(date)
         }
-        price_label.text = String(purchase.cost)
+        price_label.text = "$" + String(format: "%.2f", purchase.cost)
     }
 
 }

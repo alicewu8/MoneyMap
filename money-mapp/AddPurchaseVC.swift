@@ -110,18 +110,21 @@ class AddPurchaseVC : UIViewController {
     @IBAction func doneEditing(_ sender: Any) {
         
         // TODO: placeholder for testing. Instantiate a purchase (do this in the segue! Need to pass correct id info)
-        purchase = Purchase(name: "", cost: 0, date_of_purchase: "", additional_info: "", id: 0)
+        purchase = Purchase(name: "", cost: 0, date: "", info: "", id: 0)
         // check for nil values
+        // FIXME: cost is returning in this statement
+        // FIXME: add purchase id
         guard let cost = purchase_cost.text else {
             // TODO: prompt user to enter a cost and don't let the screen dismiss
             return
         }
-        //purchase.cost = Double(cost)!  
+        // convert string to Double: NSString has a built in way to convert
+        purchase.cost = (cost as NSString).doubleValue
         // check for whether the optional values exist and assign them
         if let name = purchase_name.text, let date = purchase_date.text, let additional_info = additional_info.text {
             purchase.name = name
-            purchase.date_of_purchase = date
-            purchase.additional_info = additional_info
+            purchase.date = date
+            purchase.info = additional_info
         }
         
         view.endEditing(true)
