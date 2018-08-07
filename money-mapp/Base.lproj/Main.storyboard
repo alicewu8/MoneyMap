@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8T7-4q-5X8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8T7-4q-5X8">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -958,7 +958,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8if-As-VLI"/>
                                         </constraints>
-                                        <state key="normal" image="grid_view"/>
+                                        <state key="normal" image="grid"/>
                                         <connections>
                                             <action selector="switchPurchaseLayout:" destination="6AC-K8-Xxs" eventType="primaryActionTriggered" id="8Tm-G1-x1F"/>
                                         </connections>
@@ -1214,7 +1214,7 @@
     <resources>
         <image name="add_favorite" width="40" height="40"/>
         <image name="analyze" width="30" height="29"/>
-        <image name="grid_view" width="25" height="25"/>
+        <image name="grid" width="25" height="23"/>
         <image name="list_view" width="25" height="24"/>
         <image name="record" width="30" height="33"/>
         <image name="return" width="20" height="36"/>

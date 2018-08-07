@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>logFormatVersion</key>
-	<integer>8</integer>
+	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>C03B62C2-4008-4663-9A48-A2305B3B04C8</key>
+		<key>EC52D832-582C-43D2-872B-34F3213ECFA1</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,19 +15,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>C03B62C2-4008-4663-9A48-A2305B3B04C8.xcactivitylog</string>
+			<string>EC52D832-582C-43D2-872B-34F3213ECFA1.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>money-mapp-gztauzbsjiheiagfbhouislqyyhp</string>
 			<key>timeStartedRecording</key>
-			<real>555368267.67052197</real>
+			<real>555370461.60142195</real>
 			<key>timeStoppedRecording</key>
-			<real>555368269.588624</real>
+			<real>555370464.43752503</real>
 			<key>title</key>
 			<string>Build target money-mapp</string>
 			<key>uniqueIdentifier</key>
-			<string>C03B62C2-4008-4663-9A48-A2305B3B04C8</string>
+			<string>EC52D832-582C-43D2-872B-34F3213ECFA1</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>
