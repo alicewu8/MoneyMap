@@ -25,6 +25,7 @@
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
 		156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940932117B73400D8F654 /* PurchaseInfo.swift */; };
+		15C79214211A43EB004475DF /* ExpensesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C79213211A43EB004475DF /* ExpensesListViewController.swift */; };
 		15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C14E21138F24007CEBAE /* Extensions.swift */; };
 		15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */; };
 		15C9C1592113E816007CEBAE /* ConfirmDeleteCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C1582113E816007CEBAE /* ConfirmDeleteCategory.swift */; };
@@ -73,6 +74,7 @@
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		156940932117B73400D8F654 /* PurchaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseInfo.swift; sourceTree = "<group>"; };
+		15C79213211A43EB004475DF /* ExpensesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListViewController.swift; sourceTree = "<group>"; };
 		15C9C14E21138F24007CEBAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		15C9C1582113E816007CEBAE /* ConfirmDeleteCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDeleteCategory.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
+				15C79213211A43EB004475DF /* ExpensesListViewController.swift */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
 				15110EB920F58AE30095CCD8 /* CategoriesVC.swift */,
@@ -305,6 +308,7 @@
 			files = (
 				1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */,
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
+				15C79214211A43EB004475DF /* ExpensesListViewController.swift in Sources */,
 				156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */,
 				15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */,
 				1528EFC02116333C001E8297 /* Settings.swift in Sources */,

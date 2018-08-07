@@ -27,6 +27,9 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
             add_purchase.expenses_vc = self
             add_purchase.category = category
             add_purchase.category_index = category_index
+        } else if segue.identifier == "to_purchase_info" {
+            let purchase_info = segue.destination as! PurchaseInfo
+            purchase_info.expenses_vc = self
         }
     }
     
@@ -85,7 +88,7 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
     // MARK: collection view
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: 140, height: 160)
+        return CGSize(width: 150, height: 168)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

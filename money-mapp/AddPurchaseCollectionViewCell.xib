@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sht-ho-xfn">
                         <rect key="frame" x="0.0" y="0.0" width="248" height="288"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-Yy-sFl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hQX-Yy-sFl">
                                 <rect key="frame" x="4" y="19" width="240" height="196"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hQX-Yy-sFl" secondAttribute="height" multiplier="1:1" constant="44" id="eDH-pf-vO1"/>
@@ -42,7 +42,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="238" height="62"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -95,6 +95,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="add_icon" width="304" height="300"/>
+        <image name="empty_add_icon" width="150" height="150"/>
     </resources>
 </document>

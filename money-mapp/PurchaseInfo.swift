@@ -23,6 +23,8 @@ class PurchaseInfo : UIViewController {
     
     var stars : [UIButton] = []
     
+    var expenses_vc : ExpensesVC!
+    
     override func viewDidLoad() {
         initializeStars()
     }
@@ -40,6 +42,10 @@ class PurchaseInfo : UIViewController {
             stars[i].tag = rating
             rating += 1
         }
+    }
+    
+    @IBAction func returnToPrevious(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func starSelected(_ sender: UIButton) {
