@@ -8,15 +8,23 @@
 
 import UIKit
 
-class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ExpensesVC : UIViewController {
     
     var categories_vc : CategoriesVC!
     var category : Category!
     var category_index : Int!
     
+    var using_grid : Bool
+    var using_list : Bool
+    
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
-    @IBOutlet weak var purchases_collection_view: UICollectionView!
+    
+    // Superview that will contain either the grid or list view
+    @IBOutlet weak var expenses_view: UIView!
+    var expenses_grid : ExpensesGridView!
+    var expenses_list : ExpensesListView?
+    
     @IBOutlet weak var done_btn: UIButton!
     @IBOutlet weak var category_name: UILabel!
     @IBOutlet weak var switch_layout_button: UIButton!
@@ -40,10 +48,6 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         background_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
         category_name.text = category.name
-        
-        formatCells()
-        initializeCollectionView()
-        //initializePurchases()
     }
     
     // TODO: testing
@@ -52,98 +56,40 @@ class ExpensesVC : UIViewController, UICollectionViewDelegate, UICollectionViewD
         categories_vc.categories[category_index].purchases.append(Purchase(name: "Dinner", cost: 340.40, date: "8/07/18", info: "JetBlue", id: 0))
     }
     
+    // default to showing the grid view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        guard let purchases_grid = Bundle.main.loadNibNamed("ExpensesGridView", owner: self, options: nil)?.first as? ExpensesGridView else { return }
+        
+        // store this in the member variable
+        expenses_grid = purchases_grid
+        
+        // set frame equal to the superview
+        expenses_grid.frame.size = expenses_view.frame.size
+        expenses_view.addSubview(expenses_grid)
+        expenses_grid.initialize(self)
+        view.layoutIfNeeded()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        // initialize member bool values
+        self.using_grid = true
+        self.using_list = false
+        
         super.init(coder: aDecoder)
     }
     
-    func initializeCollectionView() {
-        // set the delegate and datasource to ExpensesVC
-        purchases_collection_view.delegate = self
-        purchases_collection_view.dataSource = self
-        
-        purchases_collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
-        
-        // add the custom collection view cells to this collection view
-        purchases_collection_view.register(UINib(nibName: "PurchaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: PurchaseCollectionViewCell.reuse_id)
-        purchases_collection_view.register(UINib(nibName: "AddPurchaseCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id)
-        
-        purchases_collection_view.reloadData()
-    }
-    
-    func formatCells() {
-        let layout = self.purchases_collection_view.collectionViewLayout as! UICollectionViewFlowLayout
-
-        // create spacing between cells
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        layout.minimumInteritemSpacing = 5
-
-        // splits each row between three cells
-        layout.itemSize = CGSize(width: (self.purchases_collection_view.frame.size.width - 20) / 4, height: self.purchases_collection_view.frame.size.height / 3)
-    }
-    
-    // MARK: collection view
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 150, height: 168)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let vert_space : CGFloat = 10
-        
-        //Calculate horizontal spacing:
-        //    Total view width - combined padding - total cell width
-        //let num_cells = purchases_collection_view.numberOfItems(inSection: 0)
-        var hor_space : CGFloat = 0
-        if hor_space < 5 { hor_space = 40 }
-        
-        return UIEdgeInsets(top: vert_space, left: hor_space, bottom: vert_space, right: hor_space)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // add an additional cell to be the add purchase cell
-        return categories_vc.categories[category_index].purchases.count + 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // base case: no purchases
-        if categories_vc.categories[category_index].purchases.count == 0 {
-            let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
-        
-            add_cell.initialize(parent: self)
-            return add_cell
-        }
-    
-        // store the index of this cell in the array
-        let index = indexPath.row
-
-        // use a purchase collection view cell
-        // FIXME: not using the modified copy--how to make this less error-prone? How to modify the parent's member variables by reference
-        if index < categories_vc.categories[category_index].purchases.count {
-            let purchase_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: PurchaseCollectionViewCell.reuse_id, for: indexPath) as! PurchaseCollectionViewCell
-
-            purchase_cell.initialize(category: categories_vc.categories[category_index], parent: self, purchase_id: index)
-
-            return purchase_cell
-        } else { // always include an add purchase cell
-            let add_cell = purchases_collection_view.dequeueReusableCell(withReuseIdentifier: AddPurchaseCollectionViewCell.reuse_id, for: indexPath) as! AddPurchaseCollectionViewCell
-            
-            add_cell.initialize(parent: self)
-
-            return add_cell
-        }
-    }
     
     func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {
         categories_vc.categories[category_index].purchases.append(purchase)
         
         // Animate adding a new cell
-        purchases_collection_view.performBatchUpdates({
-            self.purchases_collection_view.reloadSections(IndexSet(integer: 0))
-        }, completion: nil)
+        if using_grid {
+            expenses_grid.refreshInfo()
+        } else {
+            expenses_list?.reloadInputViews()
+        }
     }
     
     // return to the category selection screen
