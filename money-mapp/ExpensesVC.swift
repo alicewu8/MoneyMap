@@ -79,25 +79,28 @@ class ExpensesVC : UIViewController {
         guard category.budget != nil else { return }
         
         // animate the image/label height changes
-        UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseIn, animations: {
-            if self.showing_status_bar { // currently showing the battery bar: hide it and show the budget remaining label
-                self.category_name_top_space.constant = 10
-                self.budget_status_bar_height.constant = 0
-                
-                // initialize budget remaining label
-                self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.running_total!) + " of $" + String(format: "%.2f", self.category.budget!) + " remaining"
-                self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
-                self.budget_remaining_height.constant = 10
-                self.showing_status_bar = false
-            } else { // shrink the label and revert the image height
-                // keep the category name in the same place
-                self.category_name_top_space.constant = 10
-                self.budget_remaining_height.constant = 0
-                self.budget_status_bar_height.constant = 20
-            }
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-        
+        if self.showing_status_bar { // currently showing the battery bar: hide it and show the budget remaining label
+            self.budget_status_bar.fadeTransition(0.8)
+            self.budget_status_bar.isHidden = true
+            
+            // initialize budget remaining label
+            self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total!) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
+            self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
+            
+            self.budget_remaining_label.fadeTransition(0.8)
+            self.budget_remaining_label.isHidden = false
+            
+            self.showing_status_bar = false
+        } else { // shrink the label and revert the image height
+            self.budget_remaining_label.fadeTransition(0.8)
+            self.budget_remaining_label.isHidden = true
+            
+            self.budget_status_bar.fadeTransition(0.8)
+            self.budget_status_bar.isHidden = false
+            
+            self.showing_status_bar = true
+        }
+        self.view.layoutIfNeeded()
     }
     
     // TODO: testing
