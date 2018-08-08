@@ -48,6 +48,7 @@ class ExpensesVC : UIViewController {
         background_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
         category_name.text = category.name
+        expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
     }
     
     // TODO: testing
@@ -101,6 +102,16 @@ class ExpensesVC : UIViewController {
     }
     
     @IBAction func switchPurchaseLayout(_ sender: Any) {
+        if using_grid {
+            // remove the previous
+            expenses_view.subviews.last?.removeFromSuperview()
+            switch_layout_button.setImage(UIImage(named: "grid"), for: .normal)
+            using_grid = false
+        } else {
+            expenses_view.subviews.last?.removeFromSuperview()
+            switch_layout_button.setImage(UIImage(named: "list_view"), for: .normal)
+            using_grid = true 
+        }
     }
     
 }
