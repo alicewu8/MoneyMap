@@ -94,31 +94,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzl-6x-Qm4" userLabel="IntroMessage">
-                                <rect key="frame" x="0.0" y="20" width="414" height="71"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1c-Z1-o6M">
-                                        <rect key="frame" x="105.66666666666669" y="16" width="203" height="39"/>
+                                        <rect key="frame" x="105.66666666666667" y="16" width="202.66666666666663" height="38"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNM-Tj-pDH">
-                                        <rect key="frame" x="365" y="16" width="41" height="43"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
-                                        <state key="normal" title="Edit">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNM-Tj-pDH">
+                                        <rect key="frame" x="359" y="20" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="FH7-nd-inS"/>
+                                            <constraint firstAttribute="height" constant="30" id="bSM-mb-tu0"/>
+                                        </constraints>
+                                        <state key="normal" image="empty_add_icon">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addCategory:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="PAX-Ie-Pmj"/>
+                                            <segue destination="gW4-tV-sRj" kind="presentation" identifier="to_add_category" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="3Gz-A5-cgc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="z1c-Z1-o6M" firstAttribute="centerX" secondItem="wzl-6x-Qm4" secondAttribute="centerX" id="0T2-3B-cNI"/>
+                                    <constraint firstItem="pNM-Tj-pDH" firstAttribute="centerY" secondItem="z1c-Z1-o6M" secondAttribute="centerY" id="713-CQ-6Bl"/>
                                     <constraint firstItem="z1c-Z1-o6M" firstAttribute="centerY" secondItem="D1N-hH-xS2" secondAttribute="centerY" id="B7T-cc-u3z"/>
-                                    <constraint firstItem="D1N-hH-xS2" firstAttribute="trailing" secondItem="pNM-Tj-pDH" secondAttribute="trailing" constant="8" id="QcN-09-IpB"/>
-                                    <constraint firstAttribute="height" constant="71" id="cVc-s3-jkv"/>
+                                    <constraint firstItem="pNM-Tj-pDH" firstAttribute="top" secondItem="D1N-hH-xS2" secondAttribute="top" constant="20" id="U7V-K3-mNc"/>
                                     <constraint firstItem="z1c-Z1-o6M" firstAttribute="top" secondItem="D1N-hH-xS2" secondAttribute="top" constant="16" id="cr4-Lb-6qy"/>
-                                    <constraint firstItem="pNM-Tj-pDH" firstAttribute="top" secondItem="D1N-hH-xS2" secondAttribute="top" constant="16" id="ni0-8U-hec"/>
-                                    <constraint firstItem="pNM-Tj-pDH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z1c-Z1-o6M" secondAttribute="trailing" constant="8" symbolic="YES" id="orQ-Ce-EbA"/>
+                                    <constraint firstItem="D1N-hH-xS2" firstAttribute="trailing" secondItem="pNM-Tj-pDH" secondAttribute="trailing" constant="25" id="foX-sF-7m6"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="D1N-hH-xS2"/>
                             </view>
@@ -142,6 +148,28 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <visualEffectView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="feX-38-iJP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="p0q-iA-3FT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJS-Ai-ZPQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TIe-2C-9zW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <vibrancyEffect>
+                                                    <blurEffect style="light"/>
+                                                </vibrancyEffect>
+                                            </visualEffectView>
+                                        </subviews>
+                                    </view>
+                                    <blurEffect style="light"/>
+                                </visualEffectView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="category_cell" id="ceJ-bi-M2I" customClass="CategoryCollectionViewCell" customModule="money_mapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="10" width="174" height="187"/>
@@ -157,7 +185,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8o1-CY-Aea">
-                                                    <rect key="frame" x="59.333333333333343" y="120" width="55.666666666666657" height="28"/>
+                                                    <rect key="frame" x="59" y="120" width="56" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="u3x-eJ-xkQ"/>
                                                     </constraints>
@@ -237,9 +265,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Expenses" image="record" id="x4c-Gz-FCl"/>
                     <connections>
+                        <outlet property="add_category_button" destination="pNM-Tj-pDH" id="N0b-He-4EO"/>
+                        <outlet property="blur_view" destination="feX-38-iJP" id="yne-gp-hsL"/>
                         <outlet property="collection_view" destination="PAl-0g-bII" id="ptm-fh-HHz"/>
                         <outlet property="tab_bar" destination="Md6-6r-xLH" id="h1V-IW-uTj"/>
                         <outlet property="title_view" destination="wzl-6x-Qm4" id="c04-5g-lwu"/>
+                        <outlet property="whole_view" destination="8bC-Xf-vdC" id="u8D-BD-fEV"/>
                         <segue destination="gW4-tV-sRj" kind="presentation" identifier="to_delete_category" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="2ob-gR-tpR"/>
                         <segue destination="6AC-K8-Xxs" kind="custom" identifier="to_expense_recording" customClass="SegueFromRight" customModule="money_mapp" customModuleProvider="target" id="zYS-ad-lV5"/>
                         <segue destination="wAV-T3-NKR" kind="presentation" identifier="to_add_budget" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="HQx-dR-JrQ"/>
@@ -247,12 +278,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-732" y="-1127"/>
+            <point key="canvasLocation" x="-733.33333333333337" y="-1128.2608695652175"/>
         </scene>
-        <!--Confirm Delete Category-->
+        <!--Modify Category-->
         <scene sceneID="20K-Hu-hUb">
             <objects>
-                <viewController id="gW4-tV-sRj" customClass="ConfirmDeleteCategory" customModule="money_mapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gW4-tV-sRj" customClass="ModifyCategory" customModule="money_mapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dA4-9g-ucC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +319,7 @@
                                                     <color key="titleColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="deleteConfirmed:" destination="gW4-tV-sRj" eventType="touchUpInside" id="jF4-8R-Xzu"/>
+                                                    <action selector="confirmChange:" destination="gW4-tV-sRj" eventType="touchUpInside" id="jF4-8R-Xzu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-b0-aDr">
@@ -308,7 +339,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Pcl-b0-aDr" firstAttribute="top" secondItem="o0B-YZ-R0x" secondAttribute="top" id="8eY-Zb-nBM"/>
                                             <constraint firstAttribute="trailing" secondItem="Pcl-b0-aDr" secondAttribute="trailing" constant="40" id="BcV-s4-btr"/>
@@ -317,7 +348,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="o0B-YZ-R0x" secondAttribute="bottom" id="4t2-IL-Xmq"/>
                                     <constraint firstItem="o0B-YZ-R0x" firstAttribute="centerX" secondItem="1Re-ve-CEm" secondAttribute="centerX" id="Aup-Ub-gdn"/>
@@ -336,7 +367,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1Re-ve-CEm" firstAttribute="centerX" secondItem="DvK-KB-l2P" secondAttribute="centerX" id="Wg8-68-eqK"/>
                             <constraint firstItem="1Re-ve-CEm" firstAttribute="centerY" secondItem="DvK-KB-l2P" secondAttribute="centerY" id="xBD-aO-2tT"/>
@@ -345,6 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="buttons_view" destination="o0B-YZ-R0x" id="MDy-4b-btg"/>
+                        <outlet property="confirmation_message" destination="pPA-XK-nHZ" id="UTQ-BN-AMM"/>
                         <outlet property="confirmation_window" destination="1Re-ve-CEm" id="1er-57-BE6"/>
                         <outlet property="no_btn" destination="Pcl-b0-aDr" id="p8m-rg-YoD"/>
                         <outlet property="yes_btn" destination="b0H-hw-n8V" id="Rdw-d2-JbL"/>
@@ -1139,10 +1171,14 @@
         <image name="add_favorite" width="40" height="40"/>
         <image name="analyze" width="30" height="29"/>
         <image name="budget_50-1" width="500" height="500"/>
+        <image name="empty_add_icon" width="150" height="150"/>
         <image name="list_view" width="25" height="24"/>
         <image name="record" width="30" height="33"/>
         <image name="return" width="15" height="27"/>
         <image name="settings" width="30" height="30"/>
         <image name="x" width="158" height="158"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Gz-A5-cgc"/>
+    </inferredMetricsTieBreakers>
 </document>

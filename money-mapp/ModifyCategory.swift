@@ -8,14 +8,17 @@
 
 import UIKit
 
-class ConfirmDeleteCategory : UIViewController {
+class ModifyCategory : UIViewController {
     
     @IBOutlet weak var confirmation_window: UIView!
     @IBOutlet weak var buttons_view: UIView!
     @IBOutlet weak var yes_btn: UIButton!
     @IBOutlet weak var no_btn: UIButton!
+    @IBOutlet weak var confirmation_message: UILabel!
     
     var categories_vc : CategoriesVC!
+    
+    var delete : Bool!
     
     override func viewDidLoad() {
         formatViews()
@@ -29,6 +32,12 @@ class ConfirmDeleteCategory : UIViewController {
         
         yes_btn.roundCorners(7.5)
         no_btn.roundCorners(7.5)
+        
+        if delete {
+            confirmation_message.text = "Do you want to delete this category?"
+        } else {
+            confirmation_message.text = "Do you want to add a new category?"
+        }
     }
     
     func formatButtons() {
@@ -36,8 +45,12 @@ class ConfirmDeleteCategory : UIViewController {
         no_btn.showsTouchWhenHighlighted = true
     }
     
-    @IBAction func deleteConfirmed(_ sender: Any) {
-        categories_vc.deleteCategory()
+    @IBAction func confirmChange(_ sender: Any) {
+        if delete {
+            categories_vc.deleteCategory()
+        } else { // add the subview that contains the textfield and confirmation button 
+            
+        }
         dismiss(animated: true, completion: nil)
     }
     
@@ -46,5 +59,7 @@ class ConfirmDeleteCategory : UIViewController {
         categories_vc.current_cell.removeWiggleAnimation(categories_vc.current_cell)
         //categories_vc.collection_view.layer.removeAllAnimations()
         //categories_vc.collection_view.reloadData()
+        
+        //categories_vc.collection_view.subviews.last?.removeFromSuperview()
     }
 }

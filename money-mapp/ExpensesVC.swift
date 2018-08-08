@@ -21,6 +21,8 @@ class ExpensesVC : UIViewController {
     @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
     @IBOutlet weak var category_name_top_space: NSLayoutConstraint!
     
+    
+    
     // MARK: state variables
     var using_grid : Bool
     var showing_status_bar : Bool
@@ -58,20 +60,29 @@ class ExpensesVC : UIViewController {
         category_name.text = category.name
         expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
+        updateBudgetBar()
         initializeLabels()
     }
     
+    // assigns the corresponding budget remaining image by percentage
+    func updateBudgetBar() {
+        
+    }
+    
+    // adds gesture recognizers to the labels to switch between status bar and label
     func initializeLabels() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
+        let tap_2 = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
+        let tap_3 = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
         
         // set the labels and image to receive user interaction events
         category_name.isUserInteractionEnabled = true
-        //budget_status_bar.isUserInteractionEnabled = true
-        //budget_remaining_label.isUserInteractionEnabled = true
+        budget_status_bar.isUserInteractionEnabled = true
+        budget_remaining_label.isUserInteractionEnabled = true
         
         category_name.addGestureRecognizer(tap)
-        //budget_status_bar.addGestureRecognizer(tap)
-        //budget_remaining_label.addGestureRecognizer(tap)
+        budget_status_bar.addGestureRecognizer(tap_2)
+        budget_remaining_label.addGestureRecognizer(tap_3)
     }
     
     @objc func showBudgetRemaining(_ sender: UITapGestureRecognizer) {

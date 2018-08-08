@@ -10,15 +10,21 @@ import UIKit
 
 // Expand budget label and give three sig figures
 class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-  
+    
+    @IBOutlet var whole_view: UIView!
+    
     // MARK: collection view
     @IBOutlet weak var collection_view: UICollectionView!
+    @IBOutlet weak var blur_view: UIVisualEffectView!
+    
+    var blur_effect : UIVisualEffect!
     
     // MARK: views
     @IBOutlet weak var title_view: UIView!
     
     // MARK: tab bar
     @IBOutlet weak var tab_bar: UITabBar!
+    @IBOutlet weak var add_category_button: UIButton!
     
     // array of purchase categories
     var categories : [Category] = []
@@ -43,6 +49,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         formatViews()
         formatCells()
         formatTabBar()
+        
+        // store the blue effect and disable it on start up
+        blur_effect = blur_view.effect
+        blur_view.effect = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +69,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: []))
         categories.append(Category(name: "Beverages", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: nil, purchases: []))
-        categories.append(Category(name: "Fuel", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: []))
+        categories.append(Category(name: "Transportation", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: []))
         categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: []))
     }
     
@@ -91,8 +101,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_delete_category" {
-            let delete_cat = segue.destination as! ConfirmDeleteCategory
+            let delete_cat = segue.destination as! ModifyCategory
             delete_cat.categories_vc = self
+            delete_cat.delete = true
         } else if segue.identifier == "to_expense_recording" {
 //            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
@@ -109,6 +120,20 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             add_budget.categories_vc = self
             add_budget.category_cell = current_cell
             add_budget.category_index = selected_category_index
+        } else if segue.identifier == "to_add_category" {
+            let add_category = segue.destination as! ModifyCategory
+            add_category.categories_vc = self
+            add_category.delete = false
+            
+//            let blurEffect = UIBlurEffect(style: .extraLight)
+//            //let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+//            
+//            let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
+//            let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
+//            //blurredEffectView.frame = collection_view.bounds
+//            vibrancyEffectView.frame = collection_view.bounds
+//            //collection_view.addSubview(blurredEffectView)
+//            collection_view.addSubview(vibrancyEffectView)
         }
     }
     
@@ -117,6 +142,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
+    
+    @IBAction func addCategory(_ sender: Any) {
+        
+        
+        performSegue(withIdentifier: "to_add_category", sender: self)
+    }
+    
     
 //    // Helper function: determines cell color based on remaining budget
 //    /* 0 = default, 1 = green, 2 = orange, 3 = red */
