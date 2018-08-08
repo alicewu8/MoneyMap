@@ -14,8 +14,15 @@ class ExpensesVC : UIViewController {
     var category : Category!
     var category_index : Int!
     
+    @IBOutlet weak var budget_status_bar: UIImageView!
+    @IBOutlet weak var budget_remaining_label: UILabel!
+    // MARK: layout constraints
+    @IBOutlet weak var budget_status_bar_height: NSLayoutConstraint!
+    @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
+    
+    // MARK: state variables
     var using_grid : Bool
-    var using_list : Bool
+    var showing_status_bar : Bool
     
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
@@ -49,6 +56,18 @@ class ExpensesVC : UIViewController {
         
         category_name.text = category.name
         expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
+        
+        initializeLabels()
+    }
+    
+    func initializeLabels() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
+        category_name.addGestureRecognizer(tap)
+        budget_status_bar.addGestureRecognizer(tap)
+    }
+    
+    @objc func showBudgetRemaining(_ sender: UITapGestureRecognizer) {
+        
     }
     
     // TODO: testing
@@ -76,9 +95,9 @@ class ExpensesVC : UIViewController {
     required init?(coder aDecoder: NSCoder) {
         // initialize member bool values
         self.using_grid = true
-        self.using_list = false
+        self.showing_status_bar = true
         
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder) 
     }
     
     
@@ -102,7 +121,7 @@ class ExpensesVC : UIViewController {
     }
     
     @IBAction func switchPurchaseLayout(_ sender: Any) {
-        if using_grid {
+        if !using_grid {
             // remove the previous
             expenses_view.subviews.last?.removeFromSuperview()
             switch_layout_button.setImage(UIImage(named: "grid"), for: .normal)
