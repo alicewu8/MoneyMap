@@ -25,6 +25,8 @@
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
 		156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940932117B73400D8F654 /* PurchaseInfo.swift */; };
+		159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */; };
+		159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */; };
 		15C79214211A43EB004475DF /* ExpensesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C79213211A43EB004475DF /* ExpensesListView.swift */; };
 		15C79216211A452A004475DF /* ExpensesGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C79215211A452A004475DF /* ExpensesGridView.xib */; };
 		15C79218211A45C6004475DF /* ExpensesGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C79217211A45C6004475DF /* ExpensesGridView.swift */; };
@@ -77,6 +79,8 @@
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		156940932117B73400D8F654 /* PurchaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseInfo.swift; sourceTree = "<group>"; };
+		159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
+		159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseTableViewCell.xib; sourceTree = "<group>"; };
 		15C79213211A43EB004475DF /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListView.swift; sourceTree = "<group>"; };
 		15C79215211A452A004475DF /* ExpensesGridView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesGridView.xib; sourceTree = "<group>"; };
 		15C79217211A45C6004475DF /* ExpensesGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesGridView.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
 				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
 				15C79213211A43EB004475DF /* ExpensesListView.swift */,
+				159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */,
+				159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */,
 				1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */,
 				15110EC220F58AE40095CCD8 /* LaunchScreen.storyboard in Resources */,
 				15110EBF20F58AE40095CCD8 /* Assets.xcassets in Resources */,
@@ -333,6 +340,7 @@
 				15C79218211A45C6004475DF /* ExpensesGridView.swift in Sources */,
 				1528EFC221163365001E8297 /* StatsVC.swift in Sources */,
 				1528EFC721163426001E8297 /* AddPurchaseCollectionViewCell.swift in Sources */,
+				159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */,
 				153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
