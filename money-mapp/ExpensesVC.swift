@@ -19,6 +19,7 @@ class ExpensesVC : UIViewController {
     // MARK: layout constraints
     @IBOutlet weak var budget_status_bar_height: NSLayoutConstraint!
     @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
+    @IBOutlet weak var category_name_top_space: NSLayoutConstraint!
     
     // MARK: state variables
     var using_grid : Bool
@@ -62,11 +63,40 @@ class ExpensesVC : UIViewController {
     
     func initializeLabels() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
+        
+        // set the labels and image to receive user interaction events
+        category_name.isUserInteractionEnabled = true
+        //budget_status_bar.isUserInteractionEnabled = true
+        //budget_remaining_label.isUserInteractionEnabled = true
+        
         category_name.addGestureRecognizer(tap)
-        budget_status_bar.addGestureRecognizer(tap)
+        //budget_status_bar.addGestureRecognizer(tap)
+        //budget_remaining_label.addGestureRecognizer(tap)
     }
     
     @objc func showBudgetRemaining(_ sender: UITapGestureRecognizer) {
+        // check for nil budget: only execute if a budget is instantiated
+        guard category.budget != nil else { return }
+        
+        // animate the image/label height changes
+        UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseIn, animations: {
+            if self.showing_status_bar { // currently showing the battery bar: hide it and show the budget remaining label
+                self.category_name_top_space.constant = 10
+                self.budget_status_bar_height.constant = 0
+                
+                // initialize budget remaining label
+                self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.running_total!) + " of $" + String(format: "%.2f", self.category.budget!) + " remaining"
+                self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
+                self.budget_remaining_height.constant = 10
+                self.showing_status_bar = false
+            } else { // shrink the label and revert the image height
+                // keep the category name in the same place
+                self.category_name_top_space.constant = 10
+                self.budget_remaining_height.constant = 0
+                self.budget_status_bar_height.constant = 20
+            }
+            self.view.layoutIfNeeded()
+        }, completion: nil)
         
     }
     
@@ -97,7 +127,7 @@ class ExpensesVC : UIViewController {
         self.using_grid = true
         self.showing_status_bar = true
         
-        super.init(coder: aDecoder) 
+        super.init(coder: aDecoder)
     }
     
     
