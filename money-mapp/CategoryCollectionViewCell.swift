@@ -119,6 +119,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
     }
     
     @IBAction func deletePressed(_ sender: Any) {
+        parent.add = false
         parent.confirmCategoryDeletion(category)
     }
     

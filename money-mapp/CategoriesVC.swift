@@ -11,13 +11,22 @@ import UIKit
 // Expand budget label and give three sig figures
 class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet var confirm_change_view: UIView!
+    @IBOutlet weak var confirm_change_message: UILabel!
+    
+    @IBOutlet weak var yes_button: UIButton!
     @IBOutlet var whole_view: UIView!
+    @IBOutlet weak var no_button: UIButton!
     
     // MARK: collection view
     @IBOutlet weak var collection_view: UICollectionView!
     @IBOutlet weak var blur_view: UIVisualEffectView!
     
     var blur_effect : UIVisualEffect!
+    
+    // MARK: state variables
+    var add : Bool = false
+    var confirm_window_displayed : Bool = false
     
     // MARK: views
     @IBOutlet weak var title_view: UIView!
@@ -53,6 +62,50 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         // store the blue effect and disable it on start up
         blur_effect = blur_view.effect
         blur_view.effect = nil
+        
+        confirm_change_view.roundCorners(7.5)
+        
+        yes_button.roundCorners(7.5)
+        no_button.roundCorners(7.5)
+        
+    }
+    
+    func animateIn() {
+        confirm_window_displayed = true
+        // NOTE: it wasn't centering because I gave it constraints
+        // position it in the view
+        confirm_change_view.center = CGPoint(x: collection_view.frame.width / 2, y: collection_view.frame.height / 2)
+        
+        self.collection_view.addSubview(confirm_change_view)
+        
+        // slightly increase the size to account for the animation (scales down the size)
+        confirm_change_view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        
+        confirm_change_view.roundCorners(7.5)
+        
+        // make invisible
+        confirm_change_view.alpha = 0
+        
+        UIView.animate(withDuration: 0.4) {
+            self.blur_view.effect = self.blur_effect
+            self.confirm_change_view.alpha = 1
+            
+            // restore its previous size
+            self.confirm_change_view.transform = CGAffineTransform.identity
+        }
+    }
+    
+    func animateOut() {
+        confirm_window_displayed = false
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.confirm_change_view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.confirm_change_view.alpha = 0
+            
+            self.blur_view.effect = nil
+        }) { (success: Bool) in
+            self.confirm_change_view.removeFromSuperview()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +125,21 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Transportation", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: nil, purchases: []))
         categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: []))
     }
+    
+    
+    @IBAction func pressedYesButton(_ sender: Any) {
+        if add {
+            print("implement category adding")
+        } else {
+            deleteCategory()
+        }
+        animateOut()
+    }
+    
+    @IBAction func pressedNoButton(_ sender: Any) {
+        animateOut()
+    }
+    
     
     func formatViews() {
         collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
@@ -100,11 +168,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "to_delete_category" {
-            let delete_cat = segue.destination as! ModifyCategory
-            delete_cat.categories_vc = self
-            delete_cat.delete = true
-        } else if segue.identifier == "to_expense_recording" {
+        if segue.identifier == "to_expense_recording" {
 //            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
             
             // track the category selected and pass information to next view controller
@@ -120,21 +184,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             add_budget.categories_vc = self
             add_budget.category_cell = current_cell
             add_budget.category_index = selected_category_index
-        } else if segue.identifier == "to_add_category" {
-            let add_category = segue.destination as! ModifyCategory
-            add_category.categories_vc = self
-            add_category.delete = false
-            
-//            let blurEffect = UIBlurEffect(style: .extraLight)
-//            //let blurredEffectView = UIVisualEffectView(effect: blurEffect)
-//            
-//            let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
-//            let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
-//            //blurredEffectView.frame = collection_view.bounds
-//            vibrancyEffectView.frame = collection_view.bounds
-//            //collection_view.addSubview(blurredEffectView)
-//            collection_view.addSubview(vibrancyEffectView)
-        }
+        } 
     }
     
     // MARK: Collection view
@@ -144,9 +194,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     }
     
     @IBAction func addCategory(_ sender: Any) {
-        
-        
-        performSegue(withIdentifier: "to_add_category", sender: self)
+        if !confirm_window_displayed {
+            confirm_change_message.text = "Add a new category?"
+            add = true
+            animateIn()
+            confirm_window_displayed = true 
+        }
     }
     
     
@@ -238,7 +291,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         category_to_delete = category.id
         
         // segue to the confirmation popup
-        performSegue(withIdentifier: "to_delete_category", sender: self)
+        //performSegue(withIdentifier: "to_delete_category", sender: self)
+        confirm_change_message.text = "Delete this category?"
+        animateIn()
     }
     
     // searches categories array for the object to delete
