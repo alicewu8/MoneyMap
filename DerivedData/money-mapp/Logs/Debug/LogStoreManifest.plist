@@ -6,6 +6,35 @@
 	<integer>8</integer>
 	<key>logs</key>
 	<dict>
+		<key>04F4016B-9A2F-4345-89CB-4578B2A3252D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>04F4016B-9A2F-4345-89CB-4578B2A3252D.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555382722.04035199</real>
+			<key>timeStoppedRecording</key>
+			<real>555382738.63469303</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>04F4016B-9A2F-4345-89CB-4578B2A3252D</string>
+		</dict>
 		<key>1B3FB1BA-3058-40E6-A8E1-E083E16F4BBA</key>
 		<dict>
 			<key>className</key>

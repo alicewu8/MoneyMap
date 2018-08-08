@@ -9,6 +9,8 @@
 import UIKit
 
 class AddPurchaseTableViewCell: UITableViewCell {
+    
+    static let reuse_id = "AddPurchaseTableViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PurchaseTableViewCell" customModule="money_mapp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="PurchaseTableViewCell" customModule="money_mapp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PurchaseTableViewCell" rowHeight="145" id="KGk-i7-Jjw" customClass="PurchaseTableViewCell" customModule="money_mapp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="487" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -53,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpO-ig-Ykg">
-                                <rect key="frame" x="20" y="57.5" width="276.5" height="2"/>
+                                <rect key="frame" x="20" y="57.5" width="266.5" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="rN7-0o-eJW"/>
@@ -63,7 +63,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OIl-u9-xqb" firstAttribute="top" secondItem="QpO-ig-Ykg" secondAttribute="bottom" constant="8" symbolic="YES" id="5qf-cr-7qY"/>
-                            <constraint firstAttribute="trailing" secondItem="QpO-ig-Ykg" secondAttribute="trailing" constant="10" id="6tQ-ZR-Rah"/>
+                            <constraint firstAttribute="trailing" secondItem="QpO-ig-Ykg" secondAttribute="trailing" constant="20" id="6tQ-ZR-Rah"/>
                             <constraint firstItem="Jlh-qL-IWk" firstAttribute="top" secondItem="u37-FJ-K93" secondAttribute="top" constant="20" id="75b-Tb-SY0"/>
                             <constraint firstAttribute="bottom" secondItem="OIl-u9-xqb" secondAttribute="bottom" constant="8" id="9jA-ZJ-cml"/>
                             <constraint firstAttribute="trailing" secondItem="Jlh-qL-IWk" secondAttribute="trailing" constant="5" id="GbT-tO-hVD"/>
@@ -87,6 +87,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="details_view" destination="u37-FJ-K93" id="jvV-TN-oqP"/>
+                <outlet property="price_label" destination="rTc-bJ-S11" id="L0W-2z-8zg"/>
+                <outlet property="price_view" destination="2zF-Mw-0s0" id="Ncc-vP-utN"/>
+                <outlet property="purchase_date" destination="OIl-u9-xqb" id="Cgj-fI-FZh"/>
+                <outlet property="purchase_name" destination="Jlh-qL-IWk" id="XiO-dj-gM2"/>
+                <outlet property="separator_line" destination="QpO-ig-Ykg" id="TZe-of-NXN"/>
+            </connections>
             <point key="canvasLocation" x="68.5" y="-71.5"/>
         </tableViewCell>
     </objects>
