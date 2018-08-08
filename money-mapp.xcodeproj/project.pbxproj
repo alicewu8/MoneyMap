@@ -22,7 +22,6 @@
 		1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */; };
 		1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */; };
 		153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */; };
-		156619A8211B67B100BA664F /* ModifyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156619A7211B67B100BA664F /* ModifyCategory.swift */; };
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
 		156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940932117B73400D8F654 /* PurchaseInfo.swift */; };
@@ -78,7 +77,6 @@
 		1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupViewController.swift; sourceTree = "<group>"; };
-		156619A7211B67B100BA664F /* ModifyCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyCategory.swift; sourceTree = "<group>"; };
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		156940932117B73400D8F654 /* PurchaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseInfo.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		15110EB620F58AE30095CCD8 /* money-mapp */ = {
 			isa = PBXGroup;
 			children = (
-				156619A7211B67B100BA664F /* ModifyCategory.swift */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
@@ -331,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				156619A8211B67B100BA664F /* ModifyCategory.swift in Sources */,
 				1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */,
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
 				15C79214211A43EB004475DF /* ExpensesListView.swift in Sources */,

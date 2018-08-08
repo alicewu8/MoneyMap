@@ -25,11 +25,21 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
 
     func initialize(parent: ExpensesVC) {
         self.parent = parent
+        self.layer.backgroundColor = Canvas.grapefruit.cgColor
         
         self.roundCorners(10)
     }
     
     @IBAction func addPurchaseTapped(_ sender: Any) {
+        
+        //self.layer.backgroundColor =
+        let color = UIColor(cgColor: self.layer.backgroundColor!)
+        
+        // decrease opacity by 50% to indicate press
+        UIView.animate(withDuration: 0.3) {
+            self.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
+        }
+        
         parent.performSegue(withIdentifier: "to_add_purchase", sender: self)
     }
 }

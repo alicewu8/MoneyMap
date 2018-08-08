@@ -10,22 +10,13 @@ import UIKit
 
 class ExpensesVC : UIViewController {
     
-    var categories_vc : CategoriesVC!
-    var category : Category!
-    var category_index : Int!
-    
     @IBOutlet weak var budget_status_bar: UIImageView!
     @IBOutlet weak var budget_remaining_label: UILabel!
+    
     // MARK: layout constraints
     @IBOutlet weak var budget_status_bar_height: NSLayoutConstraint!
     @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
     @IBOutlet weak var category_name_top_space: NSLayoutConstraint!
-    
-    
-    
-    // MARK: state variables
-    var using_grid : Bool
-    var showing_status_bar : Bool
     
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
@@ -38,6 +29,14 @@ class ExpensesVC : UIViewController {
     @IBOutlet weak var done_btn: UIButton!
     @IBOutlet weak var category_name: UILabel!
     @IBOutlet weak var switch_layout_button: UIButton!
+    
+    // MARK: state variables
+    var using_grid : Bool
+    var showing_status_bar : Bool
+    
+    var categories_vc : CategoriesVC!
+    var category : Category!
+    var category_index : Int!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_add_purchase" {
@@ -60,12 +59,45 @@ class ExpensesVC : UIViewController {
         category_name.text = category.name
         expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
+        budget_status_bar.roundCorners()
+        
         updateBudgetBar()
         initializeLabels()
     }
     
     // assigns the corresponding budget remaining image by percentage
     func updateBudgetBar() {
+        guard let budget = categories_vc.categories[category_index].budget else { return }
+        guard let total_spent = categories_vc.categories[category_index].running_total else { return }
+        
+        // Super painful hardcoding. Think of how to improve
+        // TODO: implement warning bar when budget is exceeded
+        if total_spent == 0 {
+            budget_status_bar.image = UIImage(named: "budget_0")
+        } else if total_spent <= budget * 0.1 {
+            budget_status_bar.image = UIImage(named: "budget_10")
+        } else if total_spent <= budget * 0.2 {
+            budget_status_bar.image = UIImage(named: "budget_20")
+        } else if total_spent <= budget * 0.3 {
+            budget_status_bar.image = UIImage(named: "budget_30")
+        } else if total_spent <= budget * 0.4 {
+            budget_status_bar.image = UIImage(named: "budget_40")
+        } else if total_spent <= budget * 0.5 {
+            budget_status_bar.image = UIImage(named: "budget_50-1")
+        } else if total_spent <= budget * 0.6 {
+            budget_status_bar.image = UIImage(named: "budget_60")
+        } else if total_spent <= budget * 0.7 {
+            budget_status_bar.image = UIImage(named: "budget_70")
+        } else if total_spent <= budget * 0.8 {
+            budget_status_bar.image = UIImage(named: "budget_80")
+        } else if total_spent <= budget * 0.9 {
+            budget_status_bar.image = UIImage(named: "budget_90")
+        } else {
+            budget_status_bar.image = UIImage(named: "budget_100")
+        }
+        
+        //if money_spent
+        
         
     }
     
@@ -114,12 +146,6 @@ class ExpensesVC : UIViewController {
         self.view.layoutIfNeeded()
     }
     
-    // TODO: testing
-    func initializePurchases() {
-        categories_vc.categories[category_index].purchases.append(Purchase(name: "Plane ticket", cost: 340.40, date: "8/07/18", info: "JetBlue", id: 0))
-        categories_vc.categories[category_index].purchases.append(Purchase(name: "Dinner", cost: 340.40, date: "8/07/18", info: "JetBlue", id: 0))
-    }
-    
     // default to showing the grid view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -144,7 +170,6 @@ class ExpensesVC : UIViewController {
         super.init(coder: aDecoder)
     }
     
-    
     func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {
         categories_vc.categories[category_index].purchases.append(purchase)
         
@@ -168,12 +193,12 @@ class ExpensesVC : UIViewController {
         if !using_grid {
             // remove the previous
             expenses_view.subviews.last?.removeFromSuperview()
-            switch_layout_button.setImage(UIImage(named: "grid"), for: .normal)
-            using_grid = false
+            switch_layout_button.setImage(UIImage(named: "list"), for: .normal)
+            using_grid = true
         } else {
             expenses_view.subviews.last?.removeFromSuperview()
-            switch_layout_button.setImage(UIImage(named: "list_view"), for: .normal)
-            using_grid = true 
+            switch_layout_button.setImage(UIImage(named: "grid"), for: .normal)
+            using_grid = false
         }
     }
     

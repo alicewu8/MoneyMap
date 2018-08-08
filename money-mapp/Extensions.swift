@@ -32,6 +32,23 @@ struct Purchase {
     var id : Int!
 }
 
+// TODO: implement custom UI color palettes
+struct Spring {
+    
+}
+
+struct Summer {
+    
+}
+
+struct Fall {
+    
+}
+
+struct Michigan {
+    
+}
+
 // UI Colors 
 struct Canvas {
     // Reds

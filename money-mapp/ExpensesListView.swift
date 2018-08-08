@@ -71,4 +71,9 @@ class ExpensesListView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("Todo")
+        return 40
+    }
+    
 }

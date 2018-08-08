@@ -23,19 +23,8 @@ class PurchaseTableViewCell: UITableViewCell {
     var category : Category!
     var purchase : Purchase!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func initialize(_ parent: ExpensesVC) {
-        
+        price_view.roundCorners(7.5)
     }
     
 }

@@ -32,6 +32,9 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     func initialize(category: Category, parent: ExpensesVC, purchase_id: Int) {
         self.parent = parent
         self.category = category
+        
+        self.layer.backgroundColor = Canvas.artificial_watermelon.cgColor
+        
         print(category)
         self.purchase = category.purchases[purchase_id]
         print(purchase)

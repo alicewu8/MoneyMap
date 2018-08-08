@@ -70,6 +70,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
     }
     
+    // MARK: animations for displaying confirmation window
     func animateIn() {
         confirm_window_displayed = true
         // NOTE: it wasn't centering because I gave it constraints
@@ -112,9 +113,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         super.viewWillAppear(animated)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
     
     // Default purchase categories (for testing)
     func initializeCategories() {
@@ -126,20 +127,23 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: nil, purchases: []))
     }
     
-    
+    // MARK: handle category addition/deletion actions
     @IBAction func pressedYesButton(_ sender: Any) {
         if add {
             print("implement category adding")
         } else {
             deleteCategory()
+            //current_cell.removeWiggleAnimation(current_cell)
         }
         animateOut()
     }
     
     @IBAction func pressedNoButton(_ sender: Any) {
         animateOut()
+        if !add {
+            current_cell.removeWiggleAnimation(current_cell)
+        }
     }
-    
     
     func formatViews() {
         collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
@@ -169,11 +173,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // MARK: Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_expense_recording" {
-//            guard let selected_cell = sender as? CategoryCollectionViewCell, let selected_row_index = collection_view.indexPath(for: selected_cell)?.row else { return }
-            
-            // track the category selected and pass information to next view controller
-            // FIXME: current_cell always refers to the last loaded category
-            //let expense_category = current_cell.category
             let expense_vc = segue.destination as! ExpensesVC
             //expense_vc.category = expense_category
             expense_vc.categories_vc = self
@@ -198,7 +197,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             confirm_change_message.text = "Add a new category?"
             add = true
             animateIn()
-            confirm_window_displayed = true 
+            confirm_window_displayed = true
         }
     }
     
@@ -269,7 +268,15 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
         
         //cell.layer.borderColor = Canvas.golden_sand.cgColor
-        cell.layer.backgroundColor = Canvas.french_sky_blue.cgColor
+        //cell.layer.backgroundColor = Canvas.french_sky_blue.cgColor
+        
+        // TODO: change the alpha from 0.5 to 1.0
+        let color = UIColor(cgColor: cell.layer.backgroundColor!)
+        
+        // decrease opacity by 50% to indicate press
+        UIView.animate(withDuration: 0.3) {
+            cell.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
+        }
         
         // segue into the VC responsible for expense tracking
         performSegue(withIdentifier: "to_expense_recording", sender: self)
@@ -278,6 +285,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         // for custom categories: record the string and use a default image? Or have user choose an image (do later)
     }
     
+    // FIXME: doesn't work
     // Reverts the border to unselected state
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
 //        guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
@@ -307,9 +315,5 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         }
         
         collection_view.reloadData()
-        // animate the collection view refreshing FIXME: 'attempt to create view animation for nil view'
-//        collection_view.performBatchUpdates({
-//            self.collection_view.reloadSections(IndexSet(integer: 0))
-//        }, completion: nil)
     }
 }
