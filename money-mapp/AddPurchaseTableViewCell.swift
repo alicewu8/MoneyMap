@@ -1,5 +1,5 @@
 //
-//  PurchaseTableViewCell.swift
+//  AddPurchaseTableViewCell.swift
 //  money-mapp
 //
 //  Created by Alice Wu on 8/7/18.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class PurchaseTableViewCell: UITableViewCell {
-    
-    static let reuse_id = "PurchaseTableViewCell"
+class AddPurchaseTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
