@@ -183,8 +183,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
         
-        cell.layer.borderColor = Canvas.golden_sand.cgColor
-        cell.layer.borderWidth = 2
+        //cell.layer.borderColor = Canvas.golden_sand.cgColor
+        cell.layer.backgroundColor = Canvas.french_sky_blue.cgColor
         
         // segue into the VC responsible for expense tracking
         performSegue(withIdentifier: "to_expense_recording", sender: self)
@@ -195,10 +195,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // Reverts the border to unselected state
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
-        
-        cell.layer.borderColor = Canvas.watermelon_red.cgColor
-        cell.layer.borderWidth = 0.5
+//        guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
+//        
+//        cell.layer.borderColor = Canvas.watermelon_red.cgColor
+//        cell.layer.borderWidth = 0.5
     }
     
     // MARK: Category add/delete
