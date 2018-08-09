@@ -1251,7 +1251,7 @@
         <image name="budget_50-1" width="500" height="500"/>
         <image name="empty_add_icon" width="150" height="150"/>
         <image name="list" width="25" height="24"/>
-        <image name="record" width="30" height="33"/>
+        <image name="record" width="25" height="27"/>
         <image name="return" width="15" height="27"/>
         <image name="settings" width="30" height="30"/>
         <image name="x" width="158" height="158"/>

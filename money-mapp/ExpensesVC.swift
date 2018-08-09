@@ -55,10 +55,13 @@ class ExpensesVC : UIViewController {
     var showing_status_bar : Bool
     var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
     var added_sort_view : Bool = false
+    var first_sort : Bool = true
     
     var categories_vc : CategoriesVC!
     var category : Category!
     var category_index : Int!
+    
+    var presorted_array : [Purchase]?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_add_purchase" {
@@ -107,12 +110,18 @@ class ExpensesVC : UIViewController {
     
     // TODO
     @IBAction func sortMethodSelected(_ sender: UIButton) {
+        // save the original array for use in "newest" option
+        if first_sort {
+            presorted_array = categories_vc.categories[category_index].purchases
+            first_sort = false
+        }
+        
         if sender.tag == 1 {
             print("Price low to high")
             let color = UIColor(cgColor: self.option_one_view.layer.backgroundColor!)
             UIView.animate(withDuration: 0.3, animations: {
                 self.option_one_view.layer.backgroundColor = color.withAlphaComponent(1.5).cgColor
-                self.sort_options_view.alpha = 0 })
+            })
             { (success: Bool) in
                 self.option_one_view.backgroundColor = color
             }
@@ -120,19 +129,30 @@ class ExpensesVC : UIViewController {
             // replace the current purchases array with the sorted array
             categories_vc.categories[category_index
                 ].purchases = insertionSort(categories_vc.categories[category_index
-                    ].purchases)
-            
-            if using_grid {
-                expenses_grid.purchases_collection.performBatchUpdates({
-                    self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
-                }, completion: nil)
-            }
-            
+                    ].purchases, true)
             
         } else if sender.tag == 2 {
             print("Price high to low")
+            
+            // replace the current purchases array with the sorted array
+            // FIXME: fix increasing order
+            categories_vc.categories[category_index
+                ].purchases = insertionSort(categories_vc.categories[category_index
+                    ].purchases, true)
+            categories_vc.categories[category_index].purchases = reverseArray(categories_vc.categories[category_index].purchases)
+            
         } else if sender.tag == 3 {
             print("Newest")
+            if presorted_array != nil {
+                categories_vc.categories[category_index].purchases = presorted_array!
+            }
+        }
+        
+        // update the data to reflect the sort
+        if using_grid {
+            expenses_grid.purchases_collection.performBatchUpdates({
+                self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
+            }, completion: nil)
         }
     }
     

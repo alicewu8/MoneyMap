@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>9EDE5315-1F24-4858-9701-9D3A1999DA41</key>
+		<key>4118FD6A-5479-4D68-869D-F3145D8B3DE9</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,19 +15,19 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>9EDE5315-1F24-4858-9701-9D3A1999DA41.xcactivitylog</string>
+			<string>4118FD6A-5479-4D68-869D-F3145D8B3DE9.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>money-mapp-gztauzbsjiheiagfbhouislqyyhp</string>
 			<key>timeStartedRecording</key>
-			<real>555530416.48396206</real>
+			<real>555532812.96032</real>
 			<key>timeStoppedRecording</key>
-			<real>555530419.67767799</real>
+			<real>555532820.72802401</real>
 			<key>title</key>
 			<string>Build target money-mapp</string>
 			<key>uniqueIdentifier</key>
-			<string>9EDE5315-1F24-4858-9701-9D3A1999DA41</string>
+			<string>4118FD6A-5479-4D68-869D-F3145D8B3DE9</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

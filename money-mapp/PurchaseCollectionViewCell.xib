@@ -13,20 +13,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PurchaseCollectionViewCell" customModule="money_mapp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PurchaseCollectionViewCell" id="gTV-IL-0wX" customClass="PurchaseCollectionViewCell" customModule="money_mapp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="203"/>
+            <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="140" height="203"/>
+                <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-Ry-Eyc">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="203"/>
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l15-uA-i26">
-                                <rect key="frame" x="8" y="10" width="124" height="60"/>
+                                <rect key="frame" x="8" y="10" width="149" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr7-Ig-1pY">
-                                        <rect key="frame" x="0.0" y="0.0" width="124" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="149" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                         <color key="textColor" red="0.90316599607467651" green="0.34042540192604065" blue="0.33105623722076416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -42,23 +42,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TX-5y-uiX">
-                                <rect key="frame" x="8" y="73" width="124" height="2"/>
+                                <rect key="frame" x="8" y="73" width="149" height="2"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="8kW-Ro-qFD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qO-F7-YT4">
-                                <rect key="frame" x="15" y="78" width="110" height="110"/>
+                                <rect key="frame" x="15" y="78" width="135" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crew Sweatshirt" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-bZ-cjc">
-                                        <rect key="frame" x="-15" y="5" width="140" height="57.5"/>
+                                        <rect key="frame" x="-15" y="5" width="165" height="29"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, 8/4/2018" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="naY-HY-Vmd">
-                                        <rect key="frame" x="-15" y="66.5" width="140" height="52"/>
+                                        <rect key="frame" x="-15" y="38" width="165" height="52"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                 <constraint firstItem="Y6R-Ry-Eyc" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="ncw-bt-OyR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="140" height="203"/>
+            <size key="customSize" width="165" height="213"/>
             <connections>
                 <outlet property="background_view" destination="Y6R-Ry-Eyc" id="imp-zp-OPF"/>
                 <outlet property="details_view" destination="6qO-F7-YT4" id="UFl-cZ-riw"/>
@@ -111,7 +111,7 @@
                 <outlet property="purchase_name" destination="JgW-bZ-cjc" id="ego-lh-UQ6"/>
                 <outlet property="separator_view" destination="2TX-5y-uiX" id="FU9-4A-veV"/>
             </connections>
-            <point key="canvasLocation" x="149" y="-9.5"/>
+            <point key="canvasLocation" x="168.80000000000001" y="-14.842578710644679"/>
         </collectionViewCell>
     </objects>
 </document>

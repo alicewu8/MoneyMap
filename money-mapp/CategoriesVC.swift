@@ -130,7 +130,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         categories.append(Category(name: "Transportation", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
         
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
     // MARK: handle category addition/deletion actions
