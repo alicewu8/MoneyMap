@@ -76,6 +76,12 @@ func reverseArray(_ purchases: [Purchase]) -> [Purchase] {
         end -= 1
         num_swaps += 1
     }
+    // if odd number of elements: check if the middle element needs to be swapped with its right neighbor
+    if increasingOrder(copy[copy.count / 2 - 1].cost, copy[copy.count / 2].cost) {
+        temp = copy[copy.count / 2]
+        copy[copy.count / 2] = copy[copy.count / 2 - 1]
+        copy[copy.count / 2 - 1] = temp 
+    }
     
     return copy
 }

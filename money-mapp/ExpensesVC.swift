@@ -45,7 +45,7 @@ class ExpensesVC : UIViewController {
     // Superview that will contain either the grid or list view
     @IBOutlet weak var expenses_view: UIView!
     var expenses_grid : ExpensesGridView!
-    var expenses_list : ExpensesListView?
+    var expenses_list : ExpensesListView!
     
     @IBOutlet weak var category_name: UILabel!
     @IBOutlet weak var switch_layout_button: UIButton!
@@ -164,11 +164,13 @@ class ExpensesVC : UIViewController {
             }
         }
         
-        // update the data to reflect the sort
+        // animate updating the data to reflect the sort
         if using_grid {
             expenses_grid.purchases_collection.performBatchUpdates({
                 self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
             }, completion: nil)
+        } else {
+            UIView.transition(with: self.expenses_list.purchases_table_view, duration: 0.3, options: .curveEaseIn, animations: {self.expenses_list?.purchases_table_view.reloadData()}, completion: nil)
         }
     }
     

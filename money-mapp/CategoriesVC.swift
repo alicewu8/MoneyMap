@@ -123,7 +123,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
         
         // testing sort
-        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: [Purchase(name: "Vegetables", cost: 20, date: "8/09/18", info: "", id: 0), Purchase(name: "Bread", cost: 4, date: "", info: "", id: 1), Purchase(name: "", cost: 21, date: "", info: "", id: 2), Purchase(name: "", cost: 20, date: "", info: "", id: 3), Purchase(name: "", cost: 40, date: "", info: "", id: 4)
+        categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: [Purchase(name: "Vegetables", cost: 20, date: "8/09/18", info: "MHealthy Farmer's Market", id: 0), Purchase(name: "Bread", cost: 4, date: "8/01/18", info: "for Justin", id: 1), Purchase(name: "Grocery run", cost: 30, date: "8/05/18", info: "", id: 5), Purchase(name: "Soymilk", cost: 3.25, date: "8/02/18", info: "Unsweetened for Dad", id: 2), Purchase(name: "Lychees", cost: 3.29, date: "8/02/18", info: "", id: 3), Purchase(name: "Meijer Haul", cost: 40, date: "8/05/18", info: "", id: 4)
             ]))
         
         categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
