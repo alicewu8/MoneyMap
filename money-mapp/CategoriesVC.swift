@@ -35,6 +35,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     @IBOutlet weak var tab_bar: UITabBar!
     @IBOutlet weak var add_category_button: UIButton!
     
+    // MARK: transparent views for animations
+    @IBOutlet weak var add_outer: UIView!
+    @IBOutlet weak var settings_outer: UIView!
+    
     // array of purchase categories
     var categories : [Category] = []
     
@@ -67,7 +71,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         yes_button.roundCorners(7.5)
         no_button.roundCorners(7.5)
-        
     }
     
     // MARK: animations for displaying confirmation window
@@ -106,16 +109,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             self.blur_view.effect = nil
         }) { (success: Bool) in
             self.confirm_change_view.removeFromSuperview()
-        }
+        } // completion block: executes after animation block has run
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
     
     // Default purchase categories (for testing)
     func initializeCategories() {
@@ -146,7 +145,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     }
     
     func formatViews() {
-        collection_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
+        collection_view.layer.backgroundColor = UIColor.white.cgColor
+        
+        // make it a circle
+        settings_outer.roundCorners(settings_outer.frame.width / 2)
+        settings_outer.alpha = 0
+        add_outer.roundCorners(add_outer.frame.width / 2)
+        add_outer.alpha = 0
     }
     
     func formatCells() {
@@ -193,11 +198,33 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     }
     
     @IBAction func addCategory(_ sender: Any) {
+        // animate the circular background view
+        UIView.animate(withDuration: 0.4, animations: {
+            self.add_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.add_outer.alpha = 1
+        }) { (success: Bool) in
+            // restore to its previous size and disappear it
+            self.add_outer.transform = CGAffineTransform.identity
+            self.add_outer.alpha = 0
+        }
+        
         if !confirm_window_displayed {
-            confirm_change_message.text = "Add a new category?"
+            confirm_change_message.text = "Do you want to add a new category?"
             add = true
             animateIn()
             confirm_window_displayed = true
+        }
+    }
+    
+    @IBAction func openSettings(_ sender: Any) {
+        // animate the circular background view
+        UIView.animate(withDuration: 0.4, animations: {
+            self.settings_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.settings_outer.alpha = 1
+        }) { (success: Bool) in
+            // restore to its previous size and disappear it
+            self.settings_outer.transform = CGAffineTransform.identity
+            self.settings_outer.alpha = 0
         }
     }
     
@@ -273,9 +300,18 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         // TODO: change the alpha from 0.5 to 1.0
         let color = UIColor(cgColor: cell.layer.backgroundColor!)
         
-        // decrease opacity by 50% to indicate press
-        UIView.animate(withDuration: 0.3) {
+        // decrease opacity by 50% and size to indicate press
+//        UIView.animate(withDuration: 0.3) {
+//            cell.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
+//            cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+//        }
+        
+        UIView.animate(withDuration: 0.3, animations: {
             cell.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
+            cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { (success: Bool) in
+            cell.layer.backgroundColor = color.cgColor
+            cell.transform = CGAffineTransform.identity
         }
         
         // segue into the VC responsible for expense tracking

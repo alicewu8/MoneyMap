@@ -10,6 +10,7 @@ import UIKit
 
 class ExpensesVC : UIViewController {
     
+    @IBOutlet weak var sort_button: UIButton!
     @IBOutlet weak var budget_status_bar: UIImageView!
     @IBOutlet weak var budget_remaining_label: UILabel!
     
@@ -18,21 +19,41 @@ class ExpensesVC : UIViewController {
     @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
     @IBOutlet weak var category_name_top_space: NSLayoutConstraint!
     
+    // MARK: sort options view
+    @IBOutlet var sort_options_view: UIView!
+    @IBOutlet weak var option_one_view: UIView!
+    @IBOutlet weak var option_one_label: UILabel!
+    @IBOutlet weak var separator_one: UIView!
+    @IBOutlet weak var option_one_button: UIButton!
+    
+    @IBOutlet weak var option_two_view: UIView!
+    @IBOutlet weak var option_two_label: UILabel!
+    @IBOutlet weak var separator_two: UIView!
+    @IBOutlet weak var option_two_button: UIButton!
+    
+    @IBOutlet weak var option_three_view: UIView!
+    @IBOutlet weak var option_three_label: UILabel!
+    @IBOutlet weak var option_three_button: UIButton!
+    
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
+    
+    // MARK: transparent background views for animations
+    @IBOutlet weak var sort_outer: UIView!
+    @IBOutlet weak var switch_outer: UIView!
     
     // Superview that will contain either the grid or list view
     @IBOutlet weak var expenses_view: UIView!
     var expenses_grid : ExpensesGridView!
     var expenses_list : ExpensesListView?
     
-    @IBOutlet weak var done_btn: UIButton!
     @IBOutlet weak var category_name: UILabel!
     @IBOutlet weak var switch_layout_button: UIButton!
     
     // MARK: state variables
     var using_grid : Bool
     var showing_status_bar : Bool
+    var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
     
     var categories_vc : CategoriesVC!
     var category : Category!
@@ -51,9 +72,6 @@ class ExpensesVC : UIViewController {
     }
     
     override func viewDidLoad() {
-        done_btn.roundCorners(7.5)
-        done_btn.layer.borderWidth = 1.5
-        done_btn.layer.borderColor = Canvas.watermelon_red.cgColor
         background_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
         category_name.text = category.name
@@ -63,6 +81,115 @@ class ExpensesVC : UIViewController {
         
         updateBudgetBar()
         initializeLabels()
+        
+        // make the background views circular and hidden
+        sort_outer.roundCorners(sort_outer.frame.width / 2)
+        sort_outer.alpha = 0
+        
+        switch_outer.roundCorners(switch_outer.frame.width / 2)
+        switch_outer.alpha = 0
+        
+        // add a pan gesture recognizer to support swiping the screen to dismiss
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(panScreen(_:)))
+        view.addGestureRecognizer(pan)
+        
+        //sort_options_view.roundCorners(7.5)
+        
+        // don't round these corners
+        //sort_options_view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        sort_options_view.layer.borderWidth = 1
+        sort_options_view.layer.borderColor = Canvas.strawberry.cgColor
+//        option_one_view.layer.borderWidth = 2
+//        option_one_view.layer.borderColor = Canvas.strawberry.cgColor
+//        option_two_view.layer.borderWidth = 1
+//        option_two_view.layer.borderColor = Canvas.strawberry.cgColor
+//        option_three_view.layer.borderWidth = 2
+//        option_three_view.layer.borderColor = Canvas.strawberry.cgColor
+        
+        separator_one.layer.backgroundColor = Canvas.strawberry.cgColor
+        separator_two.layer.backgroundColor = Canvas.strawberry.cgColor
+        
+        option_one_button.tag = 1
+        option_two_button.tag = 2
+        option_three_button.tag = 3
+    }
+    
+    // TODO
+    @IBAction func sortMethodSelected(_ sender: UIButton) {
+        if sender.tag == 1 {
+            print("Price low to high")
+            let color = UIColor(cgColor: self.option_one_view.layer.backgroundColor!)
+            UIView.animate(withDuration: 0.3, animations: { self.option_one_view.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor }) { (success: Bool) in
+                sender.layer.backgroundColor = color.cgColor
+            }
+            
+        } else if sender.tag == 2 {
+            print("Price high to low")
+        } else if sender.tag == 3 {
+            print("Newest")
+        }
+    }
+    
+    @IBAction func showSortOptions(_ sender: Any) {
+        print("sort pressed")
+        
+        // animate the circular background view
+        UIView.animate(withDuration: 0.4, animations: {
+            self.sort_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.sort_outer.alpha = 1
+        }) { (success: Bool) in
+            // restore to its previous size and disappear it
+            self.sort_outer.transform = CGAffineTransform.identity
+            self.sort_outer.alpha = 0
+        }
+        
+        if sort_button.titleLabel?.text == "Sort +" {
+            sort_button.setTitle("Sort -", for: .normal)
+            // y value should be below safe area (20) + intro message height (64) = 84
+            sort_options_view.frame.origin.y = 84
+            
+            // have the x align with the sort button's leading
+            sort_options_view.frame.origin.x = 20
+            
+            //view.addSubview(sort_options_view)
+            //view.layoutSubviews()
+            
+            UIView.transition(with: self.view, duration: 0.5, options: UIView.AnimationOptions.curveEaseIn,
+                              animations: {self.view.addSubview(self.sort_options_view)}, completion: nil)
+            view.layoutSubviews()
+        } else {
+            sort_button.setTitle("Sort +", for: .normal)
+            view.subviews.last?.removeFromSuperview()
+        }
+    }
+    
+    // vertically displaces this screen and handles swipe to dismiss
+    @objc func panScreen(_ sender: UIPanGestureRecognizer) {
+        // stores the origin of the pan gesture
+        let touchPoint = sender.location(in: self.view?.window)
+        
+        if sender.state == UIGestureRecognizer.State.began {
+            initial_touch_point = touchPoint
+        } else if sender.state == UIGestureRecognizer.State.changed {
+            // only move the screen with a down swipe
+            if touchPoint.y - initial_touch_point.y > 0 {
+                // displace by the vertical delta between the new touch and the initial
+                self.view.frame = CGRect(x: 0, y: touchPoint.y - initial_touch_point.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            }
+        } else if sender.state == UIGestureRecognizer.State.ended || sender.state == UIGestureRecognizer.State.cancelled {
+            // dismiss the screen if it is dragged by more than 100 pixels
+            if touchPoint.y - initial_touch_point.y > 100 {
+                self.dismiss(animated: true, completion: nil)
+                
+                // reverts the border color
+                //categories_vc.collection_view.reloadData()
+            } else {
+                // revert its position to the top
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+                })
+            }
+        }
     }
     
     // assigns the corresponding budget remaining image by percentage
@@ -123,22 +250,22 @@ class ExpensesVC : UIViewController {
         
         // animate the image/label height changes
         if self.showing_status_bar { // currently showing the battery bar: hide it and show the budget remaining label
-            self.budget_status_bar.fadeTransition(0.8)
+            self.budget_status_bar.fadeTransition(0.4)
             self.budget_status_bar.isHidden = true
             
             // initialize budget remaining label
             self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total!) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
             self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
             
-            self.budget_remaining_label.fadeTransition(0.8)
+            self.budget_remaining_label.fadeTransition(0.4)
             self.budget_remaining_label.isHidden = false
             
             self.showing_status_bar = false
         } else { // shrink the label and revert the image height
-            self.budget_remaining_label.fadeTransition(0.8)
+            self.budget_remaining_label.fadeTransition(0.4)
             self.budget_remaining_label.isHidden = true
             
-            self.budget_status_bar.fadeTransition(0.8)
+            self.budget_status_bar.fadeTransition(0.4)
             self.budget_status_bar.isHidden = false
             
             self.showing_status_bar = true
@@ -181,15 +308,17 @@ class ExpensesVC : UIViewController {
         }
     }
     
-    // return to the category selection screen
-    @IBAction func doneEditing(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
-        // reverts the border color
-        categories_vc.collection_view.reloadData()
-    }
-    
     @IBAction func switchPurchaseLayout(_ sender: Any) {
+        // animate the circular background view
+        UIView.animate(withDuration: 0.4, animations: {
+            self.switch_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.switch_outer.alpha = 1
+        }) { (success: Bool) in
+            // restore to its previous size and disappear it
+            self.switch_outer.transform = CGAffineTransform.identity
+            self.switch_outer.alpha = 0
+        }
+        
         if !using_grid {
             // remove the previous
             expenses_view.subviews.last?.removeFromSuperview()
@@ -201,5 +330,4 @@ class ExpensesVC : UIViewController {
             using_grid = false
         }
     }
-    
 }

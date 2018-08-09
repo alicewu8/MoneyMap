@@ -38,6 +38,7 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
         // decrease opacity by 50% to indicate press
         UIView.animate(withDuration: 0.3) {
             self.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
+            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }
         
         parent.performSegue(withIdentifier: "to_add_purchase", sender: self)

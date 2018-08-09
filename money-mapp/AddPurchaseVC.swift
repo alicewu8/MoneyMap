@@ -11,13 +11,6 @@ import UIKit
 
 class AddPurchaseVC : UIViewController {
     
-    var expenses_vc : ExpensesVC!
-    var category : Category!
-    var purchase : Purchase!
-    var category_index : Int!
-    
-    private var date_picker : UIDatePicker?
-    
     @IBOutlet weak var return_button: UIButton!
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var review_button: UIButton!
@@ -33,11 +26,50 @@ class AddPurchaseVC : UIViewController {
     @IBOutlet weak var separator_two: UIView!
     @IBOutlet weak var separator_three: UIView!
     
+    var expenses_vc : ExpensesVC!
+    var category : Category!
+    var purchase : Purchase!
+    var category_index : Int!
+    
+    private var date_picker : UIDatePicker?
+    
+    var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
+    
     override func viewDidLoad() {
         setUpUI()
         configureTextFields()
         configureTapGesture()
         configureDatePicker()
+        
+        // add a pan gesture recognizer to support swiping the screen to dismiss
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(panScreen(_:)))
+        view.addGestureRecognizer(pan)
+    }
+    
+    // vertically displaces this screen and handles swipe to dismiss
+    @objc func panScreen(_ sender: UIPanGestureRecognizer) {
+        // stores the origin of the pan gesture
+        let touchPoint = sender.location(in: self.view?.window)
+        
+        if sender.state == UIGestureRecognizer.State.began {
+            initial_touch_point = touchPoint
+        } else if sender.state == UIGestureRecognizer.State.changed {
+            // only move the screen with a down swipe
+            if touchPoint.y - initial_touch_point.y > 0 {
+                // displace by the vertical delta between the new touch and the initial
+                self.view.frame = CGRect(x: 0, y: touchPoint.y - initial_touch_point.y, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            }
+        } else if sender.state == UIGestureRecognizer.State.ended || sender.state == UIGestureRecognizer.State.cancelled {
+            // dismiss the screen if it is dragged by more than 100 pixels
+            if touchPoint.y - initial_touch_point.y > 100 {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                // revert its position to the top
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+                })
+            }
+        }
     }
     
     // TODO: add min/max dates
@@ -87,10 +119,6 @@ class AddPurchaseVC : UIViewController {
         review_button.roundCorners()
 //        review_button.layer.borderColor = Canvas.french_sky_blue.cgColor
 //        review_button.titleLabel?.textColor = Canvas.french_sky_blue
-    }
-    
-    @IBAction func returnToPrevious(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     // displays the purchase info in the text field
