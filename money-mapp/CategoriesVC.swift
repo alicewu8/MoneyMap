@@ -126,11 +126,11 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: [Purchase(name: "Vegetables", cost: 20, date: "8/09/18", info: "", id: 0), Purchase(name: "Bread", cost: 4, date: "", info: "", id: 1), Purchase(name: "", cost: 21, date: "", info: "", id: 2), Purchase(name: "", cost: 20, date: "", info: "", id: 3), Purchase(name: "", cost: 40, date: "", info: "", id: 4)
             ]))
         
-        categories.append(Category(name: "Beverages", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
         
         categories.append(Category(name: "Transportation", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
         
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
     // MARK: handle category addition/deletion actions

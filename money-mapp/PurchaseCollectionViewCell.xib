@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="165" height="213"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l15-uA-i26">
-                                <rect key="frame" x="8" y="10" width="149" height="60"/>
+                                <rect key="frame" x="12" y="10" width="141" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wr7-Ig-1pY">
-                                        <rect key="frame" x="0.0" y="0.0" width="149" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                         <color key="textColor" red="0.90316599607467651" green="0.34042540192604065" blue="0.33105623722076416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TX-5y-uiX">
-                                <rect key="frame" x="8" y="73" width="149" height="2"/>
+                                <rect key="frame" x="12" y="73" width="141" height="2"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="8kW-Ro-qFD"/>
@@ -76,7 +76,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="l15-uA-i26" secondAttribute="trailing" constant="8" id="1pi-nj-X3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="l15-uA-i26" secondAttribute="trailing" constant="12" id="1pi-nj-X3Q"/>
                             <constraint firstAttribute="bottom" secondItem="6qO-F7-YT4" secondAttribute="bottom" constant="15" id="8vJ-3b-qAQ"/>
                             <constraint firstItem="naY-HY-Vmd" firstAttribute="width" secondItem="Y6R-Ry-Eyc" secondAttribute="width" id="GiR-b8-x7F"/>
                             <constraint firstItem="6qO-F7-YT4" firstAttribute="leading" secondItem="Y6R-Ry-Eyc" secondAttribute="leading" constant="15" id="Jnt-QU-eki"/>
@@ -88,7 +88,7 @@
                             <constraint firstItem="l15-uA-i26" firstAttribute="top" secondItem="Y6R-Ry-Eyc" secondAttribute="top" constant="10" id="jHf-Hk-QE1"/>
                             <constraint firstItem="2TX-5y-uiX" firstAttribute="trailing" secondItem="l15-uA-i26" secondAttribute="trailing" id="jZB-Jp-zyf"/>
                             <constraint firstItem="2TX-5y-uiX" firstAttribute="leading" secondItem="l15-uA-i26" secondAttribute="leading" id="pe2-CC-Lbu"/>
-                            <constraint firstItem="l15-uA-i26" firstAttribute="leading" secondItem="Y6R-Ry-Eyc" secondAttribute="leading" constant="8" id="rVD-2O-var"/>
+                            <constraint firstItem="l15-uA-i26" firstAttribute="leading" secondItem="Y6R-Ry-Eyc" secondAttribute="leading" constant="12" id="rVD-2O-var"/>
                             <constraint firstItem="2TX-5y-uiX" firstAttribute="top" secondItem="l15-uA-i26" secondAttribute="bottom" constant="3" id="xw3-XW-ybR"/>
                         </constraints>
                     </view>

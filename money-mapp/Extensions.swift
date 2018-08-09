@@ -66,6 +66,8 @@ struct Canvas {
     // Oranges
     static let peach = UIColor(red: 250, green: 152, blue: 58)
     static let melon_melody = UIColor(red: 250, green: 152, blue: 58)
+    static let creamy_peach = UIColor(red: 243, green: 166, blue: 131)
+    static let brewed_mustard = UIColor(red: 231, green: 127, blue: 103)
 
     // Greens
     static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)

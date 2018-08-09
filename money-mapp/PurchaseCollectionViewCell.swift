@@ -33,7 +33,7 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
         self.parent = parent
         self.category = category
         
-        self.layer.backgroundColor = Canvas.artificial_watermelon.cgColor
+        self.layer.backgroundColor = Canvas.brewed_mustard.cgColor
         
         print(category)
         self.purchase = category.purchases[purchase_id]

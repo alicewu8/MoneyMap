@@ -50,7 +50,7 @@ class ExpensesListView: UIView, UITableViewDelegate, UITableViewDataSource {
         if parent.categories_vc.categories[category_index].purchases.count == 0 {
             let add_cell = purchases_table_view.dequeueReusableCell(withIdentifier: AddPurchaseTableViewCell.reuse_id, for: indexPath) as! AddPurchaseTableViewCell
             
-            //add_cell.initialize(parent: parent)
+            add_cell.initialize(parent)
             return add_cell
         }
         
@@ -60,20 +60,19 @@ class ExpensesListView: UIView, UITableViewDelegate, UITableViewDataSource {
         if index < parent.categories_vc.categories[category_index].purchases.count {
             let purchase_cell = purchases_table_view.dequeueReusableCell(withIdentifier: PurchaseTableViewCell.reuse_id, for: indexPath) as! PurchaseTableViewCell
             
-            //purchase_cell.initialize(parent: parent)
+            purchase_cell.initialize(parent, category_index, index)
             
             return purchase_cell
         } else {
             let add_cell = purchases_table_view.dequeueReusableCell(withIdentifier: AddPurchaseTableViewCell.reuse_id, for: indexPath) as! AddPurchaseTableViewCell
             
-            //add_cell.initialize(parent: parent)
+            add_cell.initialize(parent)
             return add_cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("Todo")
-        return 40
+        return 80
     }
     
 }

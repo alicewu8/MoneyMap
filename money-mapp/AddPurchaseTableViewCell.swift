@@ -11,16 +11,17 @@ import UIKit
 class AddPurchaseTableViewCell: UITableViewCell {
     
     static let reuse_id = "AddPurchaseTableViewCell"
+    
+    var parent : ExpensesVC!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func initialize(_ parent: ExpensesVC) {
+        self.roundCorners(9)
+        
+        // don't round these corners
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        
+        self.parent = parent
+        layer.backgroundColor = Canvas.grapefruit.cgColor
     }
     
 }

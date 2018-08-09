@@ -108,6 +108,22 @@ class ExpensesVC : UIViewController {
         option_three_button.tag = 3
     }
     
+    // default to showing the grid view
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let purchases_grid = Bundle.main.loadNibNamed("ExpensesGridView", owner: self, options: nil)?.first as? ExpensesGridView else { return }
+        
+        // store this in the member variable
+        expenses_grid = purchases_grid
+        
+        // set frame equal to the superview
+        expenses_grid.frame.size = expenses_view.frame.size
+        expenses_view.addSubview(expenses_grid)
+        expenses_grid.initialize(self)
+        view.layoutIfNeeded()
+    }
+    
     // TODO
     @IBAction func sortMethodSelected(_ sender: UIButton) {
         // save the original array for use in "newest" option
@@ -312,22 +328,6 @@ class ExpensesVC : UIViewController {
         self.view.layoutIfNeeded()
     }
     
-    // default to showing the grid view
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        guard let purchases_grid = Bundle.main.loadNibNamed("ExpensesGridView", owner: self, options: nil)?.first as? ExpensesGridView else { return }
-        
-        // store this in the member variable
-        expenses_grid = purchases_grid
-        
-        // set frame equal to the superview
-        expenses_grid.frame.size = expenses_view.frame.size
-        expenses_view.addSubview(expenses_grid)
-        expenses_grid.initialize(self)
-        view.layoutIfNeeded()
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         // initialize member bool values
         self.using_grid = true
@@ -365,12 +365,44 @@ class ExpensesVC : UIViewController {
         if !using_grid {
             // remove the previous
             expenses_view.subviews.last?.removeFromSuperview()
+            
+            addExpensesGrid()
+            
             switch_layout_button.setImage(UIImage(named: "list"), for: .normal)
             using_grid = true
         } else {
             expenses_view.subviews.last?.removeFromSuperview()
+            
+            addExpensesList()
+            
             switch_layout_button.setImage(UIImage(named: "grid"), for: .normal)
             using_grid = false
         }
+    }
+    
+    func addExpensesGrid() {
+        guard let purchases_grid = Bundle.main.loadNibNamed("ExpensesGridView", owner: self, options: nil)?.first as? ExpensesGridView else { return }
+        
+        // store this in the member variable
+        expenses_grid = purchases_grid
+        
+        // set frame equal to the superview
+        expenses_grid.frame.size = expenses_view.frame.size
+        expenses_view.addSubview(expenses_grid)
+        expenses_grid.initialize(self)
+        view.layoutIfNeeded()
+    }
+    
+    func addExpensesList() {
+        guard let purchases_list = Bundle.main.loadNibNamed("ExpensesListView", owner: self, options: nil)?.first as? ExpensesListView else { return }
+        
+        // store this in the member variable
+        expenses_list = purchases_list
+        
+        // set frame equal to the superview
+        expenses_list?.frame.size = expenses_view.frame.size
+        expenses_view?.addSubview(expenses_list!)
+        expenses_list?.initialize(self)
+        view.layoutIfNeeded()
     }
 }
