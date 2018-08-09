@@ -54,6 +54,7 @@ class ExpensesVC : UIViewController {
     var using_grid : Bool
     var showing_status_bar : Bool
     var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
+    var added_sort_view : Bool = false
     
     var categories_vc : CategoriesVC!
     var category : Category!
@@ -93,21 +94,11 @@ class ExpensesVC : UIViewController {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(panScreen(_:)))
         view.addGestureRecognizer(pan)
         
-        //sort_options_view.roundCorners(7.5)
+        sort_options_view.roundCorners(7.5)
+        sort_options_view.frame.size.height = 0
         
         // don't round these corners
-        //sort_options_view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        sort_options_view.layer.borderWidth = 1
-        sort_options_view.layer.borderColor = Canvas.strawberry.cgColor
-//        option_one_view.layer.borderWidth = 2
-//        option_one_view.layer.borderColor = Canvas.strawberry.cgColor
-//        option_two_view.layer.borderWidth = 1
-//        option_two_view.layer.borderColor = Canvas.strawberry.cgColor
-//        option_three_view.layer.borderWidth = 2
-//        option_three_view.layer.borderColor = Canvas.strawberry.cgColor
-        
-        separator_one.layer.backgroundColor = Canvas.strawberry.cgColor
-        separator_two.layer.backgroundColor = Canvas.strawberry.cgColor
+        sort_options_view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         
         option_one_button.tag = 1
         option_two_button.tag = 2
@@ -132,10 +123,10 @@ class ExpensesVC : UIViewController {
     
     @IBAction func showSortOptions(_ sender: Any) {
         print("sort pressed")
-        
+       
         // animate the circular background view
         UIView.animate(withDuration: 0.4, animations: {
-            self.sort_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.sort_outer.transform = CGAffineTransform(scaleX: 1.38, y: 1.38)
             self.sort_outer.alpha = 1
         }) { (success: Bool) in
             // restore to its previous size and disappear it
@@ -151,15 +142,28 @@ class ExpensesVC : UIViewController {
             // have the x align with the sort button's leading
             sort_options_view.frame.origin.x = 20
             
-            //view.addSubview(sort_options_view)
-            //view.layoutSubviews()
+            // only add this subview one time
+            if !added_sort_view {
+                self.view.addSubview(self.sort_options_view)
+            }
             
-            UIView.transition(with: self.view, duration: 0.5, options: UIView.AnimationOptions.curveEaseIn,
-                              animations: {self.view.addSubview(self.sort_options_view)}, completion: nil)
+            // animate the height change
+            UIView.transition(with: self.view, duration: 0.4, options: UIView.AnimationOptions.curveEaseIn,
+                    animations: {
+                        self.sort_options_view.frame.size.height = 140
+            }, completion: nil)
             view.layoutSubviews()
+            
+            added_sort_view  = true
         } else {
             sort_button.setTitle("Sort +", for: .normal)
-            view.subviews.last?.removeFromSuperview()
+            
+            UIView.transition(with: self.view, duration: 0.4, options: UIView.AnimationOptions.curveEaseIn,
+                              animations: {
+                                self.sort_options_view.frame.size.height = 0
+            }, completion: nil)
+            //view.subviews.last?.removeFromSuperview()
+            view.layoutSubviews()
         }
     }
     

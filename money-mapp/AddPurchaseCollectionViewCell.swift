@@ -32,13 +32,15 @@ class AddPurchaseCollectionViewCell: UICollectionViewCell {
     
     @IBAction func addPurchaseTapped(_ sender: Any) {
         
-        //self.layer.backgroundColor =
+        // TODO: change the alpha from 0.5 to 1.0
         let color = UIColor(cgColor: self.layer.backgroundColor!)
         
-        // decrease opacity by 50% to indicate press
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3, animations: {
             self.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
             self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { (success: Bool) in
+            self.layer.backgroundColor = color.cgColor
+            self.transform = CGAffineTransform.identity
         }
         
         parent.performSegue(withIdentifier: "to_add_purchase", sender: self)

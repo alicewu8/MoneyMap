@@ -228,23 +228,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         }
     }
     
-    
-//    // Helper function: determines cell color based on remaining budget
-//    /* 0 = default, 1 = green, 2 = orange, 3 = red */
-//    func budgetStatusColor(_ category: Category) -> Int {
-//        // first, check that a budget has been instantiated
-//        // TODO: prompt user for budget
-//        guard let budget = category.budget else { return 0 }
-//        
-//        if category.running_total < budget / 2 {
-//            return 1
-//        } else if category.running_total < budget * 0.8 {
-//            return 2
-//        } else {
-//            return 3
-//        }
-//    }
-    
     // update the budget for the selected category
     // bug fix: search by name instead of ID to prevent falsely assigning budgets
     func updateBudget(_ category_id: Int, _ budget: Double) {
@@ -269,18 +252,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         cell.initialize(categories[index_in_array], self)
         
-//        // set the cell's color based on the current spending amount
-//        switch budgetStatusColor(cell.category) {
-//            case 1:
-//                cell.layer.backgroundColor = Canvas.aurora_green.cgColor
-//            case 2:
-//                cell.layer.backgroundColor = Canvas.peach.cgColor
-//            case 3:
-//                cell.layer.backgroundColor = Canvas.lipstick.cgColor
-//            default:
-//                print("Default Storyboard color--no budget instantiated")
-//        }
-        
         // modify cell member variables
         cell.index_path = indexPath
         
@@ -299,12 +270,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         // TODO: change the alpha from 0.5 to 1.0
         let color = UIColor(cgColor: cell.layer.backgroundColor!)
-        
-        // decrease opacity by 50% and size to indicate press
-//        UIView.animate(withDuration: 0.3) {
-//            cell.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
-//            cell.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-//        }
         
         UIView.animate(withDuration: 0.3, animations: {
             cell.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor
