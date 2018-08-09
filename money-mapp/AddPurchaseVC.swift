@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
+// TODO: make the notes text field dynamically expansive and prevent it from going off the page
 class AddPurchaseVC : UIViewController {
     
-    @IBOutlet weak var return_button: UIButton!
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var review_button: UIButton!
     
@@ -111,9 +111,6 @@ class AddPurchaseVC : UIViewController {
     func setUpUI() {
         edit_view.roundCorners()
         done_button.roundCorners(7.5)
-        separator_one.roundCorners()
-        separator_two.roundCorners()
-        separator_three.roundCorners()
         
         display_purchase_info.roundCorners(9)
         review_button.roundCorners()

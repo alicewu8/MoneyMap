@@ -151,6 +151,7 @@ class ExpensesVC : UIViewController {
             UIView.transition(with: self.view, duration: 0.4, options: UIView.AnimationOptions.curveEaseIn,
                     animations: {
                         self.sort_options_view.frame.size.height = 140
+                        self.sort_options_view.alpha = 1
             }, completion: nil)
             view.layoutSubviews()
             
@@ -158,11 +159,10 @@ class ExpensesVC : UIViewController {
         } else {
             sort_button.setTitle("Sort +", for: .normal)
             
-            UIView.transition(with: self.view, duration: 0.4, options: UIView.AnimationOptions.curveEaseIn,
+            UIView.transition(with: self.view, duration: 0.3, options: UIView.AnimationOptions.curveEaseIn,
                               animations: {
-                                self.sort_options_view.frame.size.height = 0
-            }, completion: nil)
-            //view.subviews.last?.removeFromSuperview()
+                                self.sort_options_view.alpha = 0
+            })
             view.layoutSubviews()
         }
     }
