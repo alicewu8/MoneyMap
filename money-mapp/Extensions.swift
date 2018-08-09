@@ -17,7 +17,7 @@ struct Category {
     let id : Int
     var selected = false
     var budget : Double?
-    var running_total : Double?
+    var running_total : Double = 0
     var purchases : [Purchase] = []
 }
 

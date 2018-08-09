@@ -33,6 +33,7 @@ class AddPurchaseVC : UIViewController {
     
     private var date_picker : UIDatePicker?
     
+    // used to handle swipe down to dismiss 
     var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
     
     override func viewDidLoad() {

@@ -110,9 +110,24 @@ class ExpensesVC : UIViewController {
         if sender.tag == 1 {
             print("Price low to high")
             let color = UIColor(cgColor: self.option_one_view.layer.backgroundColor!)
-            UIView.animate(withDuration: 0.3, animations: { self.option_one_view.layer.backgroundColor = color.withAlphaComponent(0.5).cgColor }) { (success: Bool) in
-                sender.layer.backgroundColor = color.cgColor
+            UIView.animate(withDuration: 0.3, animations: {
+                self.option_one_view.layer.backgroundColor = color.withAlphaComponent(1.5).cgColor
+                self.sort_options_view.alpha = 0 })
+            { (success: Bool) in
+                self.option_one_view.backgroundColor = color
             }
+            
+            // replace the current purchases array with the sorted array
+            categories_vc.categories[category_index
+                ].purchases = insertionSort(categories_vc.categories[category_index
+                    ].purchases)
+            
+            if using_grid {
+                expenses_grid.purchases_collection.performBatchUpdates({
+                    self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
+                }, completion: nil)
+            }
+            
             
         } else if sender.tag == 2 {
             print("Price high to low")
@@ -199,7 +214,7 @@ class ExpensesVC : UIViewController {
     // assigns the corresponding budget remaining image by percentage
     func updateBudgetBar() {
         guard let budget = categories_vc.categories[category_index].budget else { return }
-        guard let total_spent = categories_vc.categories[category_index].running_total else { return }
+        let total_spent = categories_vc.categories[category_index].running_total 
         
         // Super painful hardcoding. Think of how to improve
         // TODO: implement warning bar when budget is exceeded
@@ -258,7 +273,7 @@ class ExpensesVC : UIViewController {
             self.budget_status_bar.isHidden = true
             
             // initialize budget remaining label
-            self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total!) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
+            self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
             self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
             
             self.budget_remaining_label.fadeTransition(0.4)
@@ -302,7 +317,11 @@ class ExpensesVC : UIViewController {
     }
     
     func addNewPurchase(_ purchase: Purchase, _ category_index : Int) {
+        // append this purchase to the category's purchases array
         categories_vc.categories[category_index].purchases.append(purchase)
+        
+        // update the category's running_total
+        categories_vc.categories[category_index].running_total += purchase.cost
         
         // Animate adding a new cell
         if using_grid {

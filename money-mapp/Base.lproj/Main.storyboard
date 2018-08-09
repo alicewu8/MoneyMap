@@ -563,7 +563,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Pd-J5p">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgN-Pd-J5p">
                                         <rect key="frame" x="364" y="7" width="25" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5c7-vs-Gcb"/>
@@ -810,10 +810,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="7lx-dE-dzA">
-                                                        <rect key="frame" x="32" y="23" width="94" height="35"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="94" id="EcJ-gS-fZd"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="32.000000000000007" y="23" width="73.666666666666686" height="35"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -885,6 +882,7 @@
                                                     <constraint firstItem="joc-vA-K6e" firstAttribute="top" secondItem="l5p-PY-tci" secondAttribute="bottom" id="MEN-3Q-YZP"/>
                                                     <constraint firstItem="l5p-PY-tci" firstAttribute="leading" secondItem="dCe-WH-s9A" secondAttribute="leading" constant="32" id="TD4-gr-fPT"/>
                                                     <constraint firstItem="l5p-PY-tci" firstAttribute="top" secondItem="dCe-WH-s9A" secondAttribute="top" constant="23" id="YTG-hK-ilA"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l5p-PY-tci" secondAttribute="trailing" constant="20" symbolic="YES" id="d48-Bs-wD8"/>
                                                     <constraint firstAttribute="trailing" secondItem="joc-vA-K6e" secondAttribute="trailing" constant="32" id="fEh-E9-nDW"/>
                                                     <constraint firstItem="joc-vA-K6e" firstAttribute="leading" secondItem="l5p-PY-tci" secondAttribute="leading" id="my1-8d-nfU"/>
                                                     <constraint firstAttribute="bottom" secondItem="joc-vA-K6e" secondAttribute="bottom" id="vN7-1a-h7Q"/>
@@ -894,7 +892,7 @@
                                                 <rect key="frame" x="0.0" y="188" width="394" height="60"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Notes" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-9V-nJ6">
-                                                        <rect key="frame" x="32" y="23" width="72" height="35"/>
+                                                        <rect key="frame" x="31.999999999999993" y="23" width="72.333333333333314" height="35"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
