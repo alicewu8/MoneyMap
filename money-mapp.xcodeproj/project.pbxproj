@@ -70,6 +70,7 @@
 		15110ED320F58AE40095CCD8 /* money-mappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "money-mappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15110ED720F58AE40095CCD8 /* money_mappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_mappUITests.swift; sourceTree = "<group>"; };
 		15110ED920F58AE40095CCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15275978211D1D7200F2DE26 /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesListView.swift; path = "money-mapp/ExpensesListView.swift"; sourceTree = "<group>"; };
 		15278280211CB04E0070FEEB /* SwiftSorts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftSorts.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		15278281211CB37C0070FEEB /* Sorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorts.swift; sourceTree = "<group>"; };
 		1528EFBD21160DF9001E8297 /* AddBudgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetVC.swift; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 		15110EAB20F58AE30095CCD8 = {
 			isa = PBXGroup;
 			children = (
+				15275978211D1D7200F2DE26 /* ExpensesListView.swift */,
 				15110EB620F58AE30095CCD8 /* money-mapp */,
 				15110ECB20F58AE40095CCD8 /* money-mappTests */,
 				15110ED620F58AE40095CCD8 /* money-mappUITests */,
@@ -147,6 +149,10 @@
 				15275976211D054900F2DE26 /* Purchases */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
+				15C79215211A452A004475DF /* ExpensesGridView.xib */,
+				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
+				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
+				15C79213211A43EB004475DF /* ExpensesListView.swift */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
@@ -160,10 +166,6 @@
 				156940912117ADA000D8F654 /* FavoritesVC.swift */,
 				156940932117B73400D8F654 /* PurchaseInfo.swift */,
 				153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */,
-				15C79215211A452A004475DF /* ExpensesGridView.xib */,
-				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
-				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
-				15C79213211A43EB004475DF /* ExpensesListView.swift */,
 				15278281211CB37C0070FEEB /* Sorts.swift */,
 				15278280211CB04E0070FEEB /* SwiftSorts.playground */,
 			);
@@ -341,9 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C79214211A43EB004475DF /* ExpensesListView.swift in Sources */,
 				1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */,
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
-				15C79214211A43EB004475DF /* ExpensesListView.swift in Sources */,
 				159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */,
 				156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */,
 				15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */,

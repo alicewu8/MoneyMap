@@ -24,26 +24,17 @@ class PurchaseCollectionViewCell: UICollectionViewCell {
     var category : Category!
     var purchase : Purchase!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func initialize(category: Category, parent: ExpensesVC, purchase_id: Int) {
         self.parent = parent
         self.category = category
         
-        self.layer.backgroundColor = Canvas.brewed_mustard.cgColor
+        self.layer.backgroundColor = Canvas.peach.cgColor
         
-        print(category)
         self.purchase = category.purchases[purchase_id]
-        print(purchase)
         
         roundCorners(7.5)
         
         price_view.roundCorners(10)
-        
-        //separator_view.roundCorners(4.5)
         
         // set the cell information
         if let name = purchase.name, let date = purchase.date {

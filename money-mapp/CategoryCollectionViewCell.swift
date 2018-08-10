@@ -67,7 +67,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
             self.layer.backgroundColor = Canvas.golden_sand.cgColor
         } else {
             if self.category.running_total < self.category.budget! / 2 {
-                self.layer.backgroundColor = Canvas.aurora_green.cgColor
+                self.layer.backgroundColor = Canvas.emerald.cgColor
             } else if self.category.running_total < self.category.budget! * 0.8 {
                 self.layer.backgroundColor = Canvas.peach.cgColor
             } else {

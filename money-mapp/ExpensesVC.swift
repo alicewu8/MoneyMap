@@ -52,7 +52,6 @@ class ExpensesVC : UIViewController {
     
     // MARK: state variables
     var using_grid : Bool
-    var showing_status_bar : Bool
     var initial_touch_point : CGPoint = CGPoint(x: 0, y: 0)
     var added_sort_view : Bool = false
     var first_sort : Bool = true
@@ -60,8 +59,6 @@ class ExpensesVC : UIViewController {
     var categories_vc : CategoriesVC!
     var category : Category!
     var category_index : Int!
-    
-    var presorted_array : [Purchase]?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "to_add_purchase" {
@@ -84,7 +81,7 @@ class ExpensesVC : UIViewController {
         budget_status_bar.roundCorners()
         
         updateBudgetBar()
-        initializeLabels()
+        updateBudgetLabel()
         
         // make the background views circular and hidden
         sort_outer.roundCorners(sort_outer.frame.width / 2)
@@ -127,9 +124,8 @@ class ExpensesVC : UIViewController {
         view.layoutIfNeeded()
     }
     
-    // TODO
     @IBAction func sortMethodSelected(_ sender: UIButton) {
-        // check for purchases to sort: prevent crash 
+        // check for purchases to sort: prevent crash
         guard categories_vc.categories[category_index].purchases.count > 0 else { return }
         
         if sender.tag == 1 {
@@ -159,9 +155,6 @@ class ExpensesVC : UIViewController {
             
         } else if sender.tag == 3 {
             print("Newest")
-            if presorted_array != nil {
-                categories_vc.categories[category_index].purchases = presorted_array!
-            }
         }
         
         // animate updating the data to reflect the sort
@@ -292,55 +285,17 @@ class ExpensesVC : UIViewController {
         
     }
     
-    // adds gesture recognizers to the labels to switch between status bar and label
-    func initializeLabels() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
-        let tap_2 = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
-        let tap_3 = UITapGestureRecognizer(target: self, action: #selector(showBudgetRemaining(_:)))
-        
-        // set the labels and image to receive user interaction events
-        category_name.isUserInteractionEnabled = true
-        budget_status_bar.isUserInteractionEnabled = true
-        budget_remaining_label.isUserInteractionEnabled = true
-        
-        category_name.addGestureRecognizer(tap)
-        budget_status_bar.addGestureRecognizer(tap_2)
-        budget_remaining_label.addGestureRecognizer(tap_3)
-    }
-    
-    @objc func showBudgetRemaining(_ sender: UITapGestureRecognizer) {
+    func updateBudgetLabel() {
         // check for nil budget: only execute if a budget is instantiated
         guard category.budget != nil else { return }
         
-        // animate the image/label height changes
-        if self.showing_status_bar { // currently showing the battery bar: hide it and show the budget remaining label
-            self.budget_status_bar.fadeTransition(0.4)
-            self.budget_status_bar.isHidden = true
-            
-            // initialize budget remaining label
-            self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
-            self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
-            
-            self.budget_remaining_label.fadeTransition(0.4)
-            self.budget_remaining_label.isHidden = false
-            
-            self.showing_status_bar = false
-        } else { // shrink the label and revert the image height
-            self.budget_remaining_label.fadeTransition(0.4)
-            self.budget_remaining_label.isHidden = true
-            
-            self.budget_status_bar.fadeTransition(0.4)
-            self.budget_status_bar.isHidden = false
-            
-            self.showing_status_bar = true
-        }
-        self.view.layoutIfNeeded()
+        self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
+        self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
     }
     
     required init?(coder aDecoder: NSCoder) {
         // initialize member bool values
         self.using_grid = false
-        self.showing_status_bar = true
         
         super.init(coder: aDecoder)
     }
@@ -352,6 +307,9 @@ class ExpensesVC : UIViewController {
         // update the category's running_total
         categories_vc.categories[category_index].running_total += purchase.cost
         
+        updateBudgetBar()
+        updateBudgetLabel()
+    
         // Animate adding a new cell
         if using_grid {
             expenses_grid.refreshInfo()

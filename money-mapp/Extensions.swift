@@ -49,7 +49,7 @@ struct Michigan {
     
 }
 
-// UI Colors 
+// UI Colors: mostly from flatuicolors.com
 struct Canvas {
     // Reds
     static let strawberry = UIColor(red: 223, green: 48, blue: 0)
@@ -70,12 +70,14 @@ struct Canvas {
     static let creamy_peach = UIColor(red: 243, green: 166, blue: 131)
     static let brewed_mustard = UIColor(red: 231, green: 127, blue: 103)
     static let sawtooth_awk = UIColor(red: 241, green: 144, blue: 102)
+    static let carrot = UIColor(red: 230, green: 126, blue: 34)
 
     // Greens
     static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)
     static let cheerful_green = UIColor(red: 123, green: 237, blue: 159)
     static let aurora_green = UIColor(red: 120, green: 224, blue: 143)
     static let emerald = UIColor(red: 46, green: 204, blue: 113)
+    static let mint_leaf = UIColor(red: 0, green: 184, blue: 148)
 
     // Blues
     static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
@@ -84,6 +86,10 @@ struct Canvas {
 
     // Purples
     static let purple_mountain_majesty = UIColor(red: 120, green: 111, blue:166)
+    static let shy_momeny = UIColor(red: 162, green: 155, blue: 254)
+    
+    // Pinks
+    static let first_date = UIColor(red: 250, green: 177, blue: 160)
 
     // Neutrals
     static let marshmallow = UIColor(red: 255, green: 255, blue: 255)

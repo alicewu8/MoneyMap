@@ -34,13 +34,13 @@ class PurchaseTableViewCell: UITableViewCell {
         // don't round these corners
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
-        self.layer.backgroundColor = Canvas.brewed_mustard.cgColor
+        self.layer.backgroundColor = Canvas.peach.cgColor
         
         // change the alpha from 0.5 to 1.0
         let color = UIColor(cgColor: self.layer.backgroundColor!)
         
         if purchase_id % 2 == 0 {
-            self.layer.backgroundColor = color.withAlphaComponent(0.7).cgColor
+            self.layer.backgroundColor = color.withAlphaComponent(0.6).cgColor
         }
         // set the cell information
         if let name = purchase.name, let date = purchase.date {
