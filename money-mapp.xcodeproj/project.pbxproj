@@ -30,6 +30,8 @@
 		1585F516211E115700D7AE9E /* CustomizeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585F514211E115700D7AE9E /* CustomizeTableViewCell.xib */; };
 		1585F518211E152B00D7AE9E /* CustomizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F517211E152B00D7AE9E /* CustomizeVC.swift */; };
 		1585F51A211E22E600D7AE9E /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F519211E22E600D7AE9E /* ColorCell.swift */; };
+		1585F51D211E337E00D7AE9E /* BlankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F51B211E337E00D7AE9E /* BlankTableViewCell.swift */; };
+		1585F51E211E337E00D7AE9E /* BlankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */; };
 		159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */; };
 		159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */; };
 		159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */; };
@@ -92,6 +94,8 @@
 		1585F514211E115700D7AE9E /* CustomizeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizeTableViewCell.xib; sourceTree = "<group>"; };
 		1585F517211E152B00D7AE9E /* CustomizeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeVC.swift; sourceTree = "<group>"; };
 		1585F519211E22E600D7AE9E /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		1585F51B211E337E00D7AE9E /* BlankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankTableViewCell.swift; sourceTree = "<group>"; };
+		1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlankTableViewCell.xib; sourceTree = "<group>"; };
 		159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseTableViewCell.xib; sourceTree = "<group>"; };
 		159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				1585F514211E115700D7AE9E /* CustomizeTableViewCell.xib */,
 				1585F517211E152B00D7AE9E /* CustomizeVC.swift */,
 				1585F519211E22E600D7AE9E /* ColorCell.swift */,
+				1585F51B211E337E00D7AE9E /* BlankTableViewCell.swift */,
+				1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				15110EBF20F58AE40095CCD8 /* Assets.xcassets in Resources */,
 				1528EFC821163426001E8297 /* AddPurchaseCollectionViewCell.xib in Resources */,
 				15110EBD20F58AE30095CCD8 /* Main.storyboard in Resources */,
+				1585F51E211E337E00D7AE9E /* BlankTableViewCell.xib in Resources */,
 				15C79216211A452A004475DF /* ExpensesGridView.xib in Resources */,
 				15D8DD6E211A47A3001A4D34 /* ExpensesListView.xib in Resources */,
 				159045C1211A6DF100FD9703 /* AddPurchaseTableViewCell.xib in Resources */,
@@ -361,6 +368,7 @@
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
 				159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */,
 				156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */,
+				1585F51D211E337E00D7AE9E /* BlankTableViewCell.swift in Sources */,
 				1585F518211E152B00D7AE9E /* CustomizeVC.swift in Sources */,
 				15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */,
 				1528EFC02116333C001E8297 /* Settings.swift in Sources */,

@@ -83,17 +83,24 @@ struct Canvas {
     static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
     static let french_sky_blue = UIColor(red: 112, green: 161, blue: 255)
     static let not_tiffany_blue = UIColor(red: 30, green: 144, blue: 255)
+    static let middle_blue = UIColor(red: 126, green: 214, blue: 223)
+    static let electric_blue = UIColor(red: 126, green: 255, blue: 245)
 
     // Purples
     static let purple_mountain_majesty = UIColor(red: 120, green: 111, blue:166)
     static let shy_moment = UIColor(red: 162, green: 155, blue: 254)
+    static let bright_lilac = UIColor(red: 205, green: 132, blue: 241)
     
     // Pinks
     static let first_date = UIColor(red: 250, green: 177, blue: 160)
-
+    static let flamingo = UIColor(red: 247, green: 143, blue: 179)
+    static let rogue_pink = UIColor(red: 248, green: 165, blue: 194)
+    
     // Neutrals
     static let marshmallow = UIColor(red: 255, green: 255, blue: 255)
     static let super_light_gray = UIColor(red: 223, green: 228, blue: 234)
+    static let coast_breeze = UIColor(red: 223, green: 249, blue: 251)
+    static let ice_pack = UIColor(red: 199, green: 236, blue: 238)
 }
 
 // MARK: UIColor extension

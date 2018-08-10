@@ -23,8 +23,10 @@ class CustomizeTableViewCell: UITableViewCell {
         layer.borderWidth = 1
         layer.borderColor = Canvas.super_light_gray.cgColor
         
-        roundCorners(7.5)
+        roundCorners()
+        // don't round these corners
+        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
-        layer.backgroundColor = Canvas.shy_moment.cgColor
+        layer.backgroundColor = Canvas.electric_blue.withAlphaComponent(0.6).cgColor
     }
 }

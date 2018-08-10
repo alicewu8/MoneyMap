@@ -29,6 +29,8 @@ class ColorCell : UICollectionViewCell {
         roundCorners(self.frame.width / 2)
         
         self.layer.backgroundColor = parent.colors[index]
+        
+        addTap()
     }
     
     // adds a tap gesture recognizer to this instance to forwards touch to CategoriesVC
@@ -38,8 +40,9 @@ class ColorCell : UICollectionViewCell {
         self.addGestureRecognizer(tap)
     }
     
+    // calls the didSelectItemAt function in the parent class
     @objc func sendParent() {
         parent.selected_color_index = index_path.row
-        //parent.collectionView(parent.colors_collection_view, didSelectItemAt: index_path)
+        parent.collectionView(parent.colors_collection_view, didSelectItemAt: index_path)
     }
 }
