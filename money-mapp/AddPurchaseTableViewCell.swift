@@ -21,7 +21,7 @@ class AddPurchaseTableViewCell: UITableViewCell {
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         self.parent = parent
-        layer.backgroundColor = Canvas.grapefruit.cgColor
+        layer.backgroundColor = Canvas.golden_sand.cgColor
     }
     
 }

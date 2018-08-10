@@ -25,28 +25,22 @@ func insertionSort(_ purchases: [Purchase], _ increasing: Bool) -> [Purchase] {
     for i in 1..<copy.count {
         // current element that will be compared with elements before it
         let key = copy[i]
-        var j = 0
+        var j = i - 1 // immediate previous element
         
         if increasing {
-            j = i - 1 // immediate previous element
-            
             // iterate backwards to confirm sorted order
             while j >= 0 && increasingOrder(key.cost, copy[j].cost) {
                 // if an element's left neighbor is greater, swap their positions
                 copy[j + 1] = copy[j]
-                
                 // check the next neigbor over
                 j -= 1
             }
-            // place the key in its correct location
+            // places key in correct location
             copy[j + 1] = key
         } else {
-            j = i + 1
-            
             // iterate forwards to confirm sorted order
             while j < copy.count && decreasingOrder(key.cost, copy[j].cost) {
                 copy[j - 1] = copy[j]
-                
                 j += 1
             }
             // place the key in its correct location

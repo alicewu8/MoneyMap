@@ -106,31 +106,31 @@ class ExpensesVC : UIViewController {
         option_one_button.tag = 1
         option_two_button.tag = 2
         option_three_button.tag = 3
+        
+        expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
     }
     
     // default to showing the grid view
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard let purchases_grid = Bundle.main.loadNibNamed("ExpensesGridView", owner: self, options: nil)?.first as? ExpensesGridView else { return }
+        guard let purchases_list = Bundle.main.loadNibNamed("ExpensesListView", owner: self, options: nil)?.first as? ExpensesListView else { return }
         
         // store this in the member variable
-        expenses_grid = purchases_grid
+        expenses_list = purchases_list
         
         // set frame equal to the superview
-        expenses_grid.frame.size = expenses_view.frame.size
-        expenses_view.addSubview(expenses_grid)
-        expenses_grid.initialize(self)
+        expenses_list?.frame.size = expenses_view.frame.size
+        expenses_view?.addSubview(expenses_list!)
+        expenses_list?.initialize(self)
+        expenses_list.layer.backgroundColor = Canvas.super_light_gray.cgColor
         view.layoutIfNeeded()
     }
     
     // TODO
     @IBAction func sortMethodSelected(_ sender: UIButton) {
-        // save the original array for use in "newest" option
-        if first_sort {
-            presorted_array = categories_vc.categories[category_index].purchases
-            first_sort = false
-        }
+        // check for purchases to sort: prevent crash 
+        guard categories_vc.categories[category_index].purchases.count > 0 else { return }
         
         if sender.tag == 1 {
             print("Price low to high")
@@ -170,7 +170,7 @@ class ExpensesVC : UIViewController {
                 self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
             }, completion: nil)
         } else {
-            UIView.transition(with: self.expenses_list.purchases_table_view, duration: 0.3, options: .curveEaseIn, animations: {self.expenses_list?.purchases_table_view.reloadData()}, completion: nil)
+            UIView.transition(with: self.expenses_list.purchases_table_view, duration: 0.3, options: .transitionCrossDissolve, animations: {self.expenses_list?.purchases_table_view.reloadData()}, completion: nil)
         }
     }
     
@@ -195,16 +195,13 @@ class ExpensesVC : UIViewController {
             // have the x align with the sort button's leading
             sort_options_view.frame.origin.x = 20
             
-            // only add this subview one time
-            if !added_sort_view {
-                self.view.addSubview(self.sort_options_view)
-            }
+            self.view.addSubview(self.sort_options_view)
             
             // animate the height change
             UIView.transition(with: self.view, duration: 0.4, options: UIView.AnimationOptions.curveEaseIn,
                     animations: {
                         self.sort_options_view.frame.size.height = 140
-                        self.sort_options_view.alpha = 1
+                        //self.sort_options_view.alpha = 1
             }, completion: nil)
             view.layoutSubviews()
             
@@ -212,10 +209,20 @@ class ExpensesVC : UIViewController {
         } else {
             sort_button.setTitle("Sort +", for: .normal)
             
+//            UIView.transition(with: self.view, duration: 0.3, options: UIView.AnimationOptions.curveEaseIn,
+//                              animations: {
+//                                self.sort_options_view.alpha = 0
+//            })
+            
             UIView.transition(with: self.view, duration: 0.3, options: UIView.AnimationOptions.curveEaseIn,
                               animations: {
-                                self.sort_options_view.alpha = 0
-            })
+                                self.sort_options_view.frame.size.height = 0
+                                
+                                // AWESOME! Prevents constraints from messing up the view
+                                self.view.layoutIfNeeded()
+            }) { (success: Bool) in
+                self.view.subviews.last?.removeFromSuperview()
+            }
             view.layoutSubviews()
         }
     }
@@ -332,7 +339,7 @@ class ExpensesVC : UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         // initialize member bool values
-        self.using_grid = true
+        self.using_grid = false
         self.showing_status_bar = true
         
         super.init(coder: aDecoder)
@@ -395,6 +402,7 @@ class ExpensesVC : UIViewController {
         view.layoutIfNeeded()
     }
     
+    // loads the expenses list from nib and fits it to the expenses view
     func addExpensesList() {
         guard let purchases_list = Bundle.main.loadNibNamed("ExpensesListView", owner: self, options: nil)?.first as? ExpensesListView else { return }
         
@@ -404,6 +412,7 @@ class ExpensesVC : UIViewController {
         // set frame equal to the superview
         expenses_list?.frame.size = expenses_view.frame.size
         expenses_view?.addSubview(expenses_list!)
+        expenses_list.layer.backgroundColor = Canvas.super_light_gray.cgColor
         expenses_list?.initialize(self)
         view.layoutIfNeeded()
     }

@@ -118,7 +118,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // Default purchase categories (for testing)
     func initializeCategories() {
-        categories.append(Category(name: "Clothes", image: UIImage(named: "clothes_icon")!, id: 0, selected: false, budget: 10, running_total: 0, purchases: []))
+        categories.append(Category(name: "Clothes", image: UIImage(named: "shirt")!, id: 0, selected: false, budget: 10, running_total: 0, purchases: []))
         
         categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, selected: false, budget: 50, running_total: 25, purchases: []))
         
@@ -126,11 +126,11 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, selected: false, budget: 80, running_total: 70, purchases: [Purchase(name: "Vegetables", cost: 20, date: "8/09/18", info: "MHealthy Farmer's Market", id: 0), Purchase(name: "Bread", cost: 4, date: "8/01/18", info: "for Justin", id: 1), Purchase(name: "Grocery run", cost: 30, date: "8/05/18", info: "", id: 5), Purchase(name: "Soymilk", cost: 3.25, date: "8/02/18", info: "Unsweetened for Dad", id: 2), Purchase(name: "Lychees", cost: 3.29, date: "8/02/18", info: "", id: 3), Purchase(name: "Meijer Haul", cost: 40, date: "8/05/18", info: "", id: 4)
             ]))
         
-        categories.append(Category(name: "Coffee", image: UIImage(named: "coffee_icon")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Cosmetics", image: UIImage(named: "cosmetics")!, id: 3, selected: false, budget: nil, running_total: 0, purchases: []))
         
-        categories.append(Category(name: "Transportation", image: UIImage(named: "car_icon")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Travel", image: UIImage(named: "paper_plane")!, id: 4, selected: false, budget: nil, running_total: 0, purchases: []))
         
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gift_icon")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
     // MARK: handle category addition/deletion actions

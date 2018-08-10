@@ -144,6 +144,7 @@
 		15110EB620F58AE30095CCD8 /* money-mapp */ = {
 			isa = PBXGroup;
 			children = (
+				15275976211D054900F2DE26 /* Purchases */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
@@ -156,11 +157,6 @@
 				1528EFBD21160DF9001E8297 /* AddBudgetVC.swift */,
 				1528EFBF2116333C001E8297 /* Settings.swift */,
 				1528EFC121163365001E8297 /* StatsVC.swift */,
-				1528EFC521163426001E8297 /* AddPurchaseCollectionViewCell.swift */,
-				1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */,
-				1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */,
-				1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */,
-				1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */,
 				156940912117ADA000D8F654 /* FavoritesVC.swift */,
 				156940932117B73400D8F654 /* PurchaseInfo.swift */,
 				153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */,
@@ -168,10 +164,6 @@
 				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
 				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
 				15C79213211A43EB004475DF /* ExpensesListView.swift */,
-				159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */,
-				159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */,
-				159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */,
-				159045BF211A6DF100FD9703 /* AddPurchaseTableViewCell.xib */,
 				15278281211CB37C0070FEEB /* Sorts.swift */,
 				15278280211CB04E0070FEEB /* SwiftSorts.playground */,
 			);
@@ -194,6 +186,22 @@
 				15110ED920F58AE40095CCD8 /* Info.plist */,
 			);
 			path = "money-mappUITests";
+			sourceTree = "<group>";
+		};
+		15275976211D054900F2DE26 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				1528EFC521163426001E8297 /* AddPurchaseCollectionViewCell.swift */,
+				1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */,
+				1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */,
+				1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */,
+				1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */,
+				159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */,
+				159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */,
+				159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */,
+				159045BF211A6DF100FD9703 /* AddPurchaseTableViewCell.xib */,
+			);
+			name = Purchases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

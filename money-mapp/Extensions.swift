@@ -62,12 +62,14 @@ struct Canvas {
     
     // Yellows
     static let golden_sand = UIColor(red: 236, green: 204, blue: 104)
+    static let summertime = UIColor(red: 245, green: 205, blue: 121)
     
     // Oranges
     static let peach = UIColor(red: 250, green: 152, blue: 58)
     static let melon_melody = UIColor(red: 250, green: 152, blue: 58)
     static let creamy_peach = UIColor(red: 243, green: 166, blue: 131)
     static let brewed_mustard = UIColor(red: 231, green: 127, blue: 103)
+    static let sawtooth_awk = UIColor(red: 241, green: 144, blue: 102)
 
     // Greens
     static let jellybean_green = UIColor(red: 46, green: 213, blue: 115)
@@ -79,6 +81,9 @@ struct Canvas {
     static let sky_blue = UIColor(red: 150, green: 225, blue: 255)
     static let french_sky_blue = UIColor(red: 112, green: 161, blue: 255)
     static let not_tiffany_blue = UIColor(red: 30, green: 144, blue: 255)
+
+    // Purples
+    static let purple_mountain_majesty = UIColor(red: 120, green: 111, blue:166)
 
     // Neutrals
     static let marshmallow = UIColor(red: 255, green: 255, blue: 255)

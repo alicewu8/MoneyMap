@@ -36,6 +36,12 @@ class PurchaseTableViewCell: UITableViewCell {
         
         self.layer.backgroundColor = Canvas.brewed_mustard.cgColor
         
+        // change the alpha from 0.5 to 1.0
+        let color = UIColor(cgColor: self.layer.backgroundColor!)
+        
+        if purchase_id % 2 == 0 {
+            self.layer.backgroundColor = color.withAlphaComponent(0.7).cgColor
+        }
         // set the cell information
         if let name = purchase.name, let date = purchase.date {
             purchase_name.text = name
