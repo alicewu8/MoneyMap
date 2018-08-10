@@ -20,10 +20,7 @@ class CustomizeTableViewCell: UITableViewCell {
         action_name.text = parent.options[index].name
         action_image.image = parent.options[index].image
         
-        layer.borderWidth = 1
-        layer.borderColor = Canvas.super_light_gray.cgColor
-        
-        roundCorners()
+        roundCorners(9)
         // don't round these corners
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
