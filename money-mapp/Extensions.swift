@@ -86,7 +86,7 @@ struct Canvas {
 
     // Purples
     static let purple_mountain_majesty = UIColor(red: 120, green: 111, blue:166)
-    static let shy_momeny = UIColor(red: 162, green: 155, blue: 254)
+    static let shy_moment = UIColor(red: 162, green: 155, blue: 254)
     
     // Pinks
     static let first_date = UIColor(red: 250, green: 177, blue: 160)

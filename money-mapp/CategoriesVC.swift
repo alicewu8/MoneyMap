@@ -41,8 +41,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // array of purchase categories
     var categories : [Category] = []
-    
-    // TODO: using this as a means to track the category whose "add budget" button was isn't working. Modify the button tags instead to match the category IDs (0-indexed)
+
     // represents the collection view cell currently generated
     var current_cell : CategoryCollectionViewCell!
     
@@ -139,7 +138,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             print("implement category adding")
         } else {
             deleteCategory()
-            //current_cell.removeWiggleAnimation(current_cell)
         }
         animateOut()
     }
@@ -198,12 +196,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         } 
     }
     
-    // MARK: Collection view
-    // Populates the collection view
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
-    }
-    
     @IBAction func addCategory(_ sender: Any) {
         // animate the circular background view
         UIView.animate(withDuration: 0.4, animations: {
@@ -249,6 +241,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // TODO: make a function that checks for spending past your limit
     // If you have only $20 left in your budget, a separate view controller pops up with a warning message
+    
+    // MARK: Collection view
+    // Populates the collection view
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
 
     // Initializes a category collection view cell
     // TODO! Move the UI edits to a function in CategoryCollectionViewCell.swift
@@ -288,18 +286,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         // segue into the VC responsible for expense tracking
         performSegue(withIdentifier: "to_expense_recording", sender: self)
-        // think about how to do this--use a xib file and load the one according to the selected category
         
         // for custom categories: record the string and use a default image? Or have user choose an image (do later)
-    }
-    
-    // FIXME: doesn't work
-    // Reverts the border to unselected state
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        guard let cell = collection_view.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
-//        
-//        cell.layer.borderColor = Canvas.watermelon_red.cgColor
-//        cell.layer.borderWidth = 0.5
     }
     
     // MARK: Category add/delete
@@ -307,7 +295,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         category_to_delete = category.id
         
         // segue to the confirmation popup
-        //performSegue(withIdentifier: "to_delete_category", sender: self)
         confirm_change_message.text = "Delete this category?"
         animateIn()
     }
@@ -321,7 +308,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
                 break
             }
         }
-        
         collection_view.reloadData()
     }
 }

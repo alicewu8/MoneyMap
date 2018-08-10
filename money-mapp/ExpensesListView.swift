@@ -71,8 +71,14 @@ class ExpensesListView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func refreshInfo() {
+        UIView.transition(with: self.purchases_table_view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            self.purchases_table_view.reloadData()
+        }, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 70
     }
     
 }

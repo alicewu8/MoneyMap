@@ -69,6 +69,9 @@ class ExpensesVC : UIViewController {
         } else if segue.identifier == "to_purchase_info" {
             let purchase_info = segue.destination as! PurchaseInfo
             purchase_info.expenses_vc = self
+        } else if segue.identifier == "to_customize" {
+            let customize_info = segue.destination as! CustomizeVC
+            customize_info.categories_vc = categories_vc
         }
     }
     
@@ -105,6 +108,10 @@ class ExpensesVC : UIViewController {
         option_three_button.tag = 3
         
         expenses_view.layer.backgroundColor = Canvas.super_light_gray.cgColor
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showCustomizations(_:)))
+        category_name.isUserInteractionEnabled = true
+        category_name.addGestureRecognizer(tap)
     }
     
     // default to showing the grid view
@@ -122,6 +129,12 @@ class ExpensesVC : UIViewController {
         expenses_list?.initialize(self)
         expenses_list.layer.backgroundColor = Canvas.super_light_gray.cgColor
         view.layoutIfNeeded()
+    }
+    
+    @objc func showCustomizations(_ sender: UITapGestureRecognizer) {
+        // animate the category name and arrow image alpha decreasing
+        
+        performSegue(withIdentifier: "to_customize", sender: self)
     }
     
     @IBAction func sortMethodSelected(_ sender: UIButton) {
@@ -158,11 +171,9 @@ class ExpensesVC : UIViewController {
         
         // animate updating the data to reflect the sort
         if using_grid {
-            expenses_grid.purchases_collection.performBatchUpdates({
-                self.expenses_grid.purchases_collection.reloadSections(IndexSet(integer: 0))
-            }, completion: nil)
+            expenses_grid.refreshInfo()
         } else {
-            UIView.transition(with: self.expenses_list.purchases_table_view, duration: 0.3, options: .transitionCrossDissolve, animations: {self.expenses_list?.purchases_table_view.reloadData()}, completion: nil)
+            expenses_list.refreshInfo()
         }
     }
     
@@ -281,10 +292,13 @@ class ExpensesVC : UIViewController {
     
     func updateBudgetLabel() {
         // check for nil budget: only execute if a budget is instantiated
-        guard category.budget != nil else { return }
-        
-        self.budget_remaining_label.text = "$" + String(format: "%.2f", self.category.budget! - self.category.running_total) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
+        guard let budget = categories_vc.categories[category_index].budget else { return }
+        let running_total = categories_vc.categories[category_index].running_total
+    
+        // FIXME: need to use categories_vc access variable
+        self.budget_remaining_label.text = "$" + String(format: "%.2f", budget - running_total) + " of $" + String(format: "%.2f", self.category.budget!) + " left"
         self.budget_remaining_label.font = UIFont(name: "AvenirNext-Medium", size: 15)
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -308,7 +322,7 @@ class ExpensesVC : UIViewController {
         if using_grid {
             expenses_grid.refreshInfo()
         } else {
-            expenses_list?.reloadInputViews()
+            expenses_list.refreshInfo()
         }
     }
     
