@@ -17,37 +17,53 @@ func decreasingOrder(_ price_a : Double, _ price_b : Double) -> Bool {
     return price_a > price_b
 }
 
-// increasing bool determines whether to run increasing order or decreasing order
-func insertionSort(_ purchases: [Purchase], _ increasing: Bool) -> [Purchase] {
+// Returns a sorted vector in either increasing or decreasing order
+func insertionSort(_ unsorted_values: [Purchase], _ increasing_order: Bool) -> [Purchase] {
     // Swift doesn't allow modification of a parameter
-    var copy = purchases
+    var copy = unsorted_values
     
-    for i in 1..<copy.count {
-        // current element that will be compared with elements before it
-        let key = copy[i]
-        var j = i - 1 // immediate previous element
+    /* To sort values in decreasing order, assume the last element to be sorted
+     * and start checking at the second to last. For each iteration, check that
+     * elements to the right are smaller than the key. If not, move greater elements
+     * one over to the left
+     */
+    if !increasing_order {
+        for i in (0...copy.count - 2).reversed() {
+            let key = copy[i]
+            var j = i + 1
+            
+            while j < copy.count && decreasingOrder(copy[j].cost, key.cost) {
+                copy[j - 1] = copy[j]
+                j += 1
+            }
+            copy[j - 1] = key
+        }
+    }
         
-        if increasing {
-            // iterate backwards to confirm sorted order
-            while j >= 0 && increasingOrder(key.cost, copy[j].cost) {
-                // if an element's left neighbor is greater, swap their positions
+        /* To sort values in increasing order, assume the element at index 0 to be sorted
+         * and begin checking at index 1. At each index until the last element, check
+         * that values to the left of that item are smaller than it. Greater elements
+         * will be shifted to the right by one position.
+         */
+    else {
+        for i in 1..<copy.count {
+            // current element that will be compared with elements before it
+            let key = copy[i]
+            var j = i - 1 // immediate previous element
+            
+            while  j >= 0 && !decreasingOrder(key.cost, copy[j].cost) {
+                // shift all elements greater than the key one over to the right
                 copy[j + 1] = copy[j]
                 // check the next neigbor over
                 j -= 1
             }
-            // places key in correct location
+            
+            // The loop breaks once a value to the left is smaller than the key
+            // or when the iteration reaches the first element
             copy[j + 1] = key
-        } else {
-            // iterate forwards to confirm sorted order
-            while j < copy.count && decreasingOrder(key.cost, copy[j].cost) {
-                copy[j - 1] = copy[j]
-                j += 1
-            }
-            // place the key in its correct location
-            copy[j - 1] = key
         }
     }
-    print(copy)
+    
     return copy
 }
 

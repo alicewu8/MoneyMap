@@ -150,8 +150,7 @@ class ExpensesVC : UIViewController {
             // FIXME: fix increasing order
             categories_vc.categories[category_index
                 ].purchases = insertionSort(categories_vc.categories[category_index
-                    ].purchases, true)
-            categories_vc.categories[category_index].purchases = reverseArray(categories_vc.categories[category_index].purchases)
+                    ].purchases, false)
             
         } else if sender.tag == 3 {
             print("Newest")
@@ -201,11 +200,6 @@ class ExpensesVC : UIViewController {
             added_sort_view  = true
         } else {
             sort_button.setTitle("Sort +", for: .normal)
-            
-//            UIView.transition(with: self.view, duration: 0.3, options: UIView.AnimationOptions.curveEaseIn,
-//                              animations: {
-//                                self.sort_options_view.alpha = 0
-//            })
             
             UIView.transition(with: self.view, duration: 0.3, options: UIView.AnimationOptions.curveEaseIn,
                               animations: {
