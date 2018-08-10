@@ -21,7 +21,7 @@ class AddPurchaseTableViewCell: UITableViewCell {
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
         self.parent = parent
-        layer.backgroundColor = Canvas.emerald.cgColor
+        layer.backgroundColor = Canvas.lipstick.cgColor
         
         // add tap gesture recognizer for add purchase action
         let tap = UITapGestureRecognizer(target: self, action: #selector(addPurchaseTapped(_:)))

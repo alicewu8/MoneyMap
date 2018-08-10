@@ -239,7 +239,7 @@ class ExpensesVC : UIViewController {
                 self.dismiss(animated: true, completion: nil)
                 
                 // reverts the border color
-                //categories_vc.collection_view.reloadData()
+                categories_vc.collection_view.reloadData()
             } else {
                 // revert its position to the top
                 UIView.animate(withDuration: 0.3, animations: {
