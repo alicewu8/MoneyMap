@@ -50,6 +50,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     var selected_category_index : Int?
     
+    // Records purchase history
+    // Array of dictionaries that map from category index to an array of purchases
+    var purchase_history : [[Int:[Purchase]]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
