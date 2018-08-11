@@ -38,6 +38,8 @@ class ExpensesVC : UIViewController {
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
     
+    @IBOutlet weak var slider: UIView!
+    
     // MARK: transparent background views for animations
     @IBOutlet weak var sort_outer: UIView!
     @IBOutlet weak var switch_outer: UIView!
@@ -97,7 +99,7 @@ class ExpensesVC : UIViewController {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(panScreen(_:)))
         view.addGestureRecognizer(pan)
         
-        sort_options_view.roundCorners(7.5)
+        sort_options_view.roundCorners()
         sort_options_view.frame.size.height = 0
         
         // don't round these corners
@@ -112,6 +114,10 @@ class ExpensesVC : UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(showCustomizations(_:)))
         category_name.isUserInteractionEnabled = true
         category_name.addGestureRecognizer(tap)
+        
+        slider.roundCorners()
+        // don't round these corners
+        slider.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
     // default to showing the grid view

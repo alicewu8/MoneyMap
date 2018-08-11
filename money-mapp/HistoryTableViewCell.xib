@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="KGk-i7-Jjw" customClass="HistoryTableViewCell" customModule="money_mapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="888" height="224"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="888" height="223.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="paper_plane" translatesAutoresizingMaskIntoConstraints="NO" id="M49-pG-WLl">
+                        <rect key="frame" x="20" y="11" width="164" height="164"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="M49-pG-WLl" secondAttribute="height" multiplier="1:1" id="oYD-9d-DVd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Travel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-0T-xBz">
+                        <rect key="frame" x="20" y="183" width="151" height="41"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Winter Break" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-nv-UFf">
+                        <rect key="frame" x="323" y="40" width="242" height="55"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="12/20/18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTS-rs-JuP">
+                        <rect key="frame" x="379" y="143" width="130" height="47"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gay-UY-gKa">
+                        <rect key="frame" x="200" y="11" width="3" height="201.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="Son-KA-S5P"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$888.88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7WW-3a-J2W">
+                        <rect key="frame" x="711" y="98" width="98" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-JF-RhA">
+                        <rect key="frame" x="647" y="11" width="221" height="201.5"/>
+                        <color key="backgroundColor" red="0.94756561517715454" green="0.84766489267349243" blue="0.78832656145095825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="M49-pG-WLl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="13V-zn-MDL"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3l3-DW-6aq"/>
+                    <constraint firstItem="bsU-0T-xBz" firstAttribute="centerX" secondItem="M49-pG-WLl" secondAttribute="centerX" constant="-6.5" id="85e-FH-ZXp"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="8kI-jO-vfn"/>
+                    <constraint firstItem="Gay-UY-gKa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="200" id="A1i-2K-3PN"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="leading" secondItem="LR0-nv-UFf" secondAttribute="trailing" constant="82" id="AGc-9Q-cC8"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="top" secondItem="Gay-UY-gKa" secondAttribute="top" id="GSE-vb-j9Z"/>
+                    <constraint firstAttribute="bottom" secondItem="bsU-0T-xBz" secondAttribute="bottom" constant="3" id="GgN-6K-mRg"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="bottom" secondItem="Gay-UY-gKa" secondAttribute="bottom" id="IUh-ZN-kbT"/>
+                    <constraint firstItem="bsU-0T-xBz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="RqH-v3-GF3"/>
+                    <constraint firstItem="bTS-rs-JuP" firstAttribute="centerX" secondItem="LR0-nv-UFf" secondAttribute="centerX" id="UMq-lo-Edj"/>
+                    <constraint firstAttribute="trailing" secondItem="zg8-JF-RhA" secondAttribute="trailing" constant="20" id="Ucm-5W-PnT"/>
+                    <constraint firstItem="Gay-UY-gKa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="YqD-5b-vpa"/>
+                    <constraint firstItem="bsU-0T-xBz" firstAttribute="top" secondItem="M49-pG-WLl" secondAttribute="bottom" constant="8" id="apN-Pc-pkl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="bTS-rs-JuP" secondAttribute="bottom" constant="23" id="d8u-3w-tZn"/>
+                    <constraint firstItem="LR0-nv-UFf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="fi1-Yy-khN"/>
+                    <constraint firstAttribute="bottom" secondItem="Gay-UY-gKa" secondAttribute="bottom" constant="11" id="kOO-zP-Gm8"/>
+                    <constraint firstItem="bTS-rs-JuP" firstAttribute="top" secondItem="LR0-nv-UFf" secondAttribute="bottom" constant="48" id="m3R-Au-WmS"/>
+                    <constraint firstAttribute="bottom" secondItem="zg8-JF-RhA" secondAttribute="bottom" constant="11" id="qlt-ot-8sb"/>
+                    <constraint firstItem="M49-pG-WLl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="xpg-dm-pSh"/>
+                    <constraint firstItem="zg8-JF-RhA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="647" id="zdu-Fm-JVa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="category_image" destination="M49-pG-WLl" id="6R1-7H-5RW"/>
+                <outlet property="category_name" destination="bsU-0T-xBz" id="OOM-63-BkW"/>
+                <outlet property="price_label" destination="7WW-3a-J2W" id="dts-OV-oIP"/>
+                <outlet property="price_view" destination="zg8-JF-RhA" id="ACj-Pa-k34"/>
+                <outlet property="purchase_date" destination="bTS-rs-JuP" id="UvQ-6v-2ph"/>
+                <outlet property="purchase_name" destination="LR0-nv-UFf" id="5U5-ih-QNI"/>
+            </connections>
+            <point key="canvasLocation" x="451.19999999999999" y="185.30734632683661"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="paper_plane" width="296" height="232"/>
+    </resources>
+</document>
