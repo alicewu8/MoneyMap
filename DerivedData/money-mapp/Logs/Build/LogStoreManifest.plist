@@ -93,6 +93,64 @@
 			<key>uniqueIdentifier</key>
 			<string>580B582B-EE3F-4B72-AF40-2944A0EDB6F3</string>
 		</dict>
+		<key>D3DDE7A9-7ADF-442F-9FD3-C55669EFA632</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D3DDE7A9-7ADF-442F-9FD3-C55669EFA632.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>556592817.63399005</real>
+			<key>timeStoppedRecording</key>
+			<real>556592819.71608806</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>D3DDE7A9-7ADF-442F-9FD3-C55669EFA632</string>
+		</dict>
+		<key>D46CBE3D-DE7A-4F36-8194-C735FF4ECE4A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D46CBE3D-DE7A-4F36-8194-C735FF4ECE4A.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>556592815.92195296</real>
+			<key>timeStoppedRecording</key>
+			<real>556592816.60831404</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>D46CBE3D-DE7A-4F36-8194-C735FF4ECE4A</string>
+		</dict>
 	</dict>
 </dict>
 </plist>

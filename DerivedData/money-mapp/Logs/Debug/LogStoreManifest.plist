@@ -35,6 +35,35 @@
 			<key>uniqueIdentifier</key>
 			<string>39A9C229-3EDE-47CB-A071-AB2D58510BBA</string>
 		</dict>
+		<key>C4719522-47A3-40A9-ADE3-05387887A265</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C4719522-47A3-40A9-ADE3-05387887A265.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Debug money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>556592759.31506598</real>
+			<key>timeStoppedRecording</key>
+			<real>556592816.15202403</real>
+			<key>title</key>
+			<string>Debug money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>C4719522-47A3-40A9-ADE3-05387887A265</string>
+		</dict>
 		<key>F4EC3EF4-85BA-434A-82B2-D85401319E41</key>
 		<dict>
 			<key>className</key>

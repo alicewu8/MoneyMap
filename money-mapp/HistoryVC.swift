@@ -16,7 +16,7 @@ class HistoryVC : UIViewController {
     
     var parent_tab_bar : MainTabBarController!
     override func viewDidLoad() {
-        parent_tab_bar = tabBarController as! MainTabBarController
+        parent_tab_bar = tabBarController as? MainTabBarController
     }
     
 }
