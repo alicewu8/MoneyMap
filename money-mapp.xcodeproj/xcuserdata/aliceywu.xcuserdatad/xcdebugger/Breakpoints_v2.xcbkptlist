@@ -79,8 +79,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "initialize(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "555701474.54163"
+            timestampString = "555725436.9035161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -127,8 +127,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "initialize(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -159,39 +159,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money-mapp/AddPurchaseVC.swift"
-            timestampString = "555609964.001374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "doneEditing(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money-mapp/AddPurchaseVC.swift"
-            timestampString = "555609964.001452"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "doneEditing(_:)"
+            landmarkName = "sendParent()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "555701474.542164"
+            timestampString = "555725436.903669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "addCategory(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "555701474.542419"
+            timestampString = "555725436.903722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "animateIn()"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "pressedYesButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,45 +217,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "555701474.542665"
+            filePath = "money-mapp/AddPurchaseVC.swift"
+            timestampString = "555725436.90378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "pressedYesButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money-mapp/ExpensesVC.swift"
-            timestampString = "555701474.542909"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
-            landmarkName = "addNewPurchase(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "money-mapp/ExpensesVC.swift"
-            timestampString = "555701474.543224"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
-            landmarkName = "addNewPurchase(_:_:)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "doneEditing(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

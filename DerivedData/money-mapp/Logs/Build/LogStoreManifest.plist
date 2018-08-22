@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>CA65F373-9919-4D0A-9000-411C70CB4B26</key>
+		<key>34883925-CD40-4DA1-83DF-8A9EB10E16A9</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>CA65F373-9919-4D0A-9000-411C70CB4B26.xcactivitylog</string>
+			<string>34883925-CD40-4DA1-83DF-8A9EB10E16A9.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>schemeIdentifier-containerName</key>
@@ -27,15 +27,15 @@
 			<key>signature</key>
 			<string>Build money-mapp</string>
 			<key>timeStartedRecording</key>
-			<real>555658113.67282999</real>
+			<real>556591771.51868105</real>
 			<key>timeStoppedRecording</key>
-			<real>555658116.39600301</real>
+			<real>556591778.28430903</real>
 			<key>title</key>
 			<string>Build money-mapp</string>
 			<key>uniqueIdentifier</key>
-			<string>CA65F373-9919-4D0A-9000-411C70CB4B26</string>
+			<string>34883925-CD40-4DA1-83DF-8A9EB10E16A9</string>
 		</dict>
-		<key>DDCBCF52-D618-4CBB-B563-00C8A8EC1506</key>
+		<key>41EF288C-6E8B-4F97-8D12-AA7CBBC06CE6</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -44,7 +44,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>DDCBCF52-D618-4CBB-B563-00C8A8EC1506.xcactivitylog</string>
+			<string>41EF288C-6E8B-4F97-8D12-AA7CBBC06CE6.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>schemeIdentifier-containerName</key>
@@ -56,13 +56,42 @@
 			<key>signature</key>
 			<string>Build money-mapp</string>
 			<key>timeStartedRecording</key>
-			<real>555701450.309659</real>
+			<real>556592757.63612401</real>
 			<key>timeStoppedRecording</key>
-			<real>555701458.73449802</real>
+			<real>556592759.57898605</real>
 			<key>title</key>
 			<string>Build money-mapp</string>
 			<key>uniqueIdentifier</key>
-			<string>DDCBCF52-D618-4CBB-B563-00C8A8EC1506</string>
+			<string>41EF288C-6E8B-4F97-8D12-AA7CBBC06CE6</string>
+		</dict>
+		<key>580B582B-EE3F-4B72-AF40-2944A0EDB6F3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>580B582B-EE3F-4B72-AF40-2944A0EDB6F3.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>money-mapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>money-mapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Build money-mapp</string>
+			<key>timeStartedRecording</key>
+			<real>555876047.69016695</real>
+			<key>timeStoppedRecording</key>
+			<real>555876050.66581297</real>
+			<key>title</key>
+			<string>Build money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>580B582B-EE3F-4B72-AF40-2944A0EDB6F3</string>
 		</dict>
 	</dict>
 </dict>

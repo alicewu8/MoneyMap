@@ -13,14 +13,12 @@ import UIKit
 class AddPurchaseVC : UIViewController {
     
     @IBOutlet weak var done_button: UIButton!
-    @IBOutlet weak var review_button: UIButton!
     
     @IBOutlet weak var purchase_name: UITextField!
     @IBOutlet weak var purchase_cost: UITextField!
     @IBOutlet weak var purchase_date: UITextField!
     @IBOutlet weak var additional_info: UITextField!
     @IBOutlet weak var edit_view: UIView!
-    @IBOutlet weak var display_purchase_info: UITextView!
     
     @IBOutlet weak var separator_one: UIView!
     @IBOutlet weak var separator_two: UIView!
@@ -113,25 +111,23 @@ class AddPurchaseVC : UIViewController {
         edit_view.roundCorners()
         done_button.roundCorners(7.5)
         
-        display_purchase_info.roundCorners(9)
-        review_button.roundCorners()
 //        review_button.layer.borderColor = Canvas.french_sky_blue.cgColor
 //        review_button.titleLabel?.textColor = Canvas.french_sky_blue
     }
     
-    // displays the purchase info in the text field
-    @IBAction func reviewDetails(_ sender: Any) {
-        // display info in the text view
-        // FIXME: check for nil values
-        display_purchase_info.text = """
-        \(purchase_name.text!)
-        \(purchase_cost.text!)
-        \(purchase_date.text!)
-        \(additional_info.text!)
-        """
-        print(display_purchase_info.text)
-        
-    }
+//    // displays the purchase info in the text field
+//    @IBAction func reviewDetails(_ sender: Any) {
+//        // display info in the text view
+//        // FIXME: check for nil values
+//        display_purchase_info.text = """
+//        \(purchase_name.text!)
+//        \(purchase_cost.text!)
+//        \(purchase_date.text!)
+//        \(additional_info.text!)
+//        """
+//        print(display_purchase_info.text)
+//        
+//    }
     
     @IBAction func doneEditing(_ sender: Any) {
         

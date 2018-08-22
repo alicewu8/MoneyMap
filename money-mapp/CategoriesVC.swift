@@ -51,8 +51,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     var selected_category_index : Int?
     
     // Records purchase history
-    // Array of dictionaries that map from category index to an array of purchases
-    var purchase_history : [[Int:[Purchase]]] = []
+    // Dictionary that maps from category index to an array of purchases
+    // initialize a dictionary that maps from a category's index in the categories array to the purchases made in that category
+    var history = [Int:[Purchase]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         collection_view.dataSource = self
         
         initializeCategories()
+        initializeHistory()
         formatViews()
         formatCells()
         formatTabBar()
@@ -74,6 +76,14 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         yes_button.roundCorners(7.5)
         no_button.roundCorners(7.5)
+    }
+    
+    func initializeHistory() {
+        // initialize the key (index of a category in the categories array) to an empty array to allow modification later
+        for i in 0..<categories.count {
+            history[i] = []
+        }
+        print(history.count)
     }
     
     // MARK: animations for displaying confirmation window

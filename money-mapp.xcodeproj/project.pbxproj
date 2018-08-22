@@ -42,6 +42,8 @@
 		15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C14E21138F24007CEBAE /* Extensions.swift */; };
 		15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */; };
 		15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9C15A2113F675007CEBAE /* ExpensesVC.swift */; };
+		15CD7A74212CEA220068868E /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD7A73212CEA220068868E /* HistoryVC.swift */; };
+		15CD7A76212CEDEA0068868E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CD7A75212CEDEA0068868E /* MainTabBarController.swift */; };
 		15D8DD6E211A47A3001A4D34 /* ExpensesListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */; };
 		15F85394211E78A000D5F8E3 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F85392211E78A000D5F8E3 /* HistoryTableViewCell.swift */; };
 		15F85395211E78A000D5F8E3 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15F85393211E78A000D5F8E3 /* HistoryTableViewCell.xib */; };
@@ -108,6 +110,8 @@
 		15C9C14E21138F24007CEBAE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		15C9C15A2113F675007CEBAE /* ExpensesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesVC.swift; sourceTree = "<group>"; };
+		15CD7A73212CEA220068868E /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		15CD7A75212CEDEA0068868E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpensesListView.xib; sourceTree = "<group>"; };
 		15F85392211E78A000D5F8E3 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		15F85393211E78A000D5F8E3 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -162,13 +166,10 @@
 		15110EB620F58AE30095CCD8 /* money-mapp */ = {
 			isa = PBXGroup;
 			children = (
+				15CD7A72212CE9C10068868E /* Expenses */,
 				15275976211D054900F2DE26 /* Purchases */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
-				15C79215211A452A004475DF /* ExpensesGridView.xib */,
-				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
-				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
-				15C79213211A43EB004475DF /* ExpensesListView.swift */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
@@ -176,6 +177,7 @@
 				15C9C1562113E3A4007CEBAE /* CategoryCollectionViewCell.swift */,
 				15C9C14E21138F24007CEBAE /* Extensions.swift */,
 				15C9C15A2113F675007CEBAE /* ExpensesVC.swift */,
+				15CD7A73212CEA220068868E /* HistoryVC.swift */,
 				1528EFBD21160DF9001E8297 /* AddBudgetVC.swift */,
 				1528EFBF2116333C001E8297 /* Settings.swift */,
 				1528EFC121163365001E8297 /* StatsVC.swift */,
@@ -192,6 +194,7 @@
 				1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */,
 				15F85392211E78A000D5F8E3 /* HistoryTableViewCell.swift */,
 				15F85393211E78A000D5F8E3 /* HistoryTableViewCell.xib */,
+				15CD7A75212CEDEA0068868E /* MainTabBarController.swift */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -228,6 +231,17 @@
 				159045BF211A6DF100FD9703 /* AddPurchaseTableViewCell.xib */,
 			);
 			name = Purchases;
+			sourceTree = "<group>";
+		};
+		15CD7A72212CE9C10068868E /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				15C79215211A452A004475DF /* ExpensesGridView.xib */,
+				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
+				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
+				15C79213211A43EB004475DF /* ExpensesListView.swift */,
+			);
+			name = Expenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +404,9 @@
 				15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */,
 				15F85394211E78A000D5F8E3 /* HistoryTableViewCell.swift in Sources */,
 				15C79218211A45C6004475DF /* ExpensesGridView.swift in Sources */,
+				15CD7A76212CEDEA0068868E /* MainTabBarController.swift in Sources */,
 				1528EFC221163365001E8297 /* StatsVC.swift in Sources */,
+				15CD7A74212CEA220068868E /* HistoryVC.swift in Sources */,
 				1528EFC721163426001E8297 /* AddPurchaseCollectionViewCell.swift in Sources */,
 				159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */,
 				153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */,

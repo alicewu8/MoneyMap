@@ -114,10 +114,6 @@ class ExpensesVC : UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(showCustomizations(_:)))
         category_name.isUserInteractionEnabled = true
         category_name.addGestureRecognizer(tap)
-        
-        slider.roundCorners()
-        // don't round these corners
-        slider.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
     
     // default to showing the grid view
@@ -324,12 +320,20 @@ class ExpensesVC : UIViewController {
         updateBudgetBar()
         updateBudgetLabel()
     
+        // add this purchase to the history dictionary
+        appendToHistory(purchase)
+        
         // Animate adding a new cell
         if using_grid {
             expenses_grid.refreshInfo()
         } else {
             expenses_list.refreshInfo()
         }
+    }
+    
+    func appendToHistory(_ purchase: Purchase) {
+        categories_vc.history[category_index]?.append(purchase)
+        print(categories_vc.history)
     }
     
     @IBAction func switchPurchaseLayout(_ sender: Any) {
