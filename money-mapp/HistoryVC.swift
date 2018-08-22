@@ -14,9 +14,8 @@ class HistoryVC : UIViewController {
     var categories_vc : CategoriesVC!
     var expenses_vc : ExpensesVC!
     
-    var parent_tab_bar : MainTabBarController!
     override func viewDidLoad() {
-        parent_tab_bar = tabBarController as? MainTabBarController
+        
     }
     
 }

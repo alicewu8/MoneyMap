@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8T7-4q-5X8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,11 +72,6 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="96i-Ty-ACk"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWG-Fc-qon">
-                                <rect key="frame" x="61" y="177" width="293" height="382"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.66566262089999995" blue="0.63191391799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -90,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owD-70-RgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733" y="-391"/>
+            <point key="canvasLocation" x="52" y="-743"/>
         </scene>
         <!--Analyze-->
         <scene sceneID="qqJ-qD-yeg">
@@ -107,26 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AN-zX-lpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-733" y="1215"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="APl-IW-tCF">
-            <objects>
-                <tabBarController id="8T7-4q-5X8" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEe-bw-lPj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sY6-wW-XHG"/>
-                        <segue destination="mx7-Gz-jib" kind="relationship" relationship="viewControllers" id="RgB-NU-YhQ"/>
-                        <segue destination="80y-U4-fCg" kind="relationship" relationship="viewControllers" id="QdC-Fc-gYI"/>
-                        <segue destination="lL6-Rv-yxm" kind="relationship" relationship="viewControllers" id="tyw-D4-xsD"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ov3-O9-3db" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1520" y="54"/>
         </scene>
         <!--History-->
         <scene sceneID="GHL-lH-RH4">
@@ -191,7 +166,7 @@
                                 <viewLayoutGuide key="safeArea" id="D3c-7y-FMJ"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ilP-D2-i0w">
-                                <rect key="frame" x="0.0" y="108" width="414" height="579"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="628"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -211,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERo-bg-0LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733.33333333333337" y="342.39130434782612"/>
+            <point key="canvasLocation" x="-17" y="315"/>
         </scene>
         <!--Expenses-->
         <scene sceneID="tne-QT-ifu">
@@ -302,9 +277,9 @@
                                 <color key="backgroundColor" red="0.87522091486649745" green="0.18894217345744707" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <viewLayoutGuide key="safeArea" id="Q4N-Fj-Vem"/>
                                 <items>
-                                    <tabBarItem title="Expenses" image="record" id="Evt-7H-Vn9"/>
+                                    <tabBarItem title="Record" image="record" id="Evt-7H-Vn9"/>
                                     <tabBarItem title="Analyze" image="analyze" id="482-DT-smL"/>
-                                    <tabBarItem title="Settings" image="settings" id="rJ9-IL-BXc"/>
+                                    <tabBarItem title="History" image="history" id="rJ9-IL-BXc"/>
                                 </items>
                                 <color key="tintColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="selectedImageTintColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -585,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfA-RH-zHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="-1377"/>
+            <point key="canvasLocation" x="-733" y="-2105"/>
         </scene>
         <!--Date Popup View Controller-->
         <scene sceneID="bRp-MK-pI5">
@@ -727,8 +702,8 @@
                                             <constraint firstAttribute="width" constant="13" id="hDw-Nq-dyq"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pan_down (2)" translatesAutoresizingMaskIntoConstraints="NO" id="ZVS-wd-PvW">
-                                        <rect key="frame" x="190" y="6" width="34" height="10"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar_slider" translatesAutoresizingMaskIntoConstraints="NO" id="ZVS-wd-PvW">
+                                        <rect key="frame" x="193" y="-4" width="29" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1078,29 +1053,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-DN-0my" userLabel="IntroMessage">
-                                <rect key="frame" x="20" y="50" width="374" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record a Purchase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-if-xwz">
-                                        <rect key="frame" x="90" y="0.0" width="194" height="64"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerX" secondItem="JtC-DN-0my" secondAttribute="centerX" id="3ms-ub-uzU"/>
-                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerX" secondItem="Ove-Xv-BME" secondAttribute="centerX" id="dSo-h0-ioZ"/>
-                                    <constraint firstItem="jnn-if-xwz" firstAttribute="bottom" secondItem="Ove-Xv-BME" secondAttribute="bottom" id="hzp-k1-K1w"/>
-                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerY" secondItem="Ove-Xv-BME" secondAttribute="centerY" id="rbO-E9-7xo"/>
-                                    <constraint firstAttribute="height" constant="64" id="s1P-Y8-kCu"/>
-                                    <constraint firstItem="jnn-if-xwz" firstAttribute="top" secondItem="Ove-Xv-BME" secondAttribute="top" id="zAl-FA-aRJ"/>
-                                </constraints>
-                                <viewLayoutGuide key="safeArea" id="Ove-Xv-BME"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAj-Np-TE3">
-                                <rect key="frame" x="20" y="114" width="374" height="368"/>
+                                <rect key="frame" x="20" y="164" width="374" height="368"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbK-QP-7SY">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
@@ -1246,15 +1200,15 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtn-ir-b0G">
-                                <rect key="frame" x="20" y="482" width="374" height="80"/>
+                                <rect key="frame" x="20" y="528" width="374" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-bu-b5O">
-                                        <rect key="frame" x="119" y="10" width="160" height="60"/>
+                                        <rect key="frame" x="95" y="10" width="184" height="60"/>
                                         <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="mQW-GT-AIl"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                         <state key="normal" title="Add Purchase">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1268,20 +1222,41 @@
                                 <constraints>
                                     <constraint firstItem="Lfv-bu-b5O" firstAttribute="centerY" secondItem="wtn-ir-b0G" secondAttribute="centerY" id="Fi7-x2-KL0"/>
                                     <constraint firstAttribute="trailing" secondItem="Lfv-bu-b5O" secondAttribute="trailing" constant="95" id="KF9-dm-QKa"/>
-                                    <constraint firstItem="Lfv-bu-b5O" firstAttribute="centerX" secondItem="wtn-ir-b0G" secondAttribute="centerX" constant="12" id="vJa-lG-7SU"/>
+                                    <constraint firstItem="Lfv-bu-b5O" firstAttribute="centerX" secondItem="wtn-ir-b0G" secondAttribute="centerX" id="vJa-lG-7SU"/>
                                     <constraint firstAttribute="bottom" secondItem="Lfv-bu-b5O" secondAttribute="bottom" constant="10" id="vKS-j2-p1O"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtC-DN-0my" userLabel="IntroMessage">
+                                <rect key="frame" x="20" y="100" width="374" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record a Purchase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-if-xwz">
+                                        <rect key="frame" x="90" y="0.0" width="194" height="64"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerX" secondItem="JtC-DN-0my" secondAttribute="centerX" id="3ms-ub-uzU"/>
+                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerX" secondItem="Ove-Xv-BME" secondAttribute="centerX" id="dSo-h0-ioZ"/>
+                                    <constraint firstItem="jnn-if-xwz" firstAttribute="bottom" secondItem="Ove-Xv-BME" secondAttribute="bottom" id="hzp-k1-K1w"/>
+                                    <constraint firstItem="jnn-if-xwz" firstAttribute="centerY" secondItem="Ove-Xv-BME" secondAttribute="centerY" id="rbO-E9-7xo"/>
+                                    <constraint firstAttribute="height" constant="64" id="s1P-Y8-kCu"/>
+                                    <constraint firstItem="jnn-if-xwz" firstAttribute="top" secondItem="Ove-Xv-BME" secondAttribute="top" id="zAl-FA-aRJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="Ove-Xv-BME"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JtC-DN-0my" firstAttribute="leading" secondItem="SMD-mq-Q30" secondAttribute="leading" constant="20" id="Bdf-Xl-yo6"/>
                             <constraint firstItem="wtn-ir-b0G" firstAttribute="trailing" secondItem="vAj-Np-TE3" secondAttribute="trailing" id="D2F-xu-arN"/>
-                            <constraint firstItem="JtC-DN-0my" firstAttribute="top" secondItem="SMD-mq-Q30" secondAttribute="top" constant="30" id="Nwd-Xm-D1G"/>
                             <constraint firstItem="wtn-ir-b0G" firstAttribute="leading" secondItem="vAj-Np-TE3" secondAttribute="leading" id="PNt-WI-SZk"/>
                             <constraint firstItem="vAj-Np-TE3" firstAttribute="height" secondItem="Tzr-y7-hxr" secondAttribute="height" multiplier="0.5" id="QeA-zJ-gZc"/>
+                            <constraint firstItem="JtC-DN-0my" firstAttribute="top" secondItem="SMD-mq-Q30" secondAttribute="top" constant="80" id="Vvo-dB-hq1"/>
                             <constraint firstItem="SMD-mq-Q30" firstAttribute="trailing" secondItem="JtC-DN-0my" secondAttribute="trailing" constant="20" id="Ydd-bJ-FHS"/>
-                            <constraint firstItem="wtn-ir-b0G" firstAttribute="top" secondItem="vAj-Np-TE3" secondAttribute="bottom" id="dHJ-d7-9vo"/>
+                            <constraint firstItem="wtn-ir-b0G" firstAttribute="top" secondItem="vAj-Np-TE3" secondAttribute="bottom" constant="-4" id="dHJ-d7-9vo"/>
                             <constraint firstItem="vAj-Np-TE3" firstAttribute="top" secondItem="JtC-DN-0my" secondAttribute="bottom" id="gsw-Zd-hsM"/>
                             <constraint firstItem="vAj-Np-TE3" firstAttribute="trailing" secondItem="JtC-DN-0my" secondAttribute="trailing" id="vyF-Eu-bug"/>
                             <constraint firstItem="vAj-Np-TE3" firstAttribute="leading" secondItem="JtC-DN-0my" secondAttribute="leading" id="zmU-4R-1rM"/>
@@ -1290,8 +1265,10 @@
                     </view>
                     <connections>
                         <outlet property="additional_info" destination="gkG-9V-nJ6" id="l7N-PC-ifA"/>
+                        <outlet property="button_view" destination="wtn-ir-b0G" id="Kv0-Du-gCL"/>
                         <outlet property="done_button" destination="Lfv-bu-b5O" id="SDz-Fg-rg0"/>
                         <outlet property="edit_view" destination="vAj-Np-TE3" id="rbX-rN-O8n"/>
+                        <outlet property="intro_view" destination="JtC-DN-0my" id="2tz-gM-wba"/>
                         <outlet property="purchase_cost" destination="YhS-k9-FJh" id="Hio-NJ-aEL"/>
                         <outlet property="purchase_date" destination="l5p-PY-tci" id="ocq-1k-R4v"/>
                         <outlet property="purchase_name" destination="7lx-dE-dzA" id="ShN-H7-mrf"/>
@@ -1519,18 +1496,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQJ-pc-qpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-915"/>
+            <point key="canvasLocation" x="2448" y="-926"/>
         </scene>
     </scenes>
     <resources>
         <image name="add_favorite" width="40" height="40"/>
         <image name="analyze" width="30" height="29"/>
         <image name="arrow" width="223" height="279"/>
+        <image name="bar_slider" width="250" height="250"/>
         <image name="budget_50-1" width="500" height="500"/>
         <image name="empty_add_icon" width="150" height="150"/>
         <image name="grid" width="30" height="27"/>
+        <image name="history" width="30" height="27"/>
         <image name="income" width="42" height="26"/>
-        <image name="pan_down (2)" width="150" height="82"/>
         <image name="record" width="25" height="27"/>
         <image name="return" width="223" height="279"/>
         <image name="settings" width="35" height="35"/>

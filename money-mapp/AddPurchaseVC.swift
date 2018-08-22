@@ -14,6 +14,8 @@ class AddPurchaseVC : UIViewController {
     
     @IBOutlet weak var done_button: UIButton!
     
+    @IBOutlet weak var button_view: UIView!
+    @IBOutlet weak var intro_view: UIView!
     @IBOutlet weak var purchase_name: UITextField!
     @IBOutlet weak var purchase_cost: UITextField!
     @IBOutlet weak var purchase_date: UITextField!
@@ -108,8 +110,13 @@ class AddPurchaseVC : UIViewController {
     }
     
     func setUpUI() {
-        edit_view.roundCorners()
         done_button.roundCorners(7.5)
+        
+        // masked corners are the corners that don't have the UI change applied to
+        button_view.roundCorners(7.5)
+        button_view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        intro_view.roundCorners(7.5)
+        intro_view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
 //        review_button.layer.borderColor = Canvas.french_sky_blue.cgColor
 //        review_button.titleLabel?.textColor = Canvas.french_sky_blue

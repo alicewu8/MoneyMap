@@ -155,7 +155,6 @@ class CustomizeVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         case 2:
             print("Choose color")
             colorsPopUp()
-            
         case 4:
             print("Edit budget")
             

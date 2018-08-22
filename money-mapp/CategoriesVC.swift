@@ -76,6 +76,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         yes_button.roundCorners(7.5)
         no_button.roundCorners(7.5)
+        
+        // Record will be highlighted on startup
+        tab_bar.selectedItem = tab_bar.items?.first
     }
     
     func initializeHistory() {
@@ -251,6 +254,29 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             }
         }
         collection_view.reloadData()
+    }
+    
+    // MARK: Tab bar
+    // Using a tab bar instead of tab bar controller to pass information between view controllers in a more straight-forward way
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        // represents the item that was tapped
+        let ind = tabBar.items?.index(of: item)
+        
+        // prevent going out of bounds
+        if ind! >= tab_bar.items!.count {
+            return
+        }
+        
+        switch ind {
+        case 0:
+            print("Record view")
+        case 1:
+            print("Analyze view")
+        case 2:
+            print("History view")
+        default:
+            print("Hi")
+        }
     }
     
     // TODO: make a function that checks for spending past your limit

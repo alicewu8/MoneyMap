@@ -19,22 +19,19 @@ class ExpensesVC : UIViewController {
     @IBOutlet weak var budget_remaining_height: NSLayoutConstraint!
     @IBOutlet weak var category_name_top_space: NSLayoutConstraint!
     
-    // MARK: sort options view
+    // MARK: sort options view objects
     @IBOutlet var sort_options_view: UIView!
     @IBOutlet weak var option_one_view: UIView!
     @IBOutlet weak var option_one_label: UILabel!
     @IBOutlet weak var separator_one: UIView!
     @IBOutlet weak var option_one_button: UIButton!
-    
     @IBOutlet weak var option_two_view: UIView!
     @IBOutlet weak var option_two_label: UILabel!
     @IBOutlet weak var separator_two: UIView!
     @IBOutlet weak var option_two_button: UIButton!
-    
     @IBOutlet weak var option_three_view: UIView!
     @IBOutlet weak var option_three_label: UILabel!
     @IBOutlet weak var option_three_button: UIButton!
-    
     @IBOutlet var background_view: UIView!
     @IBOutlet weak var message_view: UIView!
     
