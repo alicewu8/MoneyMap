@@ -45,6 +45,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // represents the collection view cell currently generated
     var current_cell : CategoryCollectionViewCell!
     
+    @IBOutlet weak var expense_underline: UIView!
+    @IBOutlet weak var income_underline: UIView!
+    
     // tracks the id of the category to delete
     var category_to_delete : Int?
     
@@ -79,6 +82,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         // Record will be highlighted on startup
         tab_bar.selectedItem = tab_bar.items?.first
+        
+        income_underline.isHidden = true
+        income_underline.roundCorners(2)
+        expense_underline.roundCorners(2)
     }
     
     func initializeHistory() {
@@ -254,6 +261,26 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             }
         }
         collection_view.reloadData()
+    }
+    
+    // MARK: toggle between expense and income
+    @IBAction func expenseTapped(_ sender: Any) {
+        if (expense_underline.isHidden) {
+            expense_underline.isHidden = false
+            income_underline.isHidden = true
+            
+            // switch to the expenses view
+        }
+        
+    }
+    
+    @IBAction func incomeTapped(_ sender: Any) {
+        if (income_underline.isHidden) {
+            income_underline.isHidden = false
+            expense_underline.isHidden = true
+            
+            // switch to the income recording view
+        }
     }
     
     // MARK: Tab bar
