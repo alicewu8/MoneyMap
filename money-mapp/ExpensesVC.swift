@@ -71,6 +71,7 @@ class ExpensesVC : UIViewController {
         } else if segue.identifier == "to_customize" {
             let customize_info = segue.destination as! CustomizeVC
             customize_info.categories_vc = categories_vc
+            customize_info.category_index = category_index
         }
     }
     
@@ -159,7 +160,6 @@ class ExpensesVC : UIViewController {
             print("Price high to low")
             
             // replace the current purchases array with the sorted array
-            // FIXME: fix increasing order
             categories_vc.categories[category_index
                 ].purchases = insertionSort(categories_vc.categories[category_index
                     ].purchases, false)
@@ -285,7 +285,6 @@ class ExpensesVC : UIViewController {
         }
         
         //if money_spent
-        
         
     }
     

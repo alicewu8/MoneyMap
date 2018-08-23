@@ -17,6 +17,8 @@ class HistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var price_view: UIView!
     @IBOutlet weak var price_label: UILabel!
     
+    var parent : CategoriesVC!
+    var index_of_item : Int!
     
     
 }

@@ -32,6 +32,12 @@ struct Purchase {
     var id : Int!
 }
 
+struct Income {
+    var amount : Double
+    var name : String
+    var id : Int!
+}
+
 // TODO: implement custom UI color palettes
 struct Spring {
     

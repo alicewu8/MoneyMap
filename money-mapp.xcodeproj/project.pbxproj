@@ -22,6 +22,11 @@
 		1528EFC821163426001E8297 /* AddPurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */; };
 		1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */; };
 		1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */; };
+		1529366C212F0C6300CE8CE1 /* ExpensesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15275978211D1D7200F2DE26 /* ExpensesListView.swift */; };
+		1529366F212F0CA500CE8CE1 /* IncomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529366D212F0CA500CE8CE1 /* IncomeTableViewCell.swift */; };
+		15293670212F0CA500CE8CE1 /* IncomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */; };
+		15293672212F0CFC00CE8CE1 /* IncomeTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */; };
+		15293674212F0D0800CE8CE1 /* IncomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15293673212F0D0800CE8CE1 /* IncomeTableView.swift */; };
 		153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */; };
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
@@ -79,7 +84,7 @@
 		15110ED320F58AE40095CCD8 /* money-mappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "money-mappUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15110ED720F58AE40095CCD8 /* money_mappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_mappUITests.swift; sourceTree = "<group>"; };
 		15110ED920F58AE40095CCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15275978211D1D7200F2DE26 /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpensesListView.swift; path = "money-mapp/ExpensesListView.swift"; sourceTree = "<group>"; };
+		15275978211D1D7200F2DE26 /* ExpensesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListView.swift; sourceTree = "<group>"; };
 		15278280211CB04E0070FEEB /* SwiftSorts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftSorts.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		15278281211CB37C0070FEEB /* Sorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorts.swift; sourceTree = "<group>"; };
 		1528EFBD21160DF9001E8297 /* AddBudgetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetVC.swift; sourceTree = "<group>"; };
@@ -89,6 +94,10 @@
 		1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPurchaseCollectionViewCell.xib; sourceTree = "<group>"; };
 		1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseCollectionViewCell.xib; sourceTree = "<group>"; };
+		1529366D212F0CA500CE8CE1 /* IncomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTableViewCell.swift; sourceTree = "<group>"; };
+		1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeTableViewCell.xib; sourceTree = "<group>"; };
+		15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeTableView.xib; sourceTree = "<group>"; };
+		15293673212F0D0800CE8CE1 /* IncomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTableView.swift; sourceTree = "<group>"; };
 		153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupViewController.swift; sourceTree = "<group>"; };
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -143,7 +152,6 @@
 		15110EAB20F58AE30095CCD8 = {
 			isa = PBXGroup;
 			children = (
-				15275978211D1D7200F2DE26 /* ExpensesListView.swift */,
 				15110EB620F58AE30095CCD8 /* money-mapp */,
 				15110ECB20F58AE40095CCD8 /* money-mappTests */,
 				15110ED620F58AE40095CCD8 /* money-mappUITests */,
@@ -164,10 +172,10 @@
 		15110EB620F58AE30095CCD8 /* money-mapp */ = {
 			isa = PBXGroup;
 			children = (
+				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
 				15CD7A72212CE9C10068868E /* Expenses */,
 				15275976211D054900F2DE26 /* Purchases */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
-				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
@@ -192,6 +200,10 @@
 				1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */,
 				15F85392211E78A000D5F8E3 /* HistoryTableViewCell.swift */,
 				15F85393211E78A000D5F8E3 /* HistoryTableViewCell.xib */,
+				1529366D212F0CA500CE8CE1 /* IncomeTableViewCell.swift */,
+				1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */,
+				15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */,
+				15293673212F0D0800CE8CE1 /* IncomeTableView.swift */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 		15CD7A72212CE9C10068868E /* Expenses */ = {
 			isa = PBXGroup;
 			children = (
+				15275978211D1D7200F2DE26 /* ExpensesListView.swift */,
 				15C79215211A452A004475DF /* ExpensesGridView.xib */,
 				15C79217211A45C6004475DF /* ExpensesGridView.swift */,
 				15D8DD6D211A47A3001A4D34 /* ExpensesListView.xib */,
@@ -345,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15293670212F0CA500CE8CE1 /* IncomeTableViewCell.xib in Resources */,
 				159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */,
 				1585F516211E115700D7AE9E /* CustomizeTableViewCell.xib in Resources */,
 				1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */,
@@ -354,6 +368,7 @@
 				15110EBD20F58AE30095CCD8 /* Main.storyboard in Resources */,
 				1585F51E211E337E00D7AE9E /* BlankTableViewCell.xib in Resources */,
 				15C79216211A452A004475DF /* ExpensesGridView.xib in Resources */,
+				15293672212F0CFC00CE8CE1 /* IncomeTableView.xib in Resources */,
 				15D8DD6E211A47A3001A4D34 /* ExpensesListView.xib in Resources */,
 				15F85395211E78A000D5F8E3 /* HistoryTableViewCell.xib in Resources */,
 				159045C1211A6DF100FD9703 /* AddPurchaseTableViewCell.xib in Resources */,
@@ -391,6 +406,7 @@
 				15C9C15B2113F675007CEBAE /* ExpensesVC.swift in Sources */,
 				1528EFC02116333C001E8297 /* Settings.swift in Sources */,
 				1528EFBE21160DF9001E8297 /* AddBudgetVC.swift in Sources */,
+				15293674212F0D0800CE8CE1 /* IncomeTableView.swift in Sources */,
 				15278282211CB37C0070FEEB /* Sorts.swift in Sources */,
 				1585F515211E115700D7AE9E /* CustomizeTableViewCell.swift in Sources */,
 				1585F51A211E22E600D7AE9E /* ColorCell.swift in Sources */,
@@ -404,8 +420,10 @@
 				1528EFC221163365001E8297 /* StatsVC.swift in Sources */,
 				15CD7A74212CEA220068868E /* HistoryVC.swift in Sources */,
 				1528EFC721163426001E8297 /* AddPurchaseCollectionViewCell.swift in Sources */,
+				1529366F212F0CA500CE8CE1 /* IncomeTableViewCell.swift in Sources */,
 				159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */,
 				153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */,
+				1529366C212F0C6300CE8CE1 /* ExpensesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

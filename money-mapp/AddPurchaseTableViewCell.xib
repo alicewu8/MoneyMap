@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Tzu-ad-ANx">
-                        <rect key="frame" x="415" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="412" y="3.5" width="150" height="150"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Tzu-ad-ANx" secondAttribute="height" multiplier="1:1" id="xHK-ga-jqP"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VM2-bw-ASz">
-                        <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="412" height="156.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Purchase" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvb-en-dlu">
-                                <rect key="frame" x="0.0" y="0.0" width="415" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="412" height="156.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,12 +49,12 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="VM2-bw-ASz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1x6-n9-d0e"/>
-                    <constraint firstAttribute="bottom" secondItem="Tzu-ad-ANx" secondAttribute="bottom" id="6yd-qw-9Lt"/>
-                    <constraint firstItem="Tzu-ad-ANx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="M7z-sv-Vcf"/>
+                    <constraint firstAttribute="bottom" secondItem="Tzu-ad-ANx" secondAttribute="bottom" constant="3" id="6yd-qw-9Lt"/>
+                    <constraint firstItem="Tzu-ad-ANx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="M7z-sv-Vcf"/>
                     <constraint firstItem="Tzu-ad-ANx" firstAttribute="leading" secondItem="VM2-bw-ASz" secondAttribute="trailing" id="Ok6-g9-qU9"/>
                     <constraint firstItem="VM2-bw-ASz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aaO-3Q-9nT"/>
                     <constraint firstAttribute="bottom" secondItem="VM2-bw-ASz" secondAttribute="bottom" id="awN-ed-z6p"/>
-                    <constraint firstAttribute="trailing" secondItem="Tzu-ad-ANx" secondAttribute="trailing" id="j1M-Lc-B9M"/>
+                    <constraint firstAttribute="trailing" secondItem="Tzu-ad-ANx" secondAttribute="trailing" constant="3" id="j1M-Lc-B9M"/>
                     <constraint firstItem="Tzu-ad-ANx" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="j9t-bz-Ezo"/>
                 </constraints>
             </tableViewCellContentView>

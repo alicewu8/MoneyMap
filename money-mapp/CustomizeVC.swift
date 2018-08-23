@@ -33,6 +33,17 @@ class CustomizeVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     
     var categories_vc : CategoriesVC!
     
+    // the category being modified
+    var category_index : Int!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "to_add_budget" {
+            let add_budget = segue.destination as! AddBudgetVC
+            add_budget.categories_vc = self.categories_vc
+            add_budget.category_index = self.category_index
+        }
+    }
+    
     override func viewDidLoad() {
         initializeOptions()
         initializeColors()
@@ -151,12 +162,14 @@ class CustomizeVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         switch index {
         case 0:
             print("Rename this category")
+            colorsPopUp()
             
         case 2:
             print("Choose color")
             colorsPopUp()
         case 4:
             print("Edit budget")
+            performSegue(withIdentifier: "to_add_budget", sender: self)
             
         default:
             print("tap!")

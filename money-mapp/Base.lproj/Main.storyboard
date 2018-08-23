@@ -60,7 +60,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="addCategory:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="pgX-tb-QMl"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="pgX-tb-QMl"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-Da-9KR">
@@ -109,9 +109,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERo-bg-0LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="315"/>
+            <point key="canvasLocation" x="-17" y="-865"/>
         </scene>
-        <!--Expenses-->
+        <!--CategoriesVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CategoriesVC" customModule="money_mapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,10 +158,12 @@
                                                     <action selector="expenseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ene-xu-4ip"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-s6-jTe">
-                                                <rect key="frame" x="38" y="55" width="91" height="3"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-s6-jTe">
+                                                <rect key="frame" x="37" y="55" width="93" height="3"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="93" id="m6L-fV-bSQ"/>
+                                                </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcp-ER-td1">
                                                 <rect key="frame" x="157" y="0.0" width="127" height="80"/>
@@ -173,9 +175,8 @@
                                                     <action selector="incomeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lQM-4s-RBC"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-po-EO5">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxs-po-EO5">
                                                 <rect key="frame" x="181" y="55" width="79" height="3"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -189,7 +190,14 @@
                                             <constraint firstItem="1vK-dU-26D" firstAttribute="height" secondItem="ssv-tc-KUE" secondAttribute="height" id="b18-Na-aud"/>
                                             <constraint firstItem="Zcp-ER-td1" firstAttribute="top" secondItem="ssv-tc-KUE" secondAttribute="top" id="dGN-DW-S54"/>
                                             <constraint firstItem="Zcp-ER-td1" firstAttribute="leading" secondItem="1vK-dU-26D" secondAttribute="trailing" id="dVr-dR-mv4"/>
+                                            <constraint firstAttribute="trailing" secondItem="nxs-po-EO5" secondAttribute="trailing" constant="34" id="gOX-TG-pqs"/>
+                                            <constraint firstItem="gUc-s6-jTe" firstAttribute="bottom" secondItem="nxs-po-EO5" secondAttribute="bottom" id="gzY-vc-7DT"/>
+                                            <constraint firstItem="gUc-s6-jTe" firstAttribute="top" secondItem="ssv-tc-KUE" secondAttribute="top" constant="55" id="l9t-r1-Sk6"/>
+                                            <constraint firstItem="gUc-s6-jTe" firstAttribute="top" secondItem="nxs-po-EO5" secondAttribute="top" id="p89-1l-qwO"/>
+                                            <constraint firstItem="nxs-po-EO5" firstAttribute="centerX" secondItem="Zcp-ER-td1" secondAttribute="centerX" id="q1f-AL-V06"/>
                                             <constraint firstAttribute="bottom" secondItem="1vK-dU-26D" secondAttribute="bottom" id="raQ-Yg-oUL"/>
+                                            <constraint firstAttribute="bottom" secondItem="gUc-s6-jTe" secondAttribute="bottom" constant="22" id="uOV-od-FW0"/>
+                                            <constraint firstItem="gUc-s6-jTe" firstAttribute="centerX" secondItem="1vK-dU-26D" secondAttribute="centerX" id="wcD-Gx-ms9"/>
                                             <constraint firstItem="1vK-dU-26D" firstAttribute="top" secondItem="ssv-tc-KUE" secondAttribute="top" id="z46-B8-ywl"/>
                                         </constraints>
                                     </view>
@@ -210,7 +218,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="addCategory:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="PAX-Ie-Pmj"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="PAX-Ie-Pmj"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="N3U-3n-g3g">
@@ -352,7 +360,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="746-Qc-VZZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Expenses" image="record" id="x4c-Gz-FCl"/>
                     <connections>
                         <outlet property="add_category_button" destination="pNM-Tj-pDH" id="N0b-He-4EO"/>
                         <outlet property="add_outer" destination="FqJ-sI-46F" id="cDf-HA-6dD"/>
@@ -370,6 +377,7 @@
                         <outlet property="yes_button" destination="b0H-hw-n8V" id="qeu-sN-qbF"/>
                         <segue destination="6AC-K8-Xxs" kind="presentation" identifier="to_expense_recording" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="zYS-ad-lV5"/>
                         <segue destination="wAV-T3-NKR" kind="presentation" identifier="to_add_budget" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="HQx-dR-JrQ"/>
+                        <segue destination="80y-U4-fCg" kind="custom" identifier="to_history" customClass="SegueFromRight" customModule="money_mapp" customModuleProvider="target" id="1zc-lr-LON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -451,7 +459,7 @@
                     <viewLayoutGuide key="safeArea" id="Un2-xG-lj2"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-733.33333333333337" y="-1128.2608695652175"/>
+            <point key="canvasLocation" x="-930" y="-1086"/>
         </scene>
         <!--Add BudgetVC-->
         <scene sceneID="Naz-Lj-JUa">
@@ -530,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfA-RH-zHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733" y="-2105"/>
+            <point key="canvasLocation" x="-17" y="-1620"/>
         </scene>
         <!--Date Popup View Controller-->
         <scene sceneID="bRp-MK-pI5">
@@ -944,6 +952,7 @@
                         <outlet property="options_table_view" destination="36m-nE-gpJ" id="nWI-wC-7BW"/>
                         <outlet property="title_view" destination="RYO-ly-ZmV" id="d5s-YD-P1s"/>
                         <segue destination="6AC-K8-Xxs" kind="custom" customClass="SegueFromLeft" customModule="money_mapp" customModuleProvider="target" id="DDb-9i-wrl"/>
+                        <segue destination="wAV-T3-NKR" kind="presentation" identifier="to_add_budget" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Fli-wY-MLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ida-kn-jfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1013,7 +1022,7 @@
                     <viewLayoutGuide key="safeArea" id="HUW-QR-kfx"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1600.0000000000002" y="-1857.0652173913045"/>
+            <point key="canvasLocation" x="1561" y="-2369"/>
         </scene>
         <!--Add PurchaseVC-->
         <scene sceneID="E7e-UX-9Gv">
@@ -1249,7 +1258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-tm-MDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1600.0000000000002" y="-1170.6521739130435"/>
+            <point key="canvasLocation" x="1561" y="-1716"/>
         </scene>
         <!--Purchase Info-->
         <scene sceneID="X86-TG-clb">
@@ -1485,5 +1494,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zYS-ad-lV5"/>
+        <segue reference="HQx-dR-JrQ"/>
     </inferredMetricsTieBreakers>
 </document>

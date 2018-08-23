@@ -24,6 +24,6 @@ class CustomizeTableViewCell: UITableViewCell {
         // don't round these corners
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
-        layer.backgroundColor = Canvas.electric_blue.withAlphaComponent(0.6).cgColor
+        layer.backgroundColor = Canvas.brewed_mustard.withAlphaComponent(0.8).cgColor
     }
 }

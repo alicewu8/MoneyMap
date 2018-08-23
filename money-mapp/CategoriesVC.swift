@@ -41,6 +41,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // array of purchase categories
     var categories : [Category] = []
+    
+    // array of income
+    var income : [Income] = [] 
 
     // represents the collection view cell currently generated
     var current_cell : CategoryCollectionViewCell!
@@ -57,6 +60,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // Dictionary that maps from category index to an array of purchases
     // initialize a dictionary that maps from a category's index in the categories array to the purchases made in that category
     var history = [Int:[Purchase]]()
+    
+    var income_table_view : IncomeTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -156,6 +161,23 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
+    func addIncomeList() {
+        guard let income_list = Bundle.main.loadNibNamed("IncomeTableView", owner: self, options: nil)?.first as? IncomeTableView else { return }
+        
+        income_table_view = income_list
+        
+        income_table_view.frame.size = collection_view.frame.size
+        collection_view.addSubview(income_table_view)
+        //income_table_view.initialize(self)
+        view.layoutIfNeeded()
+    }
+    
+    func addNewIncome(_ income: Income) {
+        self.income.append(income)
+        
+        self.income_table_view.refreshInfo()
+    }
+    
     // MARK: handle category addition/deletion actions
     @IBAction func pressedYesButton(_ sender: Any) {
         if add {
@@ -220,7 +242,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         } 
     }
     
-    @IBAction func addCategory(_ sender: Any) {
+    @IBAction func addButtonPressed(_ sender: Any) {
         // animate the circular background view
         UIView.animate(withDuration: 0.4, animations: {
             self.add_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -231,11 +253,15 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             self.add_outer.alpha = 0
         }
         
-        if !confirm_window_displayed {
-            confirm_change_message.text = "Do you want to add a new category?"
-            add = true
-            animateIn()
-            confirm_window_displayed = true
+        if !expense_underline.isHidden {
+            if !confirm_window_displayed {
+                confirm_change_message.text = "Do you want to add a new category?"
+                add = true
+                animateIn()
+                confirm_window_displayed = true
+            }
+        } else {
+            // add new income item
         }
     }
     
