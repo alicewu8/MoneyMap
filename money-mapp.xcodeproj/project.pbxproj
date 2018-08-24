@@ -27,6 +27,10 @@
 		15293670212F0CA500CE8CE1 /* IncomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */; };
 		15293672212F0CFC00CE8CE1 /* IncomeTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */; };
 		15293674212F0D0800CE8CE1 /* IncomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15293673212F0D0800CE8CE1 /* IncomeTableView.swift */; };
+		15293676212F7C2000CE8CE1 /* IdeasList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15293675212F7C2000CE8CE1 /* IdeasList.xib */; };
+		15293679212F7C3800CE8CE1 /* IdeasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15293677212F7C3800CE8CE1 /* IdeasTableViewCell.swift */; };
+		1529367A212F7C3800CE8CE1 /* IdeasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15293678212F7C3800CE8CE1 /* IdeasTableViewCell.xib */; };
+		1529367C212F7C4300CE8CE1 /* IdeasList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529367B212F7C4300CE8CE1 /* IdeasList.swift */; };
 		153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */; };
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
@@ -98,6 +102,10 @@
 		1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeTableViewCell.xib; sourceTree = "<group>"; };
 		15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeTableView.xib; sourceTree = "<group>"; };
 		15293673212F0D0800CE8CE1 /* IncomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeTableView.swift; sourceTree = "<group>"; };
+		15293675212F7C2000CE8CE1 /* IdeasList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdeasList.xib; sourceTree = "<group>"; };
+		15293677212F7C3800CE8CE1 /* IdeasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasTableViewCell.swift; sourceTree = "<group>"; };
+		15293678212F7C3800CE8CE1 /* IdeasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdeasTableViewCell.xib; sourceTree = "<group>"; };
+		1529367B212F7C4300CE8CE1 /* IdeasList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasList.swift; sourceTree = "<group>"; };
 		153F44BB2119368E00DA4D0E /* DatePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupViewController.swift; sourceTree = "<group>"; };
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 				1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */,
 				15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */,
 				15293673212F0D0800CE8CE1 /* IncomeTableView.swift */,
+				15293675212F7C2000CE8CE1 /* IdeasList.xib */,
+				1529367B212F7C4300CE8CE1 /* IdeasList.swift */,
+				15293677212F7C3800CE8CE1 /* IdeasTableViewCell.swift */,
+				15293678212F7C3800CE8CE1 /* IdeasTableViewCell.xib */,
 			);
 			path = "money-mapp";
 			sourceTree = "<group>";
@@ -358,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1529367A212F7C3800CE8CE1 /* IdeasTableViewCell.xib in Resources */,
 				15293670212F0CA500CE8CE1 /* IncomeTableViewCell.xib in Resources */,
 				159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */,
 				1585F516211E115700D7AE9E /* CustomizeTableViewCell.xib in Resources */,
@@ -369,6 +382,7 @@
 				1585F51E211E337E00D7AE9E /* BlankTableViewCell.xib in Resources */,
 				15C79216211A452A004475DF /* ExpensesGridView.xib in Resources */,
 				15293672212F0CFC00CE8CE1 /* IncomeTableView.xib in Resources */,
+				15293676212F7C2000CE8CE1 /* IdeasList.xib in Resources */,
 				15D8DD6E211A47A3001A4D34 /* ExpensesListView.xib in Resources */,
 				15F85395211E78A000D5F8E3 /* HistoryTableViewCell.xib in Resources */,
 				159045C1211A6DF100FD9703 /* AddPurchaseTableViewCell.xib in Resources */,
@@ -400,6 +414,7 @@
 				1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */,
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
 				159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */,
+				1529367C212F7C4300CE8CE1 /* IdeasList.swift in Sources */,
 				156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */,
 				1585F51D211E337E00D7AE9E /* BlankTableViewCell.swift in Sources */,
 				1585F518211E152B00D7AE9E /* CustomizeVC.swift in Sources */,
@@ -415,6 +430,7 @@
 				15110EB820F58AE30095CCD8 /* AppDelegate.swift in Sources */,
 				156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */,
 				15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */,
+				15293679212F7C3800CE8CE1 /* IdeasTableViewCell.swift in Sources */,
 				15F85394211E78A000D5F8E3 /* HistoryTableViewCell.swift in Sources */,
 				15C79218211A45C6004475DF /* ExpensesGridView.swift in Sources */,
 				1528EFC221163365001E8297 /* StatsVC.swift in Sources */,

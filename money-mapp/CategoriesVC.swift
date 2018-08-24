@@ -27,6 +27,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // MARK: state variables
     var add : Bool = false
     var confirm_window_displayed : Bool = false
+    var showing_ideas : Bool = false
     
     // MARK: views
     @IBOutlet weak var title_view: UIView!
@@ -76,6 +77,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         formatCells()
         formatTabBar()
         
+        // todo: testing
+        initializeIncome()
+        
         // store the blue effect and disable it on start up
         blur_effect = blur_view.effect
         blur_view.effect = nil
@@ -99,6 +103,13 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             history[i] = []
         }
         print(history.count)
+    }
+    
+    // TODO: testing
+    func initializeIncome() {
+        income.append(Income(amount: 400, name: "Paycheck from CAEN", id: 0))
+        income.append(Income(amount: 40, name: "Sold SMU Ticket", id: 1))
+        income.append(Income(amount: 800, name: "Paycheck from CAEN", id: 2))
     }
     
     // MARK: animations for displaying confirmation window
@@ -168,7 +179,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         income_table_view.frame.size = collection_view.frame.size
         collection_view.addSubview(income_table_view)
-        //income_table_view.initialize(self)
+        income_table_view.initialize(self)
         view.layoutIfNeeded()
     }
     
@@ -265,7 +276,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         }
     }
     
-    @IBAction func openSettings(_ sender: Any) {
+    @IBAction func showIdeasList(_ sender: Any) {
         // animate the circular background view
         UIView.animate(withDuration: 0.4, animations: {
             self.settings_outer.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -295,7 +306,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             expense_underline.isHidden = false
             income_underline.isHidden = true
             
-            // switch to the expenses view
+            // discard the income list view to save memory
+            income_table_view.removeFromSuperview()
         }
         
     }
@@ -306,6 +318,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             expense_underline.isHidden = true
             
             // switch to the income recording view
+            addIncomeList()
         }
     }
     

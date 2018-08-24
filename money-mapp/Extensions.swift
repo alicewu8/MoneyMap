@@ -38,6 +38,12 @@ struct Income {
     var id : Int!
 }
 
+struct Idea {
+    var name : String
+    var goal_status : String
+    var notes : String
+}
+
 // TODO: implement custom UI color palettes
 struct Spring {
     

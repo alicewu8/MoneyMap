@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IncomeTableView : UIView {//, UITableViewDelegate, UITableViewDataSource {
+class IncomeTableView : UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var income_list: UITableView!
     
@@ -27,6 +27,14 @@ class IncomeTableView : UIView {//, UITableViewDelegate, UITableViewDataSource {
         // as many cells as there are recorded income items
         return parent.income.count
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
+    func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+        return 2
+    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
@@ -34,7 +42,7 @@ class IncomeTableView : UIView {//, UITableViewDelegate, UITableViewDataSource {
         
         let income_cell = income_list.dequeueReusableCell(withIdentifier: IncomeTableViewCell.reuse_id, for: indexPath) as! IncomeTableViewCell
         
-        //income_cell.initialize(parent, index)
+        income_cell.initialize(parent, index)
         
         return income_cell
     }
@@ -44,8 +52,8 @@ class IncomeTableView : UIView {//, UITableViewDelegate, UITableViewDataSource {
         
         income_list.layer.backgroundColor = Canvas.super_light_gray.cgColor
         
-        //income_list.delegate = self
-        //income_list.dataSource = self
+        income_list.delegate = self
+        income_list.dataSource = self
         
         income_list.register(UINib(nibName: "IncomeTableViewCell", bundle: nil), forCellReuseIdentifier: IncomeTableViewCell.reuse_id)
     }

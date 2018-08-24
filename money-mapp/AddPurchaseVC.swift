@@ -13,6 +13,7 @@ import UIKit
 class AddPurchaseVC : UIViewController {
     
     @IBOutlet weak var done_button: UIButton!
+    @IBOutlet weak var down_slider: UIView!
     
     @IBOutlet weak var button_view: UIView!
     @IBOutlet weak var intro_view: UIView!
@@ -45,6 +46,8 @@ class AddPurchaseVC : UIViewController {
         // add a pan gesture recognizer to support swiping the screen to dismiss
         let pan = UIPanGestureRecognizer(target: self, action: #selector(panScreen(_:)))
         view.addGestureRecognizer(pan)
+        
+        down_slider.roundCorners(4)
     }
     
     // vertically displaces this screen and handles swipe to dismiss

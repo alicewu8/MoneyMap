@@ -12,54 +12,84 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncomeCell" rowHeight="94" id="KGk-i7-Jjw" customClass="IncomeTableViewCell" customModule="money_mapp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="356" height="94"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncomeCell" rowHeight="141" id="KGk-i7-Jjw" customClass="IncomeTableViewCell" customModule="money_mapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="482" height="141"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="356" height="93.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="482" height="140.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salary" translatesAutoresizingMaskIntoConstraints="NO" id="uV2-nE-qfH">
-                        <rect key="frame" x="16" y="11" width="74" height="74"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVw-a6-PNS">
+                        <rect key="frame" x="12" y="8" width="296.5" height="124.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paycheck" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzD-it-icj">
+                                <rect key="frame" x="4" y="13" width="94.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZa-og-7ry">
+                                <rect key="frame" x="4" y="46.5" width="262.5" height="2"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="bd1-mt-WNs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8/23/18" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwd-hd-FdT">
+                                <rect key="frame" x="4" y="51.5" width="71" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="uV2-nE-qfH" secondAttribute="height" multiplier="1:1" id="ABF-F6-aBA"/>
+                            <constraint firstItem="MzD-it-icj" firstAttribute="top" secondItem="NVw-a6-PNS" secondAttribute="top" constant="13" id="6fB-gS-Tyf"/>
+                            <constraint firstItem="pwd-hd-FdT" firstAttribute="leading" secondItem="zZa-og-7ry" secondAttribute="leading" id="Aa1-o4-cLf"/>
+                            <constraint firstItem="pwd-hd-FdT" firstAttribute="top" secondItem="zZa-og-7ry" secondAttribute="bottom" constant="3" id="AcP-pY-Tib"/>
+                            <constraint firstAttribute="trailing" secondItem="zZa-og-7ry" secondAttribute="trailing" constant="30" id="TUX-Li-XPA"/>
+                            <constraint firstItem="zZa-og-7ry" firstAttribute="top" secondItem="MzD-it-icj" secondAttribute="bottom" constant="3" id="Zdh-hc-aud"/>
+                            <constraint firstItem="MzD-it-icj" firstAttribute="leading" secondItem="NVw-a6-PNS" secondAttribute="leading" constant="4" id="dEz-c6-Xve"/>
+                            <constraint firstItem="zZa-og-7ry" firstAttribute="leading" secondItem="MzD-it-icj" secondAttribute="leading" id="tWk-R4-5tX"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paycheck" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzD-it-icj">
-                        <rect key="frame" x="129" y="32.5" width="90" height="29"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhw-0R-ZNQ">
-                        <rect key="frame" x="271" y="32.5" width="65" height="29"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ka2-mD-AfC">
+                        <rect key="frame" x="325.5" y="10" width="144.5" height="120.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhw-0R-ZNQ">
+                                <rect key="frame" x="1" y="0.0" width="142.5" height="120.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uhw-0R-ZNQ" firstAttribute="height" secondItem="ka2-mD-AfC" secondAttribute="height" id="QVp-fU-uQW"/>
+                            <constraint firstAttribute="trailing" secondItem="uhw-0R-ZNQ" secondAttribute="trailing" constant="1" id="m3o-SV-NQP"/>
+                            <constraint firstItem="uhw-0R-ZNQ" firstAttribute="leading" secondItem="ka2-mD-AfC" secondAttribute="leading" constant="1" id="r5U-my-nB9"/>
+                            <constraint firstItem="uhw-0R-ZNQ" firstAttribute="centerY" secondItem="ka2-mD-AfC" secondAttribute="centerY" id="whW-ly-CW9"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="uhw-0R-ZNQ" secondAttribute="trailing" constant="20" id="1jB-YW-U0J"/>
-                    <constraint firstItem="uhw-0R-ZNQ" firstAttribute="leading" secondItem="MzD-it-icj" secondAttribute="trailing" constant="52" id="7ce-E6-J8A"/>
-                    <constraint firstItem="uhw-0R-ZNQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aeq-FD-rdq"/>
-                    <constraint firstItem="uV2-nE-qfH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bt9-58-B5R"/>
-                    <constraint firstItem="uV2-nE-qfH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="fWF-ZP-JKg"/>
-                    <constraint firstItem="MzD-it-icj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-4" id="gni-qg-vmD"/>
-                    <constraint firstItem="MzD-it-icj" firstAttribute="leading" secondItem="uV2-nE-qfH" secondAttribute="trailing" constant="39" id="lnd-wV-sea"/>
-                    <constraint firstAttribute="bottom" secondItem="uV2-nE-qfH" secondAttribute="bottom" constant="8.5" id="pP4-kL-dSh"/>
-                    <constraint firstItem="uhw-0R-ZNQ" firstAttribute="centerY" secondItem="MzD-it-icj" secondAttribute="centerY" id="qhx-AZ-2tF"/>
+                    <constraint firstItem="ka2-mD-AfC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2ww-8o-P2f"/>
+                    <constraint firstAttribute="trailing" secondItem="ka2-mD-AfC" secondAttribute="trailing" constant="12" id="5Di-ol-xIG"/>
+                    <constraint firstAttribute="bottom" secondItem="NVw-a6-PNS" secondAttribute="bottom" constant="8" id="H9v-Oi-uhA"/>
+                    <constraint firstItem="NVw-a6-PNS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="K5g-Ff-zq0"/>
+                    <constraint firstAttribute="bottom" secondItem="ka2-mD-AfC" secondAttribute="bottom" constant="10" id="au5-7M-uak"/>
+                    <constraint firstItem="NVw-a6-PNS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oaF-VL-zGh"/>
+                    <constraint firstItem="ka2-mD-AfC" firstAttribute="leading" secondItem="NVw-a6-PNS" secondAttribute="trailing" constant="17" id="sQr-jm-3Cm"/>
+                    <constraint firstItem="ka2-mD-AfC" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="wb4-bT-Sfz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="amount_view" destination="ka2-mD-AfC" id="E3e-GS-yTm"/>
                 <outlet property="income_amt" destination="uhw-0R-ZNQ" id="M2K-rB-ooF"/>
-                <outlet property="income_image" destination="uV2-nE-qfH" id="ttp-jI-AWa"/>
                 <outlet property="income_name" destination="MzD-it-icj" id="00A-xZ-OPb"/>
             </connections>
-            <point key="canvasLocation" x="166.40000000000001" y="161.91904047976013"/>
+            <point key="canvasLocation" x="350.39999999999998" y="176.76161919040482"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="salary" width="321" height="305"/>
-    </resources>
 </document>

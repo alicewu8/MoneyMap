@@ -12,7 +12,7 @@ class IncomeTableViewCell: UITableViewCell {
 
     static let reuse_id = "IncomeCell"
     
-    @IBOutlet weak var income_image: UIImageView!
+    @IBOutlet weak var amount_view: UIView!
     @IBOutlet weak var income_name: UILabel!
     @IBOutlet weak var income_amt: UILabel!
     
@@ -26,6 +26,7 @@ class IncomeTableViewCell: UITableViewCell {
         self.income = parent.income[index]
         
         self.roundCorners(9)
+        amount_view.roundCorners(9)
         
         // don't round these corners
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
@@ -41,18 +42,6 @@ class IncomeTableViewCell: UITableViewCell {
         
         // set the cell information
         income_name.text = income.name
-        income_amt.text = String(format: "%.2f", income.amount)
+        income_amt.text = "$" + String(format: "%.2f", income.amount)
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
