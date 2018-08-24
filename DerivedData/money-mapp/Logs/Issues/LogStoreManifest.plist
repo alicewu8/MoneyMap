@@ -5,7 +5,77 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>1169C9BA-E669-414A-8CF0-EB3FF13D4C32</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>1169C9BA-E669-414A-8CF0-EB3FF13D4C32.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>money-mapp-gztauzbsjiheiagfbhouislqyyhp</string>
+			<key>timeStartedRecording</key>
+			<real>556830236.401963</real>
+			<key>timeStoppedRecording</key>
+			<real>556830246.62094402</real>
+			<key>title</key>
+			<string>Build target money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>1169C9BA-E669-414A-8CF0-EB3FF13D4C32</string>
+		</dict>
+		<key>155B68F7-532F-4E94-9EA1-8F6A232C7E41</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>155B68F7-532F-4E94-9EA1-8F6A232C7E41.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>Charts-dgmvnlpltksldxgsnglgnhuqhmts</string>
+			<key>timeStartedRecording</key>
+			<real>556830227.93964899</real>
+			<key>timeStoppedRecording</key>
+			<real>556830235.45657098</real>
+			<key>title</key>
+			<string>Build target Charts</string>
+			<key>uniqueIdentifier</key>
+			<string>155B68F7-532F-4E94-9EA1-8F6A232C7E41</string>
+		</dict>
+		<key>8DCFED21-7BD3-44F3-9515-A34ECBB4673B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>8DCFED21-7BD3-44F3-9515-A34ECBB4673B.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Pods-money-mapp-dgmvnlpltksldxgsnglgnhuqhmts</string>
+			<key>timeStartedRecording</key>
+			<real>556830235.445876</real>
+			<key>timeStoppedRecording</key>
+			<real>556830236.41266704</real>
+			<key>title</key>
+			<string>Build target Pods-money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>8DCFED21-7BD3-44F3-9515-A34ECBB4673B</string>
+		</dict>
+	</dict>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>

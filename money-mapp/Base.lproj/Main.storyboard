@@ -13,10 +13,17 @@
         <!--Analyze-->
         <scene sceneID="qqJ-qD-yeg">
             <objects>
-                <viewController id="lL6-Rv-yxm" sceneMemberID="viewController">
+                <viewController id="lL6-Rv-yxm" customClass="AnalyzeVC" customModule="money_mapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mo7-Fs-1p8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3v-MK-exU" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="62" y="370" width="291" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lRj-ur-aM6"/>
                     </view>
@@ -24,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2AN-zX-lpR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-733" y="1215"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="-777.71739130434787"/>
         </scene>
         <!--History-->
         <scene sceneID="GHL-lH-RH4">
@@ -109,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERo-bg-0LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-865"/>
+            <point key="canvasLocation" x="967" y="-1087"/>
         </scene>
         <!--CategoriesVC-->
         <scene sceneID="tne-QT-ifu">
@@ -1506,7 +1513,7 @@
         <image name="pan_down (2)" width="150" height="82"/>
         <image name="record" width="25" height="27"/>
         <image name="return" width="223" height="279"/>
-        <image name="settings" width="25" height="25"/>
+        <image name="settings" width="35" height="35"/>
         <image name="x" width="158" height="158"/>
     </resources>
     <inferredMetricsTieBreakers>
