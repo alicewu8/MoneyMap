@@ -65,6 +65,12 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     var income_table_view : IncomeTableView!
     
+    var analyze_view : Analyze!
+    
+    // displays the information displayed by the tab bar
+    @IBOutlet weak var displayView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -173,6 +179,19 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, selected: false, budget: nil, running_total: 0, purchases: []))
     }
     
+    func addAnalyzeView() {
+        guard let analyzeView = Bundle.main.loadNibNamed("Analyze", owner: self, options: nil)?.first as? Analyze else { return }
+        
+        analyze_view = analyzeView
+        analyze_view.frame.size = displayView.frame.size
+        
+        // animate adding the subview
+        UIView.transition(with: self.view, duration: 0.17, options: .transitionCrossDissolve,
+                          animations: {self.displayView.addSubview(self.analyze_view)}, completion: nil)
+        analyze_view.initialize(self)
+        view.layoutIfNeeded()
+    }
+    
     func addIncomeList() {
         guard let income_list = Bundle.main.loadNibNamed("IncomeTableView", owner: self, options: nil)?.first as? IncomeTableView else { return }
         
@@ -251,7 +270,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             add_budget.categories_vc = self
             add_budget.category_cell = current_cell
             add_budget.category_index = selected_category_index
-        } 
+        }
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -337,10 +356,19 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         switch ind {
         case 0:
             print("Record view")
+            
+            UIView.animate(withDuration: 0.17, animations: {
+                self.analyze_view.alpha = 0
+            }) { _ in
+                self.analyze_view.removeFromSuperview()
+            }
+            
         case 1:
             print("Analyze view")
+            addAnalyzeView()
         case 2:
             print("History view")
+            analyze_view.removeFromSuperview()
         default:
             print("Hi")
         }

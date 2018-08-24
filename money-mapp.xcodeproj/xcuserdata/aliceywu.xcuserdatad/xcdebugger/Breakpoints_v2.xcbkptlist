@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.734779"
+            timestampString = "556834831.935835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "364"
-            endingLineNumber = "364"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.734923"
+            timestampString = "556834831.936455"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "addButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.734978"
+            timestampString = "556834831.936818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "pressedYesButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.735826"
+            timestampString = "556834831.9372669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "316"
-            endingLineNumber = "316"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
             landmarkName = "incomeTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.7358789"
+            timestampString = "556834831.937631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "expenseTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "money-mapp/CategoriesVC.swift"
-            timestampString = "556769775.735948"
+            timestampString = "556834831.937951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "incomeTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
