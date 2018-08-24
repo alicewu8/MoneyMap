@@ -1,0 +1,6 @@
+framework module Pods_money_mapp {
+  umbrella header "Pods-money-mapp-umbrella.h"
+
+  export *
+  module * { export * }
+}

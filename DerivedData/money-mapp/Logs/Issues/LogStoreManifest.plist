@@ -5,31 +5,7 @@
 	<key>logFormatVersion</key>
 	<integer>9</integer>
 	<key>logs</key>
-	<dict>
-		<key>CB9533CC-1CCD-48DA-8298-79F6A7DB2B18</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>CB9533CC-1CCD-48DA-8298-79F6A7DB2B18.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>money-mapp-gztauzbsjiheiagfbhouislqyyhp</string>
-			<key>timeStartedRecording</key>
-			<real>556768569.07375205</real>
-			<key>timeStoppedRecording</key>
-			<real>556768572.75202405</real>
-			<key>title</key>
-			<string>Build target money-mapp</string>
-			<key>uniqueIdentifier</key>
-			<string>CB9533CC-1CCD-48DA-8298-79F6A7DB2B18</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>preserveOldLogs</key>
 	<true/>
 </dict>
