@@ -41,7 +41,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         
         self.delete_button.isHidden = true
         
-        roundCorners()
+        roundCorners(9)
         
         budget_button.layer.borderWidth = 2
         budget_button.layer.borderColor = Canvas.marshmallow.cgColor

@@ -29,6 +29,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     var add : Bool = false
     var confirm_window_displayed : Bool = false
     var showing_ideas : Bool = false
+    var showingAnalyze : Bool = false
     
     // MARK: views
     @IBOutlet weak var title_view: UIView!
@@ -163,9 +164,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // Default purchase categories (for testing)
     func initializeCategories() {
-        categories.append(Category(name: "Clothes", image: UIImage(named: "shirt")!, id: 0, in_use: false, budget: 10, running_total: 0, purchases: []))
+        categories.append(Category(name: "Clothes", image: UIImage(named: "shirt")!, id: 0, in_use: true, budget: 90, running_total: 20, purchases: [Purchase(name: "Floral Dress", cost: 20, date: "8/11/18", info: "Abercrombie", id: 0)]))
         
-        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, in_use: false, budget: 50, running_total: 25, purchases: []))
+        categories.append(Category(name: "Eating Out", image: UIImage(named: "food_icon")!, id: 1, in_use: true, budget: 50, running_total: 9.25, purchases: [Purchase(name: "Curry Ramen", cost: 9.25, date: "8/21/18", info: "Matsuchan", id: 0)]))
         
         // testing sort
         categories.append(Category(name: "Groceries", image: UIImage(named: "groceries_icon")!, id: 2, in_use: true, budget: 80, running_total: 70, purchases: [Purchase(name: "Vegetables", cost: 20, date: "8/09/18", info: "MHealthy Farmer's Market", id: 0), Purchase(name: "Bread", cost: 4, date: "8/01/18", info: "for Justin", id: 1), Purchase(name: "Grocery run", cost: 30, date: "8/05/18", info: "", id: 5), Purchase(name: "Soymilk", cost: 3.25, date: "8/02/18", info: "Unsweetened for Dad", id: 2), Purchase(name: "Lychees", cost: 3.29, date: "8/02/18", info: "", id: 3), Purchase(name: "Meijer Haul", cost: 40, date: "8/05/18", info: "", id: 4)
@@ -173,7 +174,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         categories.append(Category(name: "Cosmetics", image: UIImage(named: "cosmetics")!, id: 3, in_use: true, budget: nil, running_total: 18.7, purchases: [Purchase(name: "Cosrx Centella Cream", cost: 18.7, date: "8/24/18", info: "", id: 0)]))
         
-        categories.append(Category(name: "Travel", image: UIImage(named: "paper_plane")!, id: 4, in_use: true, budget: nil, running_total: 340.4, purchases: [Purchase(name: "Flight to Boston", cost: 340.4, date: "8/14/18", info: "HackMIT", id: 0)]))
+        categories.append(Category(name: "Travel", image: UIImage(named: "paper_plane")!, id: 4, in_use: false, budget: nil, running_total: 340.4, purchases: [Purchase(name: "Flight to Boston", cost: 340.4, date: "8/14/18", info: "HackMIT", id: 0)]))
         
         categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, in_use: true, budget: nil, running_total: 20, purchases: [Purchase(name: "Sweater for Thomas", cost: 20, date: "8/10/18", info: "Express", id: 0)]))
     }
@@ -364,15 +365,31 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             UIView.animate(withDuration: 0.1, animations: {
                 self.analyze_view.alpha = 0
             }) { _ in
-                self.analyze_view.removeFromSuperview()
+                if self.showingAnalyze {
+                    self.analyze_view.removeFromSuperview()
+                    self.showingAnalyze = false
+                }
             }
             
         case 1:
             print("Analyze view")
-            addAnalyzeView()
+            if !showingAnalyze {
+                addAnalyzeView()
+                showingAnalyze = true
+            }
         case 2:
             print("History view")
-            analyze_view.removeFromSuperview()
+            
+            if showingAnalyze {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.analyze_view.alpha = 0
+                }) { _ in
+                    if self.showingAnalyze {
+                        self.analyze_view.removeFromSuperview()
+                        self.showingAnalyze = false
+                    }
+                }
+            }
         default:
             print("Hi")
         }
