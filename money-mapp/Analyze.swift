@@ -11,6 +11,7 @@ import Charts
 
 class Analyze: UIView {
     
+    @IBOutlet weak var anaylzeLabel: UILabel!
     @IBOutlet weak var spendingChart: PieChartView!
     @IBOutlet weak var dataTable: UITableView!
     
@@ -21,28 +22,43 @@ class Analyze: UIView {
     
     var categories_vc : CategoriesVC!
     
+    var total_spent : Double = 0
+    
+    // used to calculate average spending amount
+    var categories_used : Int = 0
+    
     func initialize(_ parent: CategoriesVC) {
         self.categories_vc = parent
         
-        spendingChart.chartDescription?.text = "Amount per Category"
+        spendingChart.chartDescription?.text = ""
+        
+        // TODO: hard coding for now, modify later
+        anaylzeLabel.text = "August Expenses"
+        
+        calculateTotalSpent()
         
         calculateChartData()
         
         updateChartData()
     }
     
+    func calculateTotalSpent() {
+        for i in 0..<categories_vc.categories.count {
+            if categories_vc.categories[i].in_use {
+                total_spent += categories_vc.categories[i].running_total
+                
+                categories_used += 1
+            }
+        }
+        print(total_spent)
+    }
+    
     func calculateChartData() {
-        // keeps track of the running total
-        var total = 0
-        
-        // keeps track of categories viewed
-        var categories_used = 0
-        
         for i in 0..<categories_vc.categories.count {
             // if this purchases have been made in this category, add it to the graph
             if categories_vc.categories[i].in_use {
-                // create new object each time in the loop (will this work?)
-                let newDataEntry = PieChartDataEntry(value: categories_vc.categories[i].running_total)
+                // the value in chart represents the percent of money spent in this category
+                let newDataEntry = PieChartDataEntry(value: (categories_vc.categories[i].running_total / total_spent) * 100)
                 
                 newDataEntry.label = categories_vc.categories[i].name
                 newDataEntry.data = categories_vc.categories[i].budget as AnyObject
@@ -51,8 +67,6 @@ class Analyze: UIView {
 //                newDataEntry.icon = resizedImage
                 
                 spendingByCategory.append(newDataEntry)
-                
-                categories_used += 1
             }
         }
         
@@ -65,7 +79,7 @@ class Analyze: UIView {
         
         let colors = [Canvas.bright_lilac, Canvas.creamy_peach, Canvas.artificial_watermelon, Canvas.blush]
         let font = UIFont(name: "AvenirNext-Medium", size: 15)
-        let numberFont = UIFont(name: "Avenir-Next-DemiBold", size: 15)
+        let numberFont = UIFont(name: "AvenirNext-DemiBold", size: 17)
         
         // cast to the correct data type
         chartDataSet.colors = colors
@@ -83,6 +97,5 @@ class Analyze: UIView {
         chartDataSet.valueFormatter = DefaultValueFormatter(formatter: formatter)
         
         spendingChart.data = chartData
-        
     }
 }
