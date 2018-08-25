@@ -99,7 +99,7 @@ class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
         let chartDataSet = PieChartDataSet(values: spendingByCategory, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         
-        let colors = [Canvas.bright_lilac, Canvas.creamy_peach, Canvas.artificial_watermelon, Canvas.blush, Canvas.artificial_watermelon, Canvas.cheerful_green, Canvas.coast_breeze, Canvas.first_date, Canvas.french_sky_blue]
+        let colors = [Canvas.bright_lilac, Canvas.creamy_peach, Canvas.artificial_watermelon, Canvas.rogue_pink, Canvas.first_date]
         let font = UIFont(name: "AvenirNext-Medium", size: 15)
         let numberFont = UIFont(name: "AvenirNext-DemiBold", size: 17)
         
