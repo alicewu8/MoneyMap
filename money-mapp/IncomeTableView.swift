@@ -50,8 +50,6 @@ class IncomeTableView : UIView, UITableViewDelegate, UITableViewDataSource {
     func initialize(_ parent: CategoriesVC) {
         self.parent = parent
         
-        income_list.layer.backgroundColor = Canvas.super_light_gray.cgColor
-        
         income_list.delegate = self
         income_list.dataSource = self
         

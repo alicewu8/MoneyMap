@@ -28,8 +28,6 @@ class AddBudgetVC : UIViewController {
         // modify UI elements
         add_budget_view.roundCorners(7.5)
         add_budget_btn.roundCorners(7.5)
-        add_budget_btn.layer.borderWidth = 1.5
-        add_budget_btn.layer.borderColor = Canvas.strawberry.cgColor
     }
     
     private func configureTapGesture() {

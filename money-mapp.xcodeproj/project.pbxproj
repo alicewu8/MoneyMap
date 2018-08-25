@@ -200,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
+				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15CD7A72212CE9C10068868E /* Expenses */,
 				15275976211D054900F2DE26 /* Purchases */,
 				159E9D4B21309C3000FCCD1A /* Ideas */,
@@ -207,7 +208,6 @@
 				159E9D4C21309C3F00FCCD1A /* Custom Elements */,
 				159E9D4A21309C0500FCCD1A /* Customize */,
 				159E9D4921309BC700FCCD1A /* Tab Views */,
-				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,

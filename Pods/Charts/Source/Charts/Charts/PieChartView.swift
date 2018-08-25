@@ -43,10 +43,12 @@ open class PieChartView: PieRadarChartViewBase
     private var _entryLabelFont: NSUIFont? = NSUIFont(name: "HelveticaNeue", size: 13.0)
     
     /// if true, the hole will see-through to the inner tips of the slices
-    private var _drawSlicesUnderHoleEnabled = false
+    //private var _drawSlicesUnderHoleEnabled = false
+    private var _drawSlicesUnderHoleEnabled = true
     
     /// if true, the values inside the piechart are drawn as percent values
     private var _usePercentValuesEnabled = false
+    //private var _usePercentValuesEnabled = true
     
     /// variable for the text that is drawn in the center of the pie-chart
     private var _centerAttributedText: NSAttributedString?
