@@ -175,7 +175,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         categories.append(Category(name: "Travel", image: UIImage(named: "paper_plane")!, id: 4, in_use: true, budget: nil, running_total: 340.4, purchases: [Purchase(name: "Flight to Boston", cost: 340.4, date: "8/14/18", info: "HackMIT", id: 0)]))
         
-        categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, in_use: true, budget: nil, running_total: 10, purchases: [Purchase(name: "Sweater for Thomas", cost: 10, date: "8/10/18", info: "Express", id: 0)]))
+        categories.append(Category(name: "Gifts", image: UIImage(named: "gifts")!, id: 5, in_use: true, budget: nil, running_total: 20, purchases: [Purchase(name: "Sweater for Thomas", cost: 20, date: "8/10/18", info: "Express", id: 0)]))
     }
     
     func addAnalyzeView() {

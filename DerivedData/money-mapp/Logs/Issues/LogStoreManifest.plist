@@ -6,53 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>0A0E1999-6D7F-4A1F-B7E6-0E75E06035C0</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>0A0E1999-6D7F-4A1F-B7E6-0E75E06035C0.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>W</string>
-			<key>signature</key>
-			<string>Charts-dgmvnlpltksldxgsnglgnhuqhmts</string>
-			<key>timeStartedRecording</key>
-			<real>556849056.77044296</real>
-			<key>timeStoppedRecording</key>
-			<real>556849058.37461102</real>
-			<key>title</key>
-			<string>Build target Charts</string>
-			<key>uniqueIdentifier</key>
-			<string>0A0E1999-6D7F-4A1F-B7E6-0E75E06035C0</string>
-		</dict>
-		<key>9D07C51B-A2AE-41EF-81AC-ED137BAB0E20</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
-			<key>fileName</key>
-			<string>9D07C51B-A2AE-41EF-81AC-ED137BAB0E20.xcactivitylog</string>
-			<key>highLevelStatus</key>
-			<string>S</string>
-			<key>signature</key>
-			<string>Pods-money-mapp-dgmvnlpltksldxgsnglgnhuqhmts</string>
-			<key>timeStartedRecording</key>
-			<real>556845569.32826495</real>
-			<key>timeStoppedRecording</key>
-			<real>556845572.32454801</real>
-			<key>title</key>
-			<string>Build target Pods-money-mapp</string>
-			<key>uniqueIdentifier</key>
-			<string>9D07C51B-A2AE-41EF-81AC-ED137BAB0E20</string>
-		</dict>
-		<key>A9875272-5B4E-41CE-85F9-F8ECB27E46E7</key>
+		<key>1302D989-4425-4C60-86A4-861157A09E4E</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -61,19 +15,65 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
 			<key>fileName</key>
-			<string>A9875272-5B4E-41CE-85F9-F8ECB27E46E7.xcactivitylog</string>
+			<string>1302D989-4425-4C60-86A4-861157A09E4E.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>W</string>
 			<key>signature</key>
 			<string>money-mapp-gztauzbsjiheiagfbhouislqyyhp</string>
 			<key>timeStartedRecording</key>
-			<real>556850719.28017604</real>
+			<real>556912052.58815098</real>
 			<key>timeStoppedRecording</key>
-			<real>556850719.88593805</real>
+			<real>556912053.25454998</real>
 			<key>title</key>
 			<string>Build target money-mapp</string>
 			<key>uniqueIdentifier</key>
-			<string>A9875272-5B4E-41CE-85F9-F8ECB27E46E7</string>
+			<string>1302D989-4425-4C60-86A4-861157A09E4E</string>
+		</dict>
+		<key>824EE449-F574-47DF-AE10-5EFBB1E5F765</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>824EE449-F574-47DF-AE10-5EFBB1E5F765.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>W</string>
+			<key>signature</key>
+			<string>Charts-dgmvnlpltksldxgsnglgnhuqhmts</string>
+			<key>timeStartedRecording</key>
+			<real>556911674.39879596</real>
+			<key>timeStoppedRecording</key>
+			<real>556911677.47130096</real>
+			<key>title</key>
+			<string>Build target Charts</string>
+			<key>uniqueIdentifier</key>
+			<string>824EE449-F574-47DF-AE10-5EFBB1E5F765</string>
+		</dict>
+		<key>CACCDEED-C4A4-432B-AA2A-569FD539B459</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.framework</string>
+			<key>fileName</key>
+			<string>CACCDEED-C4A4-432B-AA2A-569FD539B459.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>S</string>
+			<key>signature</key>
+			<string>Pods-money-mapp-dgmvnlpltksldxgsnglgnhuqhmts</string>
+			<key>timeStartedRecording</key>
+			<real>556911674.37999403</real>
+			<key>timeStoppedRecording</key>
+			<real>556911677.47677505</real>
+			<key>title</key>
+			<string>Build target Pods-money-mapp</string>
+			<key>uniqueIdentifier</key>
+			<string>CACCDEED-C4A4-432B-AA2A-569FD539B459</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

@@ -14,6 +14,8 @@ class Analyze: UIView {
     @IBOutlet weak var anaylzeLabel: UILabel!
     @IBOutlet weak var spendingChart: PieChartView!
     @IBOutlet weak var dataTable: UITableView!
+    @IBOutlet weak var totalSpentLabel: UILabel!
+    @IBOutlet weak var averageExpenseLabel: UILabel!
     
     var clothesDataEntry = PieChartDataEntry(value: 0)
     var groceriesDataEntry = PieChartDataEntry(value: 0)
@@ -23,6 +25,7 @@ class Analyze: UIView {
     var categories_vc : CategoriesVC!
     
     var total_spent : Double = 0
+    var average_spent : Double = 0
     
     // used to calculate average spending amount
     var categories_used : Int = 0
@@ -35,14 +38,16 @@ class Analyze: UIView {
         // TODO: hard coding for now, modify later
         anaylzeLabel.text = "August Expenses"
         
-        calculateTotalSpent()
+        calculateBasicStats()
         
         calculateChartData()
         
         updateChartData()
+        
+        updateLabels()
     }
     
-    func calculateTotalSpent() {
+    func calculateBasicStats() {
         for i in 0..<categories_vc.categories.count {
             if categories_vc.categories[i].in_use {
                 total_spent += categories_vc.categories[i].running_total
@@ -51,6 +56,13 @@ class Analyze: UIView {
             }
         }
         print(total_spent)
+        
+        average_spent = total_spent / Double(categories_used)
+    }
+    
+    func updateLabels() {
+        totalSpentLabel.text = "Total Spent: $" + String(format: "%.2f", total_spent)
+        averageExpenseLabel.text = "Avg Expense: $" + String(format: "%.2f", average_spent)
     }
     
     func calculateChartData() {
