@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class Analyze: UIView {
+class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var anaylzeLabel: UILabel!
     @IBOutlet weak var spendingChart: PieChartView!
@@ -33,6 +33,11 @@ class Analyze: UIView {
     func initialize(_ parent: CategoriesVC) {
         self.categories_vc = parent
         
+        // initailize the table view
+        dataTable.delegate = self
+        dataTable.dataSource = self
+        dataTable.register(UINib(nibName: "StatsTableViewCell", bundle: nil), forCellReuseIdentifier: StatsTableViewCell.reuse_id)
+        
         spendingChart.chartDescription?.text = ""
         
         // TODO: hard coding for now, modify later
@@ -45,6 +50,8 @@ class Analyze: UIView {
         updateChartData()
         
         updateLabels()
+        
+        //dataTable.reloadData()
     }
     
     func calculateBasicStats() {
@@ -81,8 +88,6 @@ class Analyze: UIView {
                 spendingByCategory.append(newDataEntry)
             }
         }
-        
-        
     }
     
     func updateChartData() {
@@ -109,5 +114,22 @@ class Analyze: UIView {
         chartDataSet.valueFormatter = DefaultValueFormatter(formatter: formatter)
         
         spendingChart.data = chartData
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories_used
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let index = indexPath.row
+        
+        let cell = dataTable.dequeueReusableCell(withIdentifier: StatsTableViewCell.reuse_id, for: indexPath) as! StatsTableViewCell
+        cell.initialize(categories_vc, index)
+        
+        return cell 
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 95
     }
 }
