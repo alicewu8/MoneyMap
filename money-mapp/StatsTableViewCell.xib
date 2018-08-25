@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0 of budget remaining" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-iR-a3O">
-                                <rect key="frame" x="15" y="71" width="1035" height="287.5"/>
+                                <rect key="frame" x="15" y="71" width="1035" height="282.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                         <constraints>
                             <constraint firstItem="6Pd-iR-a3O" firstAttribute="width" secondItem="mHc-8d-SDc" secondAttribute="width" id="24C-FG-Z3u"/>
                             <constraint firstItem="m77-i4-JNy" firstAttribute="top" secondItem="mHc-8d-SDc" secondAttribute="top" constant="10" id="4IZ-Yk-lbS"/>
-                            <constraint firstAttribute="bottom" secondItem="6Pd-iR-a3O" secondAttribute="bottom" constant="5" id="8X1-4p-Ckn"/>
+                            <constraint firstAttribute="bottom" secondItem="6Pd-iR-a3O" secondAttribute="bottom" constant="10" id="8X1-4p-Ckn"/>
                             <constraint firstAttribute="trailing" secondItem="OI9-4g-fln" secondAttribute="trailing" constant="50" id="9pN-Ey-V01"/>
                             <constraint firstItem="m77-i4-JNy" firstAttribute="leading" secondItem="6Pd-iR-a3O" secondAttribute="leading" id="Hs1-Rl-vm3"/>
                             <constraint firstItem="m77-i4-JNy" firstAttribute="leading" secondItem="mHc-8d-SDc" secondAttribute="leading" constant="15" id="RTE-5V-aMS"/>

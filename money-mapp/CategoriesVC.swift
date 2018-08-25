@@ -185,7 +185,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         analyze_view.frame.size = displayView.frame.size
         
         // animate adding the subview
-        UIView.transition(with: self.view, duration: 0.17, options: .transitionCrossDissolve,
+        UIView.transition(with: self.view, duration: 0.1, options: .transitionCrossDissolve,
                           animations: {self.displayView.addSubview(self.analyze_view)}, completion: nil)
         analyze_view.initialize(self)
         view.layoutIfNeeded()
@@ -361,7 +361,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         case 0:
             print("Record view")
             
-            UIView.animate(withDuration: 0.17, animations: {
+            UIView.animate(withDuration: 0.1, animations: {
                 self.analyze_view.alpha = 0
             }) { _ in
                 self.analyze_view.removeFromSuperview()

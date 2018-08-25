@@ -24,6 +24,9 @@ class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var categories_vc : CategoriesVC!
     
+    // stores the ids of the used categories in order
+    var indicesOfCategories = [Int]()
+    
     var total_spent : Double = 0
     var average_spent : Double = 0
     
@@ -60,6 +63,7 @@ class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
                 total_spent += categories_vc.categories[i].running_total
                 
                 categories_used += 1
+                indicesOfCategories.append(i)
             }
         }
         print(total_spent)
@@ -124,12 +128,12 @@ class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
         let index = indexPath.row
         
         let cell = dataTable.dequeueReusableCell(withIdentifier: StatsTableViewCell.reuse_id, for: indexPath) as! StatsTableViewCell
-        cell.initialize(categories_vc, index)
+        cell.initialize(self, categories_vc, index)
         
         return cell 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 95
+        return 100
     }
 }

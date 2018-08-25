@@ -22,10 +22,12 @@ class StatsTableViewCell: UITableViewCell {
     @IBOutlet weak var totalSpentLabel: UILabel!
     @IBOutlet weak var photoFrame: UIView!
     
-    var parent : CategoriesVC!
+    var parent : Analyze!
+    var categories_vc : CategoriesVC!
     
-    func initialize(_ parent: CategoriesVC, _ index: Int) {
+    func initialize(_ parent: Analyze, _ categoriesVC: CategoriesVC, _ index: Int) {
         self.parent = parent
+        self.categories_vc = categoriesVC
         
         self.roundCorners(7.5)
         self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
@@ -34,7 +36,7 @@ class StatsTableViewCell: UITableViewCell {
         totalSpentView.roundCorners(9)
         
         // store the category into a temporary variable
-        let data = parent.categories[index]
+        let data = self.categories_vc.categories[parent.indicesOfCategories[index]]
         
         categoryIcon.image = data.image
         categoryNameLabel.text = data.name
@@ -50,6 +52,8 @@ class StatsTableViewCell: UITableViewCell {
         if let budget = data.budget {
             let remaining = budget - data.running_total
             budgetStatusLabel.text = "$" + String(format: "%.2f", remaining) + " of budget remaining"
+        } else {
+            budgetStatusLabel.text = "No budget was assigned"
         }
         
         self.layer.backgroundColor = Canvas.blush.cgColor
