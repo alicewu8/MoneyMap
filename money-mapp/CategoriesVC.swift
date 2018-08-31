@@ -114,9 +114,9 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     
     // TODO: testing
     func initializeIncome() {
-        income.append(Income(amount: 400, name: "Paycheck from CAEN", id: 0))
-        income.append(Income(amount: 40, name: "Sold SMU Ticket", id: 1))
-        income.append(Income(amount: 800, name: "Paycheck from CAEN", id: 2))
+        income.append(Income(amount: 425.80, name: "Biweekly Paycheck", id: 0))
+        income.append(Income(amount: 40, name: "Sold Football Ticket", id: 1))
+        income.append(Income(amount: 800, name: "Biweekly Paycheck", id: 2))
     }
     
     // MARK: animations for displaying confirmation window
