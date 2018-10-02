@@ -18,6 +18,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     @IBOutlet weak var yes_button: UIButton!
     @IBOutlet var whole_view: UIView!
     @IBOutlet weak var no_button: UIButton!
+    @IBOutlet weak var expenseBtn: UIButton!
+    @IBOutlet weak var incomeBtn: UIButton!
     
     // MARK: collection view
     @IBOutlet weak var collection_view: UICollectionView!
@@ -102,6 +104,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         income_underline.isHidden = true
         income_underline.roundCorners(2)
         expense_underline.roundCorners(2)
+        
+        expenseBtn.roundCorners()
+        expenseBtn.layer.borderWidth = 2
+        expenseBtn.layer.borderColor = Canvas.marshmallow.cgColor
     }
     
     func initializeHistory() {
@@ -335,6 +341,10 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             income_table_view.removeFromSuperview()
         }
         
+        expenseBtn.layer.borderWidth = 2
+        expenseBtn.layer.borderColor = Canvas.marshmallow.cgColor
+        expenseBtn.roundCorners()
+        incomeBtn.layer.borderWidth = 0
     }
     
     @IBAction func incomeTapped(_ sender: Any) {
@@ -345,6 +355,11 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
             // switch to the income recording view
             addIncomeList()
         }
+        
+        expenseBtn.layer.borderWidth = 0
+        incomeBtn.layer.borderColor = Canvas.marshmallow.cgColor
+        incomeBtn.layer.borderWidth = 2
+        incomeBtn.roundCorners();
     }
     
     // MARK: Tab bar

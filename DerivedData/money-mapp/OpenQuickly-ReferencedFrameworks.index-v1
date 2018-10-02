@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Quartz</string>
-	<string>Charts</string>
 	<string>XCTest</string>
+	<string>Charts</string>
+	<string>Quartz</string>
 	<string>CoreData</string>
 	<string>CoreGraphics</string>
 	<string>AppKit</string>

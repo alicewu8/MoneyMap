@@ -72,6 +72,8 @@ class ExpensesVC : UIViewController {
             let customize_info = segue.destination as! CustomizeVC
             customize_info.categories_vc = categories_vc
             customize_info.category_index = category_index
+        } else if segue.identifier == "backToMain" {
+            
         }
     }
     
@@ -388,4 +390,9 @@ class ExpensesVC : UIViewController {
         expenses_list?.initialize(self)
         view.layoutIfNeeded()
     }
+    
+    @IBAction func backToCategoriesVC(_ sender: Any) {
+        performSegue(withIdentifier: "backToMain", sender: self)
+    }
+    
 }
