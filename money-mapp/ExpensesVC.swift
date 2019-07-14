@@ -183,7 +183,7 @@ class ExpensesVC : UIViewController {
        
         // animate the circular background view
         UIView.animate(withDuration: 0.4, animations: {
-            self.sort_outer.transform = CGAffineTransform(scaleX: 1.38, y: 1.38)
+            self.sort_outer.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             self.sort_outer.alpha = 1
         }) { (success: Bool) in
             // restore to its previous size and disappear it

@@ -27,7 +27,7 @@ func insertionSort(_ unsorted_values: [Purchase], _ increasing_order: Bool) -> [
      * elements to the right are smaller than the key. If not, move greater elements
      * one over to the left
      */
-    if !increasing_order {
+    if !increasing_order && copy.count > 1 {
         for i in (0...copy.count - 2).reversed() {
             let key = copy[i]
             var j = i + 1

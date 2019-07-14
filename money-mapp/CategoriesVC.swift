@@ -119,6 +119,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     }
     
     // TODO: testing
+    // FIXME: use CoreData persistence manager
     func initializeIncome() {
         income.append(Income(amount: 425.80, name: "Biweekly Paycheck", id: 0))
         income.append(Income(amount: 40, name: "Sold Football Ticket", id: 1))
@@ -426,7 +427,8 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "category_cell", for: indexPath) as! CategoryCollectionViewCell
         
-        cell.initialize(categories[index_in_array], self)
+        print(Int(index_in_array))
+        cell.initialize(categories[index_in_array], Int(index_in_array), self)
         
         // modify cell member variables
         cell.index_path = indexPath
