@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1518,15 +1518,15 @@
     </scenes>
     <resources>
         <image name="add_favorite" width="40" height="40"/>
-        <image name="analyze" width="30" height="29"/>
+        <image name="analyze" width="30" height="29.5"/>
         <image name="budget_50-1" width="500" height="500"/>
         <image name="empty_add_icon" width="150" height="150"/>
-        <image name="grid" width="30" height="27"/>
-        <image name="history" width="30" height="27"/>
-        <image name="record" width="25" height="27"/>
-        <image name="return" width="223" height="279"/>
+        <image name="grid" width="30" height="27.5"/>
+        <image name="history" width="30" height="27.5"/>
+        <image name="record" width="25" height="27.5"/>
+        <image name="return" width="223.5" height="279.5"/>
         <image name="settings" width="35" height="35"/>
-        <image name="x" width="158" height="158"/>
+        <image name="x" width="158.5" height="158"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zYS-ad-lV5"/>
