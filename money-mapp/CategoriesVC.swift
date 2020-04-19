@@ -101,10 +101,6 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
         // Record will be highlighted on startup
         tab_bar.selectedItem = tab_bar.items?.first
         
-        income_underline.isHidden = true
-        income_underline.roundCorners(2)
-        expense_underline.roundCorners(2)
-        
         expenseBtn.roundCorners()
         expenseBtn.layer.borderWidth = 2
         expenseBtn.layer.borderColor = Canvas.marshmallow.cgColor
@@ -366,7 +362,7 @@ class CategoriesVC: UIViewController, UITabBarDelegate, UICollectionViewDelegate
     // Using a tab bar instead of tab bar controller to pass information between view controllers in a more straight-forward way
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         // represents the item that was tapped
-        let ind = tabBar.items?.index(of: item)
+        let ind = tabBar.items?.firstIndex(of: item)
         
         // prevent going out of bounds
         if ind! >= tab_bar.items!.count {

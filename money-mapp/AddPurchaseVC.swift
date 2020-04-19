@@ -156,7 +156,7 @@ class AddPurchaseVC : UIViewController {
         view.endEditing(true)
         self.dismiss(animated: true, completion: nil)
         
-        print(purchase)
+        print(purchase ?? "empty purchase")
         expenses_vc.addNewPurchase(purchase, category_index)
     }
 }

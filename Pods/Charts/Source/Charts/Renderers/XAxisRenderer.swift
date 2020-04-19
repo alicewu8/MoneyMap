@@ -345,7 +345,7 @@ open class XAxisRenderer: AxisRendererBase
             let transformer = self.transformer
             else { return }
         
-        var limitLines = xAxis.limitLines
+        let limitLines = xAxis.limitLines
         
         if limitLines.count == 0
         {

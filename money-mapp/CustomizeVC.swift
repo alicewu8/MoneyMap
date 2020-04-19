@@ -202,7 +202,7 @@ class CustomizeVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             self.colors_collection_view.cellForItem(at: indexPath)?.transform = CGAffineTransform.identity
         }
         
-        print(selected_color_index)
+        print(selected_color_index ?? "empty color index")
     }
     
     @IBAction func returnToPrevious(_ sender: Any) {

@@ -52,7 +52,7 @@ class AddBudgetVC : UIViewController {
         // convert from string to int and add the budget to the given category
         // pass the category id
         guard let user_budget = Double(budget_text_field.text!) else { return }
-        print(category_cell.category)
+        print(category_cell.category ?? "empty category")
         categories_vc.updateBudget(category_index, user_budget)
     }
     

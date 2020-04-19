@@ -21,7 +21,6 @@
 		1528EFC821163426001E8297 /* AddPurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFC621163426001E8297 /* AddPurchaseCollectionViewCell.xib */; };
 		1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1528EFC921163440001E8297 /* PurchaseCollectionViewCell.swift */; };
 		1528EFCC21163440001E8297 /* PurchaseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1528EFCA21163440001E8297 /* PurchaseCollectionViewCell.xib */; };
-		1529366C212F0C6300CE8CE1 /* ExpensesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15275978211D1D7200F2DE26 /* ExpensesListView.swift */; };
 		1529366F212F0CA500CE8CE1 /* IncomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529366D212F0CA500CE8CE1 /* IncomeTableViewCell.swift */; };
 		15293670212F0CA500CE8CE1 /* IncomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1529366E212F0CA500CE8CE1 /* IncomeTableViewCell.xib */; };
 		15293672212F0CFC00CE8CE1 /* IncomeTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15293671212F0CFC00CE8CE1 /* IncomeTableView.xib */; };
@@ -422,18 +421,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Alice Wu";
 				TargetAttributes = {
 					15110EB320F58AE30095CCD8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 					};
 					15110EC720F58AE40095CCD8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 						TestTargetID = 15110EB320F58AE30095CCD8;
 					};
 					15110ED220F58AE40095CCD8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 						TestTargetID = 15110EB320F58AE30095CCD8;
 					};
 				};
@@ -610,7 +612,6 @@
 				1529366F212F0CA500CE8CE1 /* IncomeTableViewCell.swift in Sources */,
 				159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */,
 				153F44BC2119368E00DA4D0E /* DatePopupViewController.swift in Sources */,
-				1529366C212F0C6300CE8CE1 /* ExpensesListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,16 +786,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mapp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu-money-mapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -805,16 +806,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mapp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu-money-mapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -826,7 +827,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mappTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -835,7 +836,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/money-mapp.app/money-mapp";
 			};
@@ -848,7 +849,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mappTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -857,7 +858,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/money-mapp.app/money-mapp";
 			};
@@ -868,8 +869,9 @@
 			baseConfigurationReference = AE2886D471379FC95BD9CC4F /* Pods-money-mappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mappUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -877,8 +879,9 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mappUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "aliceywu-money-mapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "money-mapp";
 			};
@@ -889,8 +892,9 @@
 			baseConfigurationReference = 1363B6347A54762AECE28CE5 /* Pods-money-mappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D9GZK3CLYY;
+				DEVELOPMENT_TEAM = 83RZX58P73;
 				INFOPLIST_FILE = "money-mappUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,8 +902,9 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "aliceywu.money-mappUITests";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "aliceywu-money-mapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "money-mapp";
 			};
