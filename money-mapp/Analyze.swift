@@ -96,7 +96,7 @@ class Analyze: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateChartData() {
-        let chartDataSet = PieChartDataSet(values: spendingByCategory, label: nil)
+        let chartDataSet = PieChartDataSet(entries: spendingByCategory, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         
         let colors = [Canvas.bright_lilac, Canvas.creamy_peach, Canvas.artificial_watermelon, Canvas.rogue_pink, Canvas.first_date]

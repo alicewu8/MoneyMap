@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -656,19 +656,19 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="95"/>
                                 <subviews>
                                     <label verifyAmbiguity="ignoreSizes" opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s37-Lh-cfQ">
-                                        <rect key="frame" x="116" y="18" width="182" height="36"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                        <rect key="frame" x="115.66666666666667" y="18" width="182.66666666666663" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cc-fb-o3g">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cc-fb-o3g">
                                         <rect key="frame" x="56" y="23" width="40" height="49"/>
                                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-qG-bqx">
-                                        <rect key="frame" x="45" y="19" width="62" height="57"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-qG-bqx">
+                                        <rect key="frame" x="45" y="19" width="61.666666666666657" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                                         <state key="normal" title="Sort +">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -719,10 +719,10 @@
                                 <color key="backgroundColor" red="0.89411764709999997" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="0lP-qG-bqx" firstAttribute="top" secondItem="21l-V1-7KL" secondAttribute="top" constant="19" id="3a7-g1-Jip"/>
-                                    <constraint firstItem="s37-Lh-cfQ" firstAttribute="leading" secondItem="4cc-fb-o3g" secondAttribute="trailing" constant="47" id="6qK-Oo-fM3"/>
+                                    <constraint firstItem="s37-Lh-cfQ" firstAttribute="leading" secondItem="4cc-fb-o3g" secondAttribute="trailing" constant="19.666666666666671" id="6qK-Oo-fM3"/>
                                     <constraint firstItem="WQR-3n-Lc5" firstAttribute="top" secondItem="s37-Lh-cfQ" secondAttribute="bottom" constant="3" id="89s-RE-7B5"/>
                                     <constraint firstAttribute="height" constant="95" id="8DT-iB-zmg"/>
-                                    <constraint firstItem="s37-Lh-cfQ" firstAttribute="leading" secondItem="0lP-qG-bqx" secondAttribute="trailing" constant="34" id="ANP-0I-KMq"/>
+                                    <constraint firstItem="s37-Lh-cfQ" firstAttribute="leading" secondItem="0lP-qG-bqx" secondAttribute="trailing" constant="9" id="ANP-0I-KMq"/>
                                     <constraint firstItem="s37-Lh-cfQ" firstAttribute="top" secondItem="21l-V1-7KL" secondAttribute="top" constant="18" id="BxY-kO-1Ad"/>
                                     <constraint firstItem="7uN-uW-UK0" firstAttribute="centerX" secondItem="21l-V1-7KL" secondAttribute="centerX" id="C7h-lT-SH7"/>
                                     <constraint firstItem="21l-V1-7KL" firstAttribute="trailing" secondItem="27N-Db-3tS" secondAttribute="trailing" constant="20" id="FVu-og-IBQ"/>
@@ -731,14 +731,14 @@
                                     <constraint firstItem="7uN-uW-UK0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s37-Lh-cfQ" secondAttribute="leading" id="VK5-8y-Kd6"/>
                                     <constraint firstItem="s37-Lh-cfQ" firstAttribute="centerX" secondItem="21l-V1-7KL" secondAttribute="centerX" id="WiK-Qd-ous"/>
                                     <constraint firstItem="27N-Db-3tS" firstAttribute="top" secondItem="4cc-fb-o3g" secondAttribute="top" id="XWg-ZH-qLR"/>
-                                    <constraint firstItem="4cc-fb-o3g" firstAttribute="leading" secondItem="21l-V1-7KL" secondAttribute="leading" constant="29" id="d0q-4R-98x"/>
+                                    <constraint firstItem="4cc-fb-o3g" firstAttribute="leading" secondItem="21l-V1-7KL" secondAttribute="leading" constant="56" id="d0q-4R-98x"/>
                                     <constraint firstItem="27N-Db-3tS" firstAttribute="top" secondItem="21l-V1-7KL" secondAttribute="top" constant="23" id="dUq-F9-GGq"/>
                                     <constraint firstItem="0lP-qG-bqx" firstAttribute="centerY" secondItem="21l-V1-7KL" secondAttribute="centerY" id="g9p-4a-J61"/>
                                     <constraint firstItem="21l-V1-7KL" firstAttribute="trailing" secondItem="YgN-Pd-J5p" secondAttribute="trailing" constant="25" id="hZ8-29-cHj"/>
                                     <constraint firstItem="27N-Db-3tS" firstAttribute="centerY" secondItem="YgN-Pd-J5p" secondAttribute="centerY" id="lK0-P5-D3b"/>
                                     <constraint firstItem="21l-V1-7KL" firstAttribute="bottom" secondItem="7uN-uW-UK0" secondAttribute="bottom" constant="3" id="tXa-5b-HQd"/>
                                     <constraint firstItem="27N-Db-3tS" firstAttribute="bottom" secondItem="4cc-fb-o3g" secondAttribute="bottom" id="vbc-Zk-IXx"/>
-                                    <constraint firstItem="0lP-qG-bqx" firstAttribute="leading" secondItem="21l-V1-7KL" secondAttribute="leading" constant="20" id="wJz-wT-ofy"/>
+                                    <constraint firstItem="0lP-qG-bqx" firstAttribute="leading" secondItem="21l-V1-7KL" secondAttribute="leading" constant="45" id="wJz-wT-ofy"/>
                                     <constraint firstItem="27N-Db-3tS" firstAttribute="centerX" secondItem="YgN-Pd-J5p" secondAttribute="centerX" id="wrm-QU-7Wx"/>
                                     <constraint firstItem="YgN-Pd-J5p" firstAttribute="centerY" secondItem="21l-V1-7KL" secondAttribute="centerY" id="zPc-KK-aUc"/>
                                 </constraints>
@@ -1518,15 +1518,15 @@
     </scenes>
     <resources>
         <image name="add_favorite" width="40" height="40"/>
-        <image name="analyze" width="30" height="29"/>
+        <image name="analyze" width="30" height="29.5"/>
         <image name="budget_50-1" width="500" height="500"/>
         <image name="empty_add_icon" width="150" height="150"/>
-        <image name="grid" width="30" height="27"/>
-        <image name="history" width="30" height="27"/>
-        <image name="record" width="25" height="27"/>
-        <image name="return" width="223" height="279"/>
+        <image name="grid" width="30" height="27.5"/>
+        <image name="history" width="30" height="27.5"/>
+        <image name="record" width="25" height="27.5"/>
+        <image name="return" width="223.5" height="279.5"/>
         <image name="settings" width="35" height="35"/>
-        <image name="x" width="158" height="158"/>
+        <image name="x" width="158.5" height="158"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zYS-ad-lV5"/>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "1140"
+=======
+   LastUpgradeVersion = "1020"
+>>>>>>> 797d78ed47a1ff6c48ce0a0781b706b8b900ec80
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -39,7 +43,11 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
+<<<<<<< HEAD
             skipped = "YES">
+=======
+            skipped = "NO">
+>>>>>>> 797d78ed47a1ff6c48ce0a0781b706b8b900ec80
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15110ED220F58AE40095CCD8"
@@ -49,6 +57,20 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+<<<<<<< HEAD
+=======
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "15110EB320F58AE30095CCD8"
+            BuildableName = "money-mapp.app"
+            BlueprintName = "money-mapp"
+            ReferencedContainer = "container:money-mapp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+>>>>>>> 797d78ed47a1ff6c48ce0a0781b706b8b900ec80
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -70,6 +92,11 @@
             ReferencedContainer = "container:money-mapp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+<<<<<<< HEAD
+=======
+      <AdditionalOptions>
+      </AdditionalOptions>
+>>>>>>> 797d78ed47a1ff6c48ce0a0781b706b8b900ec80
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

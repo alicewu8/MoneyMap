@@ -87,6 +87,13 @@ class AddPurchaseVC : UIViewController {
         
         // the date picker will be displayed inside purchase_date
         purchase_date.inputView = date_picker
+        
+        // set today's date as default
+        let today = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        let dateString = dateFormatter.string(from: today)
+        purchase_date.text = dateString 
     }
     
     @objc func dateChanged(date_picker: UIDatePicker) {

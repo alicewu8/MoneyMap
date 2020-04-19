@@ -21,6 +21,7 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
     var parent : CategoriesVC!
     var index_path : IndexPath!
     var category : Category!
+    var category_index : Int!
     
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         setNeedsLayout()
@@ -32,8 +33,9 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         return layoutAttributes
     }
     
-    func initialize(_ category: Category, _ parent: CategoriesVC) {
+    func initialize(_ category: Category, _ index: Int, _ parent: CategoriesVC) {
         self.parent = parent
+        self.category_index = index
         self.category = category
         
         self.category_label.text = category.name
@@ -58,7 +60,13 @@ class CategoryCollectionViewCell: UICollectionViewCell, UIPopoverPresentationCon
         } else {
             print(category)
             // format string to two decimal places
-            budget_button.setTitle("Budget: $" + String(format: "%.2f", category.budget!), for: .normal)
+            // TODO: indicate remaining from budget
+            // check for nil budget: only execute if a budget is instantiated
+            guard let budget = parent.categories[category_index].budget else { return }
+            let running_total = parent.categories[category_index].running_total
+
+            // adding the remaining budget tag to the category cell
+            budget_button.setTitle("$" + String(format: "%.2f", budget - running_total) + " / $" + String(format: "%.2f", self.category.budget!), for: .normal)
         }
         
         // set the background color of the cell based on the budget remaining
