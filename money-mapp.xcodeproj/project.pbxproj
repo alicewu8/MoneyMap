@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15011BF7245F4B5800412936 /* MoneyMapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15011BF5245F4B5800412936 /* MoneyMapp.xcdatamodeld */; };
 		15110EB820F58AE30095CCD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110EB720F58AE30095CCD8 /* AppDelegate.swift */; };
 		15110EBA20F58AE30095CCD8 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15110EB920F58AE30095CCD8 /* CategoriesVC.swift */; };
 		15110EBD20F58AE30095CCD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15110EBB20F58AE30095CCD8 /* Main.storyboard */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		0CEFBF6353992E4349BAF555 /* Pods-money-mapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-money-mapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-money-mapp/Pods-money-mapp.debug.xcconfig"; sourceTree = "<group>"; };
 		1363B6347A54762AECE28CE5 /* Pods-money-mappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-money-mappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-money-mappUITests/Pods-money-mappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		15011BF6245F4B5800412936 /* MoneyMapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyMapp.xcdatamodel; sourceTree = "<group>"; };
 		15110EB420F58AE30095CCD8 /* money-mapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "money-mapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15110EB720F58AE30095CCD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15110EB920F58AE30095CCD8 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				159E9D4A21309C0500FCCD1A /* Customize */,
 				159E9D4921309BC700FCCD1A /* Tab Views */,
 				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
+				15011BF5245F4B5800412936 /* MoneyMapp.xcdatamodeld */,
 				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
 				15C9C14E21138F24007CEBAE /* Extensions.swift */,
@@ -607,6 +610,7 @@
 				15293679212F7C3800CE8CE1 /* IdeasTableViewCell.swift in Sources */,
 				15F85394211E78A000D5F8E3 /* HistoryTableViewCell.swift in Sources */,
 				15C79218211A45C6004475DF /* ExpensesGridView.swift in Sources */,
+				15011BF7245F4B5800412936 /* MoneyMapp.xcdatamodeld in Sources */,
 				15CD7A74212CEA220068868E /* HistoryVC.swift in Sources */,
 				1528EFC721163426001E8297 /* AddPurchaseCollectionViewCell.swift in Sources */,
 				1529366F212F0CA500CE8CE1 /* IncomeTableViewCell.swift in Sources */,
@@ -950,6 +954,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15011BF5245F4B5800412936 /* MoneyMapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15011BF6245F4B5800412936 /* MoneyMapp.xcdatamodel */,
+			);
+			currentVersion = 15011BF6245F4B5800412936 /* MoneyMapp.xcdatamodel */;
+			path = MoneyMapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 15110EAC20F58AE30095CCD8 /* Project object */;
 }
