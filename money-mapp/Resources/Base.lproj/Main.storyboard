@@ -1523,7 +1523,7 @@
         <image name="history" width="30" height="27.5"/>
         <image name="record" width="25" height="27.5"/>
         <image name="return" width="223.5" height="279.5"/>
-        <image name="settings" width="35" height="35"/>
+        <image name="settings" width="25" height="25"/>
         <image name="x" width="158.5" height="158"/>
     </resources>
 </document>

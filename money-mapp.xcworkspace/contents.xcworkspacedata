@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/aliceywu/money-mapp/money-mapp/Purchase+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/aliceywu/money-mapp/money-mapp/Purchase+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:money-mapp.xcodeproj">
    </FileRef>
    <FileRef

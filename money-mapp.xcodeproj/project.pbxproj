@@ -36,12 +36,15 @@
 		156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */; };
 		156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940912117ADA000D8F654 /* FavoritesVC.swift */; };
 		156940942117B73400D8F654 /* PurchaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156940932117B73400D8F654 /* PurchaseInfo.swift */; };
+		1577B5EA245FA685004421A9 /* Purchase+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577B5E9245FA685004421A9 /* Purchase+CoreDataProperties.swift */; };
+		1577B5EB245FA685004421A9 /* Purchase+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577B5E8245FA685004421A9 /* Purchase+CoreDataClass.swift */; };
 		1585F515211E115700D7AE9E /* CustomizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F513211E115700D7AE9E /* CustomizeTableViewCell.swift */; };
 		1585F516211E115700D7AE9E /* CustomizeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585F514211E115700D7AE9E /* CustomizeTableViewCell.xib */; };
 		1585F518211E152B00D7AE9E /* CustomizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F517211E152B00D7AE9E /* CustomizeVC.swift */; };
 		1585F51A211E22E600D7AE9E /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F519211E22E600D7AE9E /* ColorCell.swift */; };
 		1585F51D211E337E00D7AE9E /* BlankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1585F51B211E337E00D7AE9E /* BlankTableViewCell.swift */; };
 		1585F51E211E337E00D7AE9E /* BlankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */; };
+		1586D461245F802C000AD885 /* money-mapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1586D45F245F802C000AD885 /* money-mapp.xcdatamodeld */; };
 		159045BC211A6D8D00FD9703 /* PurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */; };
 		159045BD211A6D8D00FD9703 /* PurchaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */; };
 		159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */; };
@@ -120,12 +123,15 @@
 		1569408F2117A80D00D8F654 /* AddPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseVC.swift; sourceTree = "<group>"; };
 		156940912117ADA000D8F654 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		156940932117B73400D8F654 /* PurchaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseInfo.swift; sourceTree = "<group>"; };
+		1577B5E8245FA685004421A9 /* Purchase+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Purchase+CoreDataClass.swift"; path = "/Users/aliceywu/money-mapp/money-mapp/Purchase+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		1577B5E9245FA685004421A9 /* Purchase+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Purchase+CoreDataProperties.swift"; path = "/Users/aliceywu/money-mapp/money-mapp/Purchase+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		1585F513211E115700D7AE9E /* CustomizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeTableViewCell.swift; sourceTree = "<group>"; };
 		1585F514211E115700D7AE9E /* CustomizeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomizeTableViewCell.xib; sourceTree = "<group>"; };
 		1585F517211E152B00D7AE9E /* CustomizeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeVC.swift; sourceTree = "<group>"; };
 		1585F519211E22E600D7AE9E /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		1585F51B211E337E00D7AE9E /* BlankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankTableViewCell.swift; sourceTree = "<group>"; };
 		1585F51C211E337E00D7AE9E /* BlankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlankTableViewCell.xib; sourceTree = "<group>"; };
+		1586D460245F802C000AD885 /* money-mapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "money-mapp.xcdatamodel"; sourceTree = "<group>"; };
 		159045BA211A6D8D00FD9703 /* PurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTableViewCell.swift; sourceTree = "<group>"; };
 		159045BB211A6D8D00FD9703 /* PurchaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseTableViewCell.xib; sourceTree = "<group>"; };
 		159045BE211A6DF100FD9703 /* AddPurchaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,7 +210,10 @@
 		15110EB620F58AE30095CCD8 /* money-mapp */ = {
 			isa = PBXGroup;
 			children = (
-				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
+				1577B5E8245FA685004421A9 /* Purchase+CoreDataClass.swift */,
+				1577B5E9245FA685004421A9 /* Purchase+CoreDataProperties.swift */,
+				1586D462245F809F000AD885 /* Entities */,
+				1586D45E245F8001000AD885 /* Resources */,
 				15110EC320F58AE40095CCD8 /* Info.plist */,
 				15CD7A72212CE9C10068868E /* Expenses */,
 				15275976211D054900F2DE26 /* Purchases */,
@@ -213,9 +222,7 @@
 				159E9D4C21309C3F00FCCD1A /* Custom Elements */,
 				159E9D4A21309C0500FCCD1A /* Customize */,
 				159E9D4921309BC700FCCD1A /* Tab Views */,
-				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
 				15011BF5245F4B5800412936 /* MoneyMapp.xcdatamodeld */,
-				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
 				15110EB720F58AE30095CCD8 /* AppDelegate.swift */,
 				15C9C14E21138F24007CEBAE /* Extensions.swift */,
 				1528EFBD21160DF9001E8297 /* AddBudgetVC.swift */,
@@ -261,6 +268,24 @@
 				159045BF211A6DF100FD9703 /* AddPurchaseTableViewCell.xib */,
 			);
 			name = Purchases;
+			sourceTree = "<group>";
+		};
+		1586D45E245F8001000AD885 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15110EBE20F58AE40095CCD8 /* Assets.xcassets */,
+				15110EBB20F58AE30095CCD8 /* Main.storyboard */,
+				15110EC020F58AE40095CCD8 /* LaunchScreen.storyboard */,
+				1586D45F245F802C000AD885 /* money-mapp.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1586D462245F809F000AD885 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		159E9D4821309BB300FCCD1A /* Income */ = {
@@ -587,7 +612,9 @@
 			files = (
 				15C79214211A43EB004475DF /* ExpensesListView.swift in Sources */,
 				1528EFCB21163440001E8297 /* PurchaseCollectionViewCell.swift in Sources */,
+				1577B5EA245FA685004421A9 /* Purchase+CoreDataProperties.swift in Sources */,
 				15C9C1572113E3A4007CEBAE /* CategoryCollectionViewCell.swift in Sources */,
+				1577B5EB245FA685004421A9 /* Purchase+CoreDataClass.swift in Sources */,
 				159E9D4E21309C9E00FCCD1A /* Analyze.swift in Sources */,
 				159045C0211A6DF100FD9703 /* AddPurchaseTableViewCell.swift in Sources */,
 				1529367C212F7C4300CE8CE1 /* IdeasList.swift in Sources */,
@@ -603,6 +630,7 @@
 				1585F51A211E22E600D7AE9E /* ColorCell.swift in Sources */,
 				156940922117ADA000D8F654 /* FavoritesVC.swift in Sources */,
 				15110EBA20F58AE30095CCD8 /* CategoriesVC.swift in Sources */,
+				1586D461245F802C000AD885 /* money-mapp.xcdatamodeld in Sources */,
 				15110EB820F58AE30095CCD8 /* AppDelegate.swift in Sources */,
 				156940902117A80D00D8F654 /* AddPurchaseVC.swift in Sources */,
 				15C9C14F21138F24007CEBAE /* Extensions.swift in Sources */,
@@ -963,6 +991,16 @@
 			);
 			currentVersion = 15011BF6245F4B5800412936 /* MoneyMapp.xcdatamodel */;
 			path = MoneyMapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		1586D45F245F802C000AD885 /* money-mapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1586D460245F802C000AD885 /* money-mapp.xcdatamodel */,
+			);
+			currentVersion = 1586D460245F802C000AD885 /* money-mapp.xcdatamodel */;
+			path = "money-mapp.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

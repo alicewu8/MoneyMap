@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 // TODO: make the notes text field dynamically expansive and prevent it from going off the page
 class AddPurchaseVC : UIViewController {
@@ -48,6 +49,10 @@ class AddPurchaseVC : UIViewController {
         view.addGestureRecognizer(pan)
         
         down_slider.roundCorners(4)
+        
+//        Testing CoreData
+        self.save(cost: 8, descr: "hi")
+        self.save(cost: 19, descr: "hi")
     }
     
     // vertically displaces this screen and handles swipe to dismiss
@@ -158,6 +163,8 @@ class AddPurchaseVC : UIViewController {
         
         print(purchase ?? "empty purchase")
         expenses_vc.addNewPurchase(purchase, category_index)
+        
+//        TODO: ADD IN COREDATA
     }
 }
 
@@ -169,5 +176,44 @@ extension AddPurchaseVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+}
+
+extension AddPurchaseVC {
+    func save(cost: Double, descr: String) {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistentContainer.viewContext
+            
+            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Purchase", in: context) else { return }
+            
+            let newValue = NSManagedObject(entity: entityDescription, insertInto: context)
+            newValue.setValue(cost, forKey: "cost")
+            newValue.setValue(descr, forKey: "descr")
+            
+            do {
+                try context.save()
+                print("Saved: \(cost) \(descr)")
+            } catch {
+                print("Saving error")
+            }
+        }
+    }
+    
+    func retrieveValues() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<PurchaseEntity>(entityName: "PurchaseEntity")
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                
+                for res in results {
+                    let cost = res.cost
+                    print(cost)
+                }
+            } catch {
+                print("Could not retrieve")
+            }
+        }
     }
 }
